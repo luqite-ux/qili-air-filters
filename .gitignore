@@ -6,3 +6,6 @@ node_modules/
 .env.*.local
 .codex-delivery/
 *.log
+
+.vercel
+.env*
