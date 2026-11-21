@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "templateFamily": "building-systems",
+  "navigation": [
+    {"label":"Home","route":"/","level":0,"source":"customer buyer journey","referencePeer":"daikin.com"},
+    {"label":"Products","route":"/products","level":0,"source":"16 customer product-source groups","referencePeer":"glasfloss.com"},
+    {"label":"Applications","route":"/applications","level":0,"source":"customer FAQ application list","referencePeer":"apcfilters.com"},
+    {"label":"Capabilities","route":"/capabilities","level":0,"source":"workbook equipment and facility images","referencePeer":"glasfloss.com"},
+    {"label":"Quality","route":"/quality","level":0,"source":"three management-system certificates","referencePeer":"apcfilters.com"},
+    {"label":"About","route":"/about","level":0,"source":"customer company facts","referencePeer":"daikin.com"},
+    {"label":"News","route":"/news","level":0,"source":"backend-ready honest empty state","referencePeer":"glasfloss.com"},
+    {"label":"Contact","route":"/contact","level":0,"source":"formal inquiry path","referencePeer":"apcfilters.com"}
+  ],
+  "productTaxonomy": [
+    {"customerProduct":"Pre-filter panels","category":"Pre-Filters","route":"/products?category=pre-filters","source":"产品（修改）/初效板式过滤器"},
+    {"customerProduct":"Medium bag filters","category":"Bag Filters","route":"/products?category=bag-filters","source":"产品（修改）/中效袋式过滤器"},
+    {"customerProduct":"Bag-filter media rolls","category":"Filter Media","route":"/products?category=filter-media","source":"产品（修改）/中效滤袋卷材"},
+    {"customerProduct":"HEPA filters","category":"HEPA Filters","route":"/products?category=hepa-filters","source":"产品（修改）/高效过滤器"},
+    {"customerProduct":"High-efficiency units","category":"Filter Units","route":"/products?category=filter-units","source":"产品（修改）/高效过滤单元"},
+    {"customerProduct":"Chemical and oil-mist filters","category":"Specialty Filters","route":"/products?category=specialty-filters","source":"产品（修改）/金属网 油雾 化学过滤器"},
+    {"customerProduct":"Household and commercial HEPA","category":"Equipment Filters","route":"/products?category=equipment-filters","source":"产品（修改）/HEPA家用商用 过滤网"},
+    {"customerProduct":"Filter media and humidifier pads","category":"Media & Pads","route":"/products?category=media-pads","source":"产品（修改）/熔喷无纺布材料、加湿网等"}
+  ],
+  "homepageSections": [
+    {"sectionId":"hero","type":"banner","informationGain":"three distinct purchase starting points","purpose":"orient buyers to range, capability and RFQ","factSource":"three supplied banner images","contentType":"carousel","desktopStrategy":"full-width 2.4:1 layered composition","mobile390Strategy":"independent crop or copy below image","componentDecision":"custom accessible carousel","referencePeers":["daikin.com"]},
+    {"sectionId":"product-families","type":"products","informationGain":"distinguish filtration families","purpose":"help initial product selection","factSource":"16 product source groups","contentType":"category navigation","desktopStrategy":"four-column image-led grid","mobile390Strategy":"two/one-column touch grid","componentDecision":"data-driven cards","referencePeers":["glasfloss.com","daikin.com"]},
+    {"sectionId":"selector","type":"selection","informationGain":"turn operating needs into selection inputs","purpose":"reduce vague inquiries","factSource":"workbook FAQ and product groups","contentType":"guided selector","desktopStrategy":"layered horizontal steps","mobile390Strategy":"vertical progressive steps","componentDecision":"custom semantic stepper","referencePeers":["apcfilters.com"]},
+    {"sectionId":"airflow-story","type":"technology","informationGain":"explain multi-stage filtration relationship","purpose":"make product hierarchy understandable","factSource":"customer filter families","contentType":"interactive diagram","desktopStrategy":"lightweight spatial airflow layers","mobile390Strategy":"static layered SVG fallback","componentDecision":"progressive WebGL/SVG explainer","referencePeers":["daikin.com"]},
+    {"sectionId":"manufacturing","type":"capabilities","informationGain":"show actual equipment and facility evidence","purpose":"establish manufacturing trust","factSource":"52 environment/equipment images and workbook list","contentType":"editorial media grid","desktopStrategy":"asymmetric large-image layout","mobile390Strategy":"natural-ratio single column","componentDecision":"custom media mosaic","referencePeers":["glasfloss.com"]},
+    {"sectionId":"applications","type":"applications","informationGain":"connect industries to product paths","purpose":"confirm application fit","factSource":"FAQ application list","contentType":"industry navigation","desktopStrategy":"three/four-column semantic cards","mobile390Strategy":"one/two-column touch cards","componentDecision":"data-driven application cards","referencePeers":["apcfilters.com","daikin.com"]},
+    {"sectionId":"certifications","type":"quality","informationGain":"prove three current management systems","purpose":"support supplier qualification","factSource":"six-page bilingual certificate PDF","contentType":"three certificate items","desktopStrategy":"three equal evidence panels","mobile390Strategy":"stacked document cards","componentDecision":"document viewer cards","referencePeers":["apcfilters.com"]},
+    {"sectionId":"process","type":"process","informationGain":"clarify cooperation sequence","purpose":"set RFQ expectations","factSource":"workbook customization and ordering facts","contentType":"process timeline","desktopStrategy":"horizontal connected sequence","mobile390Strategy":"vertical sequence","componentDecision":"semantic ordered process","referencePeers":["apcfilters.com"]},
+    {"sectionId":"delivery","type":"planning","informationGain":"share conditional production-planning references","purpose":"support buyer scheduling","factSource":"workbook typical lead times","contentType":"conditional planning data","desktopStrategy":"editorial split with real media","mobile390Strategy":"stacked facts and caveat","componentDecision":"custom facts panel","referencePeers":["glasfloss.com"]},
+    {"sectionId":"faq","type":"faq","informationGain":"answer specifications, samples, MOQ, lead time and inspection","purpose":"remove common inquiry friction","factSource":"FAQ worksheet excluding prohibited commitments","contentType":"grouped accordion","desktopStrategy":"balanced groups without empty sidebar","mobile390Strategy":"accessible single-column accordion","componentDecision":"semantic accordion","referencePeers":["apcfilters.com"]},
+    {"sectionId":"final-cta","type":"inquiry","informationGain":"collect application and specification detail","purpose":"create a valid RFQ","factSource":"customer contact facts and product taxonomy","contentType":"contact plus inquiry form","desktopStrategy":"balanced full-width composition","mobile390Strategy":"single-column form","componentDecision":"integration-ready RFQ form","referencePeers":["apcfilters.com"]}
+  ]
+}

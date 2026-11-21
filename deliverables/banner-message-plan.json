@@ -1,0 +1,29 @@
+[
+    {
+      "banner_id": "banner-1",
+      "message_role": "product-range-selection",
+      "headline": "Air Filtration Built Around Your System",
+      "supporting_copy": "Compare filter media, pre-filters, bag filters, HEPA units and application-specific structures for your equipment and operating conditions.",
+      "evidence_refs": ["banner背景图/1.jpg", "产品（修改）"],
+      "primary_cta_label": "Explore Products",
+      "primary_cta_target": "/products"
+    },
+    {
+      "banner_id": "banner-2",
+      "message_role": "manufacturing-customization",
+      "headline": "From Material Selection to Finished Filters",
+      "supporting_copy": "Discuss dimensions, media, frames, process requirements and order planning with a manufacturing team in Kunshan.",
+      "evidence_refs": ["banner背景图/2.jpg", "环境图片/企立环保环境"],
+      "primary_cta_label": "View Capabilities",
+      "primary_cta_target": "/capabilities"
+    },
+    {
+      "banner_id": "banner-3",
+      "message_role": "application-fit-inquiry",
+      "headline": "Specify the Filter for the Air You Need",
+      "supporting_copy": "Share your application, target class, dimensions, airflow conditions and quantity to start a practical filter discussion.",
+      "evidence_refs": ["banner背景图/3.jpg", "副本企业资料&产品&FAQ问题收集表填写.xlsx#FAQ问题"],
+      "primary_cta_label": "Request a Quote",
+      "primary_cta_target": "/contact"
+    }
+]

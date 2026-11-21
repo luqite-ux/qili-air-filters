@@ -1,0 +1,3 @@
+# APC Filtration review
+
+Reviewed 2026-11-21: home/product structure connects custom filter engineering to industries; navigation exposes products, applications and inquiry; industrial product page explains media selection and pre-production validation. Adopt an application/specification-to-RFQ path. Reject APC certifications, experience years, efficiency values, customers, imagery and performance claims.

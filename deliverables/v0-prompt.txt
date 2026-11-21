@@ -1,0 +1,76 @@
+# Build the complete first visual design for Qili Air Filters
+
+Create a complete, production-quality Next.js 16 App Router frontend for **Suzhou Qili Environmental Protection Technology Co., Ltd.**, an air-filter and filter-media manufacturer in Kunshan, China. This is an English-first B2B inquiry website with a preserved locale-ready data model and future multilingual expansion. Brand name: Qili. Formal domain: qiliairfilters.com.
+
+Preserve this user-authored visual direction exactly: **参考 https://openai.com/index/gpt-6-astra/ 或 https://antigravity.google/ 的现代科技感与空间层次，但不要黑色调；灵活采用有业务意义的 Three.js/WebGL，兼顾性能、移动端、可访问性和 reduced motion。**
+
+Use a bright, premium “clean-air laboratory” visual system: cool white, mist blue, restrained air-cyan/green and colors derived from the supplied official logo. Use generous editorial space, strong typography, deep but bright spatial layers, clear section rhythm and purposeful product imagery. Do not use a black theme, generic blue SaaS template, cheap glow, floating decorative orbs, excessive rounding, card walls, or repeated identical layouts. Do not copy OpenAI or Google branding, text, product screenshots, dark palettes, or space-themed decoration.
+
+## Supplied assets and exact use
+
+Attachments include the official square Logo, all three supplied 3840×1600 images from the customer's `banner背景图` folder, representative product images covering filter media, panel/bag/HEPA/chemical filters and high-efficiency units, plus representative manufacturing/facility images. Use every supplied Banner image as one slide in the homepage hero carousel. Do not reject, replace, regenerate or omit any of the three Banner images. They are complete wide visual assets, not cards. Use the official Logo in header and footer with `object-fit: contain`, link it to Home, and derive a crisp square favicon from the same mark; remove all v0/Next.js/template favicons.
+
+Representative attachments are only visual samples. Do not infer product counts, category counts or a complete catalog from the number of files. Codex will connect the full 68-product-image and 52-facility/equipment-image ledger after source handoff, so build extensible category/list/detail/gallery templates.
+
+Videos exist in the source material but are explicitly out of scope: do not create a video section, upload, embed, transcode or request video assets.
+
+## Verified customer facts
+
+- Company: Suzhou Qili Environmental Protection Technology Co., Ltd. / 苏州企立环保科技有限公司.
+- Registered address: No. 688 Huangpujiang North Road, Zhoushi Town, Kunshan City, Jiangsu, China.
+- Public inquiry email: info@qiliairfilters.com. Phones: +86 135 8429 5396 and 400 880 5352.
+- Product scope: pre-filters, medium-efficiency bag filters, HEPA filters, chemical filters, high-temperature filters, oil-mist filters, activated-carbon filters, air-filter media, filter cotton, household/commercial HEPA filters, humidifier pads and high-efficiency filter units.
+- Applications supported by the provided material include microelectronics, HVAC terminals, biological laboratories, food and beverage, pharmaceuticals, lithium batteries, semiconductors, hospitals, automotive coating, photovoltaics, membrane production, residential fresh air, commercial HVAC and agricultural ventilation. Treat these as applicable fields, not claimed completed projects.
+- Supplied manufacturing facts include approximately 3,000 m² and seven workshops plus listed meltblown, nonwoven, bag-filter, frame, pleating, gluing, welding and assembly equipment. Keep quantities scoped and factual.
+- Typical planning references from the workbook: filter-media container orders 7–10 days, primary/medium filters 10–15 days, HEPA filters 20–25 days. Present only as indicative planning subject to specification, quantity and order confirmation.
+- Certifications: ISO 14001:2015 (29526E07642R001), ISO 9001:2015 (29526Q07641R001), ISO 45001:2018 (29526S07643R001), issued 2026-09-16 and valid through 2029-09-15. Create three independent certification items; the Chinese and English PDF pages are bilingual versions of the same three certifications, not six certificates.
+
+Never invent customers, export countries, performance figures, filter efficiency, test reports, certification scope, production capacity, equipment automation level or completed project cases. Never use warranty, warranties, guarantee, guaranteed, quality guarantee, 质保, 保修 or synonymous service promises anywhere, including metadata, FAQ, fallback data or structured data. Do not expose internal source/audit language such as “customer supplied”, “verified”, “according to materials”, “pending confirmation”, coverage counts or production notes.
+
+## Multi-route architecture
+
+Build real independent routes with shared header/footer and maintainable components:
+
+- `/` Home; navigation must visibly include **Home**, and the Logo also returns Home.
+- `/products` with real category filters and cards whose image/title/main area all navigate to a non-empty true category or product target.
+- `/products/[slug]` detailed product template with complete-image gallery, specifications, applications, RFQ entry and related products.
+- `/applications` and useful application detail structure.
+- `/capabilities` for manufacturing and equipment.
+- `/quality` for three independent certifications and quality process without guarantee language.
+- `/about`.
+- `/news` and `/news/[slug]`; use the public label **News** everywhere. There are no real articles yet, so show an honest polished empty state and data-ready structure—do not invent demo news.
+- `/contact` / Request a Quote.
+
+Do not turn this into a one-page anchor site. Keep products/articles/site copy locale-ready with request-locale → default-locale → first-non-empty fallback interfaces, while only English is public initially.
+
+## Homepage buyer journey (11 substantive sections)
+
+1. Full-width three-slide Banner carousel, each with a distinct headline and task: product range → manufacturing/customization → application-fit inquiry. Use real DOM copy and CTA; manual, keyboard and touch controls; pause capability; reduced-motion behavior.
+2. Product families that help buyers distinguish filter grade, structure and media—not a random gallery.
+3. Selection path based on operating conditions, dimensions, media/frame and application.
+4. An explanatory airflow/filtration-layer story. A lightweight Three.js/WebGL treatment is welcome only if it clarifies airflow through filtration layers. Provide static SVG/image fallback for mobile, low power, failure and reduced motion.
+5. Manufacturing and equipment with real-image layout and accurate captions.
+6. Application sectors with clear product-path links.
+7. Three certification items with scope/date/number and view-document affordance.
+8. Custom cooperation process: requirement → selection → sample/confirmation → production planning → delivery.
+9. Conditional lead-time planning reference, never an unconditional promise.
+10. Buyer FAQ grouped for specifications/customization, MOQ/samples, ordering/lead time and inspection. Exclude all warranty and compensation answers.
+11. Final RFQ composition with company context and a full-width, balanced form—not a short sidebar beside a very long form.
+
+Header, footer, repeated CTA, empty News and duplicated facts do not count as substantive sections.
+
+## Inquiry UI
+
+Design a real RFQ form UI with name, business email, company, phone/WhatsApp optional, product/category, dimensions/specification, quantity, target application, message and a visible 4-digit image CAPTCHA area. Do not implement a fake success with `alert`, `console.log` or `setTimeout`. Provide loading/success/error visual states and an integration boundary for the real server action Codex will add. Each future inquiry surface must support its own independent `captchaScope`.
+
+## Motion, responsiveness and accessibility
+
+Implement four purposeful motion scenes: layered hero entry; explanatory airflow layers; image-mask reveal for manufacturing/certification media; per-card stagger plus restrained hover/touch feedback. Every major content section and every repeated card must have a perceptible viewport entry in normal motion mode. A section wrapper animation does not substitute for each card.
+
+Critical content must be visible in base CSS. Only apply temporary hidden states after a synchronous `data-motion-ready` enhancement marker. Never use a fixed/global timeout to mark off-screen sections `revealed`, `hasAnimated`, `completed` or played. A failure fallback may restore visibility but must not consume future viewport animation. `prefers-reduced-motion`, no JS, low-power and failed WebGL must leave all content immediately readable and operable.
+
+Desktop and 390px mobile need independent compositions, not simple shrinking. Keep product structures complete—no stretching or hard cropping of key parts. Use responsive image sizing, reserved aspect ratios, keyboard focus, 44px touch targets, WCAG AA contrast, semantic controls, Escape/lightbox focus return where relevant, and no horizontal overflow.
+
+## Engineering output
+
+Return the complete executable source, not a mock or screenshot. Use maintainable Server/Client boundaries and local controllable assets. Do not configure Supabase, R2, Vercel or the shared admin in v0. Codex will replace demo data with tenant-scoped backend data and full customer media after download. The project must build, include all route files, contain no default framework branding, and preserve a clear integration boundary for products, articles, site settings and inquiry server actions.

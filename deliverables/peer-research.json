@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "customerIndustry": "Industrial air filtration and filter-media manufacturing",
+  "products": ["pre-filters", "bag filters", "HEPA filters", "chemical filters", "filter media", "filter units"],
+  "targetBuyers": ["HVAC and cleanroom project buyers", "equipment OEMs", "industrial distributors", "facility engineering teams"],
+  "peers": [
+    {
+      "url": "https://www.daikin.com/products/ac/lineup/air_filters",
+      "source": "web",
+      "normalizedDomain": "daikin.com",
+      "pagesReviewed": [
+        {"kind":"home","url":"https://www.daikin.com/products/ac/lineup/air_filters","observation":"Portfolio-first landing establishes filtration scope and industries before group brands.","checkedAt":"2026-11-21T13:40:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/daikin.txt","sha256":"73d81ae6e600bbe61245d9d0c3a26b2635bfd869f6493e044eaa4d41fb1bce7b"}},
+        {"kind":"navigation","url":"https://www.daikin.com/products/ac/lineup/air_filters","observation":"Navigation separates product lineup, applications and corporate context.","checkedAt":"2026-11-21T13:40:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/daikin.txt","sha256":"73d81ae6e600bbe61245d9d0c3a26b2635bfd869f6493e044eaa4d41fb1bce7b"}},
+        {"kind":"products","url":"https://www.daikin.com/products/ac/lineup/air_filters","observation":"Product framing connects filtration groups with semiconductor, pharmaceutical, healthcare, food and building uses.","checkedAt":"2026-11-21T13:40:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/daikin.txt","sha256":"73d81ae6e600bbe61245d9d0c3a26b2635bfd869f6493e044eaa4d41fb1bce7b"}}
+      ],
+      "overseasEvidence":{"country":"Japan","whyCompetitor":"Global Japanese HVAC and air-filtration group serving overlapping industrial applications.","sourceUrl":"https://www.daikin.com/products/ac/lineup/air_filters"},
+      "homeSections":["portfolio introduction","application overview","brand/product groups"],
+      "navigation":["products","applications","company"],
+      "productTaxonomy":["air filters","cleanroom equipment","pollution-control systems"],
+      "adopt":["application-led product orientation","clear portfolio hierarchy"],
+      "reject":["group scale claims","market position","consumer HVAC sections"],
+      "evidence":[{"url":"https://www.daikin.com/products/ac/lineup/air_filters","observation":"Actual official lineup page reviewed."}]
+    },
+    {
+      "url": "https://www.glasfloss.com/",
+      "source": "web",
+      "normalizedDomain": "glasfloss.com",
+      "pagesReviewed": [
+        {"kind":"home","url":"https://www.glasfloss.com/","observation":"Homepage leads with filtration specialization and direct product-family access.","checkedAt":"2026-11-21T13:41:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/glasfloss.txt","sha256":"9348cc6c8bf8253a19fa3228bb8b0af49d6bbb6467c1c9a1998c41929234c98e"}},
+        {"kind":"navigation","url":"https://www.glasfloss.com/","observation":"Navigation prioritizes products, resources and company trust.","checkedAt":"2026-11-21T13:41:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/glasfloss.txt","sha256":"9348cc6c8bf8253a19fa3228bb8b0af49d6bbb6467c1c9a1998c41929234c98e"}},
+        {"kind":"products","url":"https://www.glasfloss.com/","observation":"Distinct filter series appear early with a path to the complete product range.","checkedAt":"2026-11-21T13:41:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/glasfloss.txt","sha256":"9348cc6c8bf8253a19fa3228bb8b0af49d6bbb6467c1c9a1998c41929234c98e"}}
+      ],
+      "overseasEvidence":{"country":"United States","whyCompetitor":"US HVAC filter manufacturer with overlapping panel, bag and mini-pleat product families.","sourceUrl":"https://www.glasfloss.com/"},
+      "homeSections":["hero","featured product series","manufacturing proof","about"],
+      "navigation":["products","resources","about"],
+      "productTaxonomy":["pleated","mini-pleat","bag","V-bank"],
+      "adopt":["early product-family visibility","concise manufacturing evidence"],
+      "reject":["heritage claims","US manufacturing claims","lead-time superlatives"],
+      "evidence":[{"url":"https://www.glasfloss.com/","observation":"Actual official homepage and product modules reviewed."}]
+    },
+    {
+      "url": "https://www.apcfilters.com/product/industrial-air-filters/",
+      "source": "web",
+      "normalizedDomain": "apcfilters.com",
+      "pagesReviewed": [
+        {"kind":"home","url":"https://www.apcfilters.com/product/industrial-air-filters/","observation":"Engineering proposition connects custom filtration with buyer applications.","checkedAt":"2026-11-21T13:42:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/apc.txt","sha256":"1bb2e070e3abe087ddf087bf4bb1780d435cf27630223e43549b46518aad4f05"}},
+        {"kind":"navigation","url":"https://www.apcfilters.com/product/industrial-air-filters/","observation":"Product, industry and inquiry paths are visible from the industrial filter page.","checkedAt":"2026-11-21T13:42:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/apc.txt","sha256":"1bb2e070e3abe087ddf087bf4bb1780d435cf27630223e43549b46518aad4f05"}},
+        {"kind":"products","url":"https://www.apcfilters.com/product/industrial-air-filters/","observation":"Product explanation covers media selection, prototype/QC steps and application industries.","checkedAt":"2026-11-21T13:42:00.000Z","evidence":{"path":"deliverables/blueprint-evidence/apc.txt","sha256":"1bb2e070e3abe087ddf087bf4bb1780d435cf27630223e43549b46518aad4f05"}}
+      ],
+      "overseasEvidence":{"country":"Canada","whyCompetitor":"Canadian custom air-filter manufacturer addressing industrial, commercial and equipment-OEM buyers.","sourceUrl":"https://www.apcfilters.com/product/industrial-air-filters/"},
+      "homeSections":["engineering proposition","product range","industry fit","custom-design CTA"],
+      "navigation":["products","industries","inquiry"],
+      "productTaxonomy":["prefilters","HEPA","ULPA","custom filters"],
+      "adopt":["specification-to-RFQ flow","industry entry points"],
+      "reject":["efficiency claims","experience years","certifications and client claims"],
+      "evidence":[{"url":"https://www.apcfilters.com/product/industrial-air-filters/","observation":"Actual official industrial-filter page reviewed."}]
+    }
+  ],
+  "caseIntake": []
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    {"sectionId":"hero","query":"bright industrial air filtration hero carousel","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; custom accessible carousel required"},
+    {"sectionId":"product-families","query":"industrial product category image grid","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; data-driven cards planned"},
+    {"sectionId":"selector","query":"B2B specification guided selector","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; semantic custom stepper planned"},
+    {"sectionId":"airflow-story","query":"scroll layered airflow filtration diagram","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; progressive WebGL/SVG planned"},
+    {"sectionId":"manufacturing","query":"industrial manufacturing asymmetric media grid","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; real-media mosaic planned"},
+    {"sectionId":"applications","query":"industrial applications navigation cards","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; data-driven application cards planned"},
+    {"sectionId":"certifications","query":"certificate document viewer cards","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; three evidence cards planned"},
+    {"sectionId":"process","query":"responsive B2B cooperation timeline","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; semantic ordered process planned"},
+    {"sectionId":"delivery","query":"industrial production planning facts panel","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; conditional facts panel planned"},
+    {"sectionId":"faq","query":"grouped responsive FAQ accordion","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; accessible grouped accordion planned"},
+    {"sectionId":"final-cta","query":"balanced B2B RFQ form composition","candidates":[],"decision":"no-match","receipt":"case library NETWORK_UNAVAILABLE 2026-11-21; integration-ready form planned"}
+  ]
+}

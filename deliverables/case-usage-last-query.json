@@ -1,0 +1,20 @@
+{
+  "context": {
+    "projectId": "project-c96997e7-36d3-4290-8d9f-9454228f9d0e",
+    "runId": "run-c01a054c-afc0-4fb4-a387-7651a29425b1",
+    "purpose": "build"
+  },
+  "localRequestId": "failed-49cf9593-c873-4723-9a2e-1f86af777714",
+  "request": {
+    "match": "fuzzy",
+    "sort": "relevance",
+    "limit": "5",
+    "query": "industrial air filters HEPA filter media bag filters chemical filtration",
+    "industry": "Air Filtration Manufacturing"
+  },
+  "at": "2026-11-21T13:44:12.154Z",
+  "status": 0,
+  "response": {
+    "error": "NETWORK_UNAVAILABLE"
+  }
+}
