@@ -14,6 +14,8 @@ import { getApplications } from '@/lib/repositories/applications'
 import { getCategories } from '@/lib/repositories/products'
 import { DEFAULT_LOCALE } from '@/lib/i18n'
 
+export { metadata } from './home-metadata.mjs'
+
 export default async function HomePage() {
   const locale = DEFAULT_LOCALE
   const [content, categories, applications] = await Promise.all([getHomeContent(locale), getCategories(locale), getApplications(locale)])
