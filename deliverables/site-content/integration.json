@@ -1,0 +1,6 @@
+{
+  "domain": "qiliairfilters.com",
+  "adapterVersion": "1",
+  "capabilities": ["preview"],
+  "modules": ["home.hero", "home.faq", "home.seo"]
+}

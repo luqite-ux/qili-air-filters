@@ -1,0 +1,78 @@
+{
+  "pages": {
+    "home": {
+      "order": ["hero", "faq", "seo"],
+      "modules": {
+        "hero": {
+          "hidden": false,
+          "values": {
+            "slides": [
+              {
+                "id": "range",
+                "eyebrow": { "en": "Product range" },
+                "title": { "en": "From pre-filters to HEPA, filter media to finished units" },
+                "body": { "en": "Panel, bag, HEPA, chemical, high-temperature and oil-mist filters, plus filter media and humidifier pads. Choose by stage, structure and media." },
+                "primary_label": { "en": "Browse products" },
+                "primary_href": "/products",
+                "secondary_label": { "en": "Request a quote" },
+                "secondary_href": "/contact",
+                "image": { "assetId": "7db893ab-e76f-4dc7-84e6-608f158b6fb3", "alt": { "en": "Cylindrical filters, filter roll, carbon panel and filter sheets arranged on a reflective teal surface" } },
+                "side": "left",
+                "tab_label": { "en": "Product range" }
+              },
+              {
+                "id": "manufacturing",
+                "eyebrow": { "en": "Manufacturing and customization" },
+                "title": { "en": "Made to your dimensions, media and frame" },
+                "body": { "en": "Media production, pleating, framing and assembly in Kunshan. Send a drawing, a sample or a size list and we plan the build with you." },
+                "primary_label": { "en": "See our capabilities" },
+                "primary_href": "/capabilities",
+                "secondary_label": { "en": "Send a drawing" },
+                "secondary_href": "/contact",
+                "image": { "assetId": "2fbd8da7-fb7c-45fe-9d6f-eea9ab152ca1", "alt": { "en": "Layered filter media, activated carbon granules, a filter media roll and production machine on a light blue background" } },
+                "side": "left",
+                "tab_label": { "en": "Custom manufacturing" }
+              },
+              {
+                "id": "application",
+                "eyebrow": { "en": "Application-fit inquiry" },
+                "title": { "en": "Tell us where the air needs to be cleaner" },
+                "body": { "en": "Describe the process, airflow and space. We match filter stage, media and frame to the application and quote against your requirement." },
+                "primary_label": { "en": "Start an inquiry" },
+                "primary_href": "/contact",
+                "secondary_label": { "en": "Explore applications" },
+                "secondary_href": "/applications",
+                "image": { "assetId": "4ff27b71-8182-4e87-acbf-7dd53e010177", "alt": { "en": "Bundle of white filter fibres with glowing airflow curves on a blue gradient" } },
+                "side": "right",
+                "tab_label": { "en": "Application fit" }
+              }
+            ]
+          }
+        },
+        "faq": {
+          "hidden": false,
+          "values": {
+            "items": [
+              { "id": "dimensions", "group": { "en": "Specifications and customization" }, "question": { "en": "Can you make a filter to my own dimensions?" }, "answer": { "en": "Yes. Send a drawing, a size list or a sample. We confirm media, frame and structure with you before production." } },
+              { "id": "quote-info", "group": { "en": "Specifications and customization" }, "question": { "en": "What information helps you quote fastest?" }, "answer": { "en": "The application, dimensions, quantity, target filter stage and any temperature, humidity or contaminant details." } },
+              { "id": "media-only", "group": { "en": "Specifications and customization" }, "question": { "en": "Do you supply filter media without converting it into filters?" }, "answer": { "en": "Yes. Meltblown and nonwoven media and filter cotton can be supplied in rolls or cut to size." } },
+              { "id": "moq", "group": { "en": "MOQ and samples" }, "question": { "en": "What is the minimum order quantity?" }, "answer": { "en": "It depends on product type and specification. Tell us your target quantity and we confirm what is practical for that item." } },
+              { "id": "sample", "group": { "en": "MOQ and samples" }, "question": { "en": "Can I request a sample first?" }, "answer": { "en": "Sample arrangements depend on the product. Ask in your inquiry and we confirm what can be prepared and on what terms." } },
+              { "id": "lead-time", "group": { "en": "Ordering and lead time" }, "question": { "en": "How long does production take?" }, "answer": { "en": "We give planning references by product family on this page. Firm timing is confirmed once specification and quantity are agreed." } },
+              { "id": "order", "group": { "en": "Ordering and lead time" }, "question": { "en": "How do we place an order?" }, "answer": { "en": "Send an inquiry, confirm specification and quotation, then production is planned for the confirmed order." } },
+              { "id": "inspection", "group": { "en": "Inspection" }, "question": { "en": "Can we agree inspection requirements in advance?" }, "answer": { "en": "Yes. Raise inspection or documentation needs in your inquiry so they are discussed during order confirmation." } },
+              { "id": "certificates", "group": { "en": "Inspection" }, "question": { "en": "Which management-system certificates do you hold?" }, "answer": { "en": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018. Details are shown in the certification section and on the Quality page." } }
+            ]
+          }
+        },
+        "seo": {
+          "hidden": false,
+          "values": {
+            "title": { "en": "Qili Air Filters | Filter Media Manufacturer in Kunshan" },
+            "description": { "en": "Qili Air Filters manufactures pre-filters, bag filters, HEPA filters, chemical filters and filter media in Kunshan, China. Request a quote." }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
 import { resolveDictionary } from '@/lib/i18n'
+import { getSiteContent } from '@/lib/site-content/site-content'
+import { applyHomeSiteContent } from './home-site-content.mjs'
 
 export type HeroSlide = {
   id: string
@@ -273,5 +275,8 @@ const en: HomeContent = {
 const dictionaries: Record<string, HomeContent> = { en }
 
 export async function getHomeContent(locale: string): Promise<HomeContent> {
-  return resolveDictionary(dictionaries, locale)
+  const fallback = resolveDictionary(dictionaries, locale)
+  if (!process.env.SITE_CONTENT_INTEGRATION_KEY || !process.env.SITE_CONTENT_DOMAIN) return fallback
+  const snapshot = await getSiteContent(locale)
+  return applyHomeSiteContent(fallback, snapshot) as HomeContent
 }

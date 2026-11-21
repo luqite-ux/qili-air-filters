@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from 'next'
+import { cookies } from 'next/headers'
 import { Manrope, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 import { MotionRoot } from '@/components/motion/motion-root'
 import { site } from '@/lib/site'
+import { PREVIEW_COOKIE } from '@/lib/site-content/site-content'
+import { previewUiState } from '@/lib/site-content/preview-ui.mjs'
 import './globals.css'
 
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' })
@@ -54,7 +57,10 @@ const organizationJsonLd = {
   },
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const preview = Boolean((await cookies()).get(PREVIEW_COOKIE)?.value)
+  const previewUi = previewUiState(preview, process.env.NODE_ENV === 'production')
+
   return (
     <html lang="en" className={`${manrope.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
@@ -62,6 +68,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
       </head>
       <body>
+        {previewUi.showPreviewBar && (
+          <aside className="sticky top-0 z-[110] flex items-center justify-center gap-4 bg-slate-950 px-4 py-2 text-sm text-white" aria-label="Content preview mode">
+            <span>You are previewing unpublished content.</span>
+            <form action="/api/site-content/exit-preview" method="post">
+              <button type="submit" className="rounded-sm border border-white/50 px-3 py-1 font-semibold hover:bg-white hover:text-slate-950">
+                Exit preview
+              </button>
+            </form>
+          </aside>
+        )}
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-3 focus:text-primary-foreground"
@@ -72,7 +88,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main id="main">{children}</main>
         <SiteFooter />
         <MotionRoot />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {previewUi.showAnalytics && <Analytics />}
       </body>
     </html>
   )

@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "fontFamilies": [
+    { "key": "site-sans", "label": "Manrope" }
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "path": "/",
+      "label": "Homepage",
+      "modules": [
+        {
+          "key": "hero",
+          "type": "hero",
+          "label": "Homepage banner carousel",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "slides",
+              "type": "repeat",
+              "label": "Banner slides",
+              "maxItems": 3,
+              "fields": [
+                { "key": "eyebrow", "type": "text", "label": "Eyebrow", "localized": true, "required": true, "maxLength": 90 },
+                { "key": "title", "type": "text", "label": "Heading", "localized": true, "required": true, "maxLength": 120, "typography": { "fontFamilies": ["site-sans"], "fontWeights": [700, 800], "fontSize": { "min": 28, "max": 48 }, "defaults": { "fontFamily": "site-sans", "fontWeight": 800, "fontSizeDesktop": 42, "fontSizeMobile": 30 } } },
+                { "key": "body", "type": "textarea", "label": "Description", "localized": true, "required": true, "maxLength": 360 },
+                { "key": "primary_label", "type": "text", "label": "Primary button", "localized": true, "required": true, "maxLength": 50 },
+                { "key": "primary_href", "type": "link", "label": "Primary target", "required": true },
+                { "key": "secondary_label", "type": "text", "label": "Secondary button", "localized": true, "required": true, "maxLength": 50 },
+                { "key": "secondary_href", "type": "link", "label": "Secondary target", "required": true },
+                { "key": "image", "type": "image", "label": "Banner image", "required": true },
+                { "key": "side", "type": "text", "label": "Content side", "required": true, "maxLength": 5 },
+                { "key": "tab_label", "type": "text", "label": "Slide tab", "localized": true, "required": true, "maxLength": 50 }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "faq",
+          "type": "faq",
+          "label": "Homepage buyer FAQ",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Questions",
+              "maxItems": 12,
+              "fields": [
+                { "key": "group", "type": "text", "label": "Group", "localized": true, "required": true, "maxLength": 90 },
+                { "key": "question", "type": "text", "label": "Question", "localized": true, "required": true, "maxLength": 180 },
+                { "key": "answer", "type": "textarea", "label": "Answer", "localized": true, "required": true, "maxLength": 900 }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Homepage SEO",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            { "key": "title", "type": "text", "label": "SEO title", "localized": true, "required": true, "maxLength": 70 },
+            { "key": "description", "type": "textarea", "label": "SEO description", "localized": true, "required": true, "maxLength": 170 }
+          ]
+        }
+      ]
+    }
+  ]
+}
