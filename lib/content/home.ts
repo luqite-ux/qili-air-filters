@@ -50,7 +50,7 @@ const en: HomeContent = {
         src: '/images/banners/banner-product-range.jpg',
         alt: 'Cylindrical filters, filter roll, carbon panel and filter sheets arranged on a reflective teal surface',
       },
-      side: 'left',
+      side: 'right',
       tabLabel: 'Product range',
     },
     {
@@ -78,7 +78,7 @@ const en: HomeContent = {
         src: '/images/banners/banner-fiber-media.jpg',
         alt: 'Bundle of white filter fibres with glowing airflow curves on a blue gradient',
       },
-      side: 'right',
+      side: 'left',
       tabLabel: 'Application fit',
     },
   ],

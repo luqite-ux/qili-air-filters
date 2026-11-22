@@ -4,11 +4,10 @@ import { Reveal } from '@/components/motion/reveal'
 import { SectionHeading } from '@/components/layout/section-heading'
 import { ProductVisual } from '@/components/products/product-visual'
 import type { CategoryView } from '@/lib/repositories/products'
-import { cn } from '@/lib/utils'
 
 export function ProductFamilies({ categories }: { categories: CategoryView[] }) {
-  const featured = categories.filter((c) => c.image)
-  const rest = categories.filter((c) => !c.image)
+  const featured = categories.slice(0, 6)
+  const rest = categories.slice(6)
 
   return (
     <section aria-labelledby="families-title" className="section-pad">
@@ -24,11 +23,11 @@ export function ProductFamilies({ categories }: { categories: CategoryView[] }) 
           </Reveal>
         </div>
 
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((c, i) => (
-            <Reveal as="li" key={c.slug} index={i} className={cn('lg:[&:nth-child(even)]:mt-10')}>
+            <Reveal as="li" key={c.slug} index={i}>
               <Link href={`/products?category=${c.slug}`} className="lift group flex h-full overflow-hidden rounded-lg border border-border bg-card sm:flex-col">
-                <ProductVisual image={c.image} kind={c.visual} sizes="(min-width:1024px) 18vw, (min-width:640px) 45vw, 112px" className="w-28 shrink-0 border-r border-border sm:w-full sm:border-b sm:border-r-0" />
+                <ProductVisual image={c.image} kind={c.visual} sizes="(min-width:1024px) 30vw, (min-width:640px) 45vw, 112px" className="w-28 shrink-0 border-r border-border sm:aspect-[16/9] sm:w-full sm:border-b sm:border-r-0" />
                 <div className="flex flex-1 flex-col p-4 sm:p-5">
                   <p className="eyebrow">{c.role}</p>
                   <h3 className="mt-2 font-bold leading-snug">{c.name}</h3>
@@ -42,7 +41,15 @@ export function ProductFamilies({ categories }: { categories: CategoryView[] }) 
           ))}
         </ul>
 
-        <ul className="mt-14 grid gap-x-10 border-t border-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 flex items-end justify-between gap-6 border-b border-border pb-4">
+          <div>
+            <p className="eyebrow">More product families</p>
+            <h3 className="mt-2 text-xl font-bold">Browse by media and construction</h3>
+          </div>
+          <span className="hidden text-sm text-muted-foreground sm:block">Select a family to view matching products</span>
+        </div>
+
+        <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((c, i) => (
             <Reveal as="li" key={c.slug} index={i} className="border-b border-border">
               <Link href={`/products?category=${c.slug}`} className="group flex min-h-11 items-start justify-between gap-4 py-5">
