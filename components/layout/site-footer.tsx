@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Logo } from '@/components/layout/logo'
 import { site, mainNav } from '@/lib/site'
 import { getCategories } from '@/lib/repositories/products'
+import { compactFooterCategoryCount } from '@/lib/content/customer-materials.mjs'
 
 export async function SiteFooter() {
   const categories = await getCategories()
@@ -12,8 +13,6 @@ export async function SiteFooter() {
           <Logo size={56} />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
             {site.legalName}
-            <br />
-            <span lang="zh-Hans">{site.legalNameZh}</span>
           </p>
           <address className="mt-5 text-sm not-italic leading-relaxed text-foreground/80">
             {site.addressLines.map((line) => (
@@ -45,13 +44,18 @@ export async function SiteFooter() {
         <nav aria-label="Product families" className="lg:col-span-3">
           <h2 className="eyebrow">Product families</h2>
           <ul className="mt-4 space-y-1">
-            {categories.map((c) => (
-              <li key={c.slug}>
+            {categories.map((c, index) => (
+              <li key={c.slug} className={index >= compactFooterCategoryCount ? 'hidden lg:list-item' : undefined}>
                 <Link href={`/products?category=${c.slug}`} className="inline-flex min-h-11 items-center text-sm hover:text-primary">
                   {c.name}
                 </Link>
               </li>
             ))}
+            <li className="lg:hidden">
+              <Link href="/products" className="inline-flex min-h-11 items-center text-sm font-semibold text-primary hover:underline">
+                View all product families
+              </Link>
+            </li>
           </ul>
         </nav>
 

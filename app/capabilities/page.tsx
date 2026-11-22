@@ -5,18 +5,13 @@ import { CtaBand } from '@/components/layout/cta-band'
 import { Reveal } from '@/components/motion/reveal'
 import { getHomeContent } from '@/lib/content/home'
 import { DEFAULT_LOCALE } from '@/lib/i18n'
+import { facilityGallery } from '@/lib/content/customer-materials.mjs'
 
 export const metadata: Metadata = {
   title: 'Manufacturing and Equipment',
   description: 'Filter media, pleating, bag filter, frame, gluing, welding and assembly capability at the Qili production base in Kunshan, Jiangsu.',
   alternates: { canonical: '/capabilities' },
 }
-
-const facility = [
-  { src: '/images/facility/workshop-building.jpg', alt: 'Production building in the Kunshan industrial park under a clear sky', caption: 'Production building' },
-  { src: '/images/facility/park-street.jpg', alt: 'Street between production buildings in the Kunshan industrial park', caption: 'Park street between buildings' },
-  { src: '/images/facility/park-entrance.jpg', alt: 'Entrance gate and office tower of the industrial park', caption: 'Park entrance' },
-]
 
 const stages = [
   { title: 'Media', text: 'Meltblown and nonwoven lines for filter media and filter cotton.' },
@@ -89,18 +84,19 @@ export default async function CapabilitiesPage() {
 
       <section className="container-x py-14 lg:py-20" aria-labelledby="site">
         <Reveal>
-          <p className="eyebrow">The site</p>
+          <p className="eyebrow">Inside production</p>
           <h2 id="site" className="mt-3 max-w-2xl text-3xl font-extrabold sm:text-4xl">
-            Zhoushi Town, Kunshan
+            Equipment and workshop areas supplied by Qili
           </h2>
+          <p className="mt-4 max-w-3xl text-muted-foreground">The photographs below come from the customer&apos;s production archive and show the equipment behind cutting, pleating, forming and assembly.</p>
         </Reveal>
-        <ul className="mt-10 grid gap-6 md:grid-cols-12">
-          {facility.map((f, i) => (
-            <li key={f.src} className={i === 0 ? 'md:col-span-7' : 'md:col-span-5'}>
+        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {facilityGallery.map((f, i) => (
+            <li key={f.src}>
               <Reveal variant="mask" delay={i * 80}>
                 <figure>
                   <div className="overflow-hidden rounded-lg border border-border">
-                    <Image src={f.src} alt={f.alt} width={1706} height={1279} sizes={i === 0 ? '(min-width:768px) 58vw, 92vw' : '(min-width:768px) 40vw, 92vw'} className="aspect-[4/3] h-auto w-full object-cover" />
+                    <Image src={f.src} alt={f.alt} width={1800} height={1200} sizes="(min-width:1024px) 30vw, (min-width:640px) 46vw, 92vw" className="aspect-[3/2] h-auto w-full object-cover" />
                   </div>
                   <figcaption className="mt-3 text-sm text-muted-foreground">{f.caption}</figcaption>
                 </figure>
