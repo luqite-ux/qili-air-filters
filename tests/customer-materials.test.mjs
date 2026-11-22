@@ -1,5 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 
 import { facilityGallery, compactFooterCategoryCount } from '../lib/content/customer-materials.mjs'
 
@@ -13,4 +14,10 @@ test('facility gallery uses supplied production and cleanroom photography', () =
 
 test('mobile footer limits the product-family index to a scannable subset', () => {
   assert.equal(compactFooterCategoryCount, 6)
+})
+
+test('production photographs remain visible even when viewport motion is missed', () => {
+  const source = readFileSync(new URL('../app/capabilities/page.tsx', import.meta.url), 'utf8')
+  const gallery = source.slice(source.indexOf('facilityGallery.map'), source.indexOf('</ul>', source.indexOf('facilityGallery.map')))
+  assert.doesNotMatch(gallery, /<Reveal\b/)
 })

@@ -91,16 +91,14 @@ export default async function CapabilitiesPage() {
           <p className="mt-4 max-w-3xl text-muted-foreground">The photographs below come from the customer&apos;s production archive and show the equipment behind cutting, pleating, forming and assembly.</p>
         </Reveal>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {facilityGallery.map((f, i) => (
+          {facilityGallery.map((f) => (
             <li key={f.src}>
-              <Reveal variant="mask" delay={i * 80}>
-                <figure>
-                  <div className="overflow-hidden rounded-lg border border-border">
-                    <Image src={f.src} alt={f.alt} width={1800} height={1200} sizes="(min-width:1024px) 30vw, (min-width:640px) 46vw, 92vw" className="aspect-[3/2] h-auto w-full object-cover" />
-                  </div>
-                  <figcaption className="mt-3 text-sm text-muted-foreground">{f.caption}</figcaption>
-                </figure>
-              </Reveal>
+              <figure>
+                <div className="overflow-hidden rounded-lg border border-border">
+                  <Image src={f.src} alt={f.alt} width={1800} height={1200} sizes="(min-width:1024px) 30vw, (min-width:640px) 46vw, 92vw" className="aspect-[3/2] h-auto w-full object-cover" />
+                </div>
+                <figcaption className="mt-3 text-sm text-muted-foreground">{f.caption}</figcaption>
+              </figure>
             </li>
           ))}
         </ul>
