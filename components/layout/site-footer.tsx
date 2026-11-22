@@ -44,14 +44,14 @@ export async function SiteFooter() {
         <nav aria-label="Product families" className="lg:col-span-3">
           <h2 className="eyebrow">Product families</h2>
           <ul className="mt-4 space-y-1">
-            {categories.map((c, index) => (
-              <li key={c.slug} className={index >= compactFooterCategoryCount ? 'hidden lg:list-item' : undefined}>
+            {categories.slice(0, compactFooterCategoryCount).map((c) => (
+              <li key={c.slug}>
                 <Link href={`/products?category=${c.slug}`} className="inline-flex min-h-11 items-center text-sm hover:text-primary">
                   {c.name}
                 </Link>
               </li>
             ))}
-            <li className="lg:hidden">
+            <li>
               <Link href="/products" className="inline-flex min-h-11 items-center text-sm font-semibold text-primary hover:underline">
                 View all product families
               </Link>
