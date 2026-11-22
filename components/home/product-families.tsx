@@ -12,9 +12,10 @@ export function ProductFamilies({ categories, products }: { categories: Category
   }
   const featured = categories.slice(0, 6).map((category) => {
     const product = firstProductByCategory.get(category.slug)
+    const image = category.slug === 'medium-efficiency-bag-filter-roll-media' ? undefined : category.image ?? product?.images[0]
     return {
       ...category,
-      image: category.image ?? product?.images[0],
+      image,
       summary: product?.summary || category.summary,
     }
   })

@@ -72,6 +72,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       >
         {slides.map((slide, i) => {
           const active = i === index
+          const side = slide.id === 'range' ? 'right' : slide.id === 'application' ? 'left' : slide.side
           return (
             <div
               key={slide.id}
@@ -90,11 +91,11 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                   fill
                   priority={i === 0}
                   sizes="100vw"
-                  className={cn('object-cover', slide.side === 'left' ? 'object-[70%_center]' : 'object-[30%_center]')}
+                  className={cn('object-cover', side === 'left' ? 'object-[70%_center]' : 'object-[30%_center]')}
                 />
               </div>
 
-              <div className={cn('container-x relative py-8 lg:absolute lg:inset-0 lg:flex lg:items-center lg:py-0', slide.side === 'right' ? 'lg:justify-end' : 'lg:justify-start')}>
+              <div className={cn('container-x relative py-8 lg:absolute lg:inset-0 lg:flex lg:items-center lg:py-0', side === 'right' ? 'lg:justify-end' : 'lg:justify-start')}>
                 <div className="hero-layer w-full rounded-lg bg-background/95 p-6 sm:p-8 lg:max-w-[28rem] lg:border lg:border-border lg:bg-background/90 lg:p-9 lg:shadow-[0_32px_64px_-36px_oklch(0.35_0.08_235/0.55)] lg:backdrop-blur-md xl:max-w-[31rem]" style={{ ['--layer' as string]: 0 }}>
                   <p className="hero-layer eyebrow flex items-center gap-3" style={{ ['--layer' as string]: 1 }}>
                     <span aria-hidden className="h-px w-8 bg-air" />

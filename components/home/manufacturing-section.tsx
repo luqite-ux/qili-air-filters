@@ -6,9 +6,9 @@ import { SectionHeading } from '@/components/layout/section-heading'
 import type { HomeContent } from '@/lib/content/home'
 
 export const facilityImages = [
-  { src: '/images/facility/workshop-building.jpg', alt: 'Multi-storey building in the Kunshan manufacturing park', caption: 'Building in the Kunshan manufacturing park' },
-  { src: '/images/facility/park-street.jpg', alt: 'Street between buildings in the manufacturing park', caption: 'Park street between buildings' },
-  { src: '/images/facility/park-entrance.jpg', alt: 'Entrance gate and tall building at the manufacturing park', caption: 'Park entrance' },
+  { src: '/images/facility/production/pleating-line.jpg', alt: 'Filter media pleating line', caption: 'Media pleating' },
+  { src: '/images/facility/production/bag-filter-assembly.jpg', alt: 'Bag filter assembly work area', caption: 'Bag filter assembly' },
+  { src: '/images/facility/production/frame-forming.jpg', alt: 'Filter frame forming equipment', caption: 'Frame forming' },
 ]
 
 export function ManufacturingSection({ equipment }: { equipment: HomeContent['equipment'] }) {
@@ -37,10 +37,10 @@ export function ManufacturingSection({ equipment }: { equipment: HomeContent['eq
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 lg:col-span-7">
+          <div className="grid grid-cols-2 gap-4 self-start lg:col-span-7">
             {facilityImages.map((img, i) => (
               <figure key={img.src} className={i === 0 ? 'col-span-2' : ''}>
-                <Reveal variant="mask" delay={i * 120} className="overflow-hidden rounded-lg">
+                <Reveal variant="fade" delay={i * 120} className="overflow-hidden rounded-lg">
                   <Image
                     src={img.src}
                     alt={img.alt}
