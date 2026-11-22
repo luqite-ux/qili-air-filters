@@ -3,9 +3,7 @@ import Image from 'next/image'
 import { PageHero } from '@/components/layout/page-hero'
 import { CtaBand } from '@/components/layout/cta-band'
 import { Reveal } from '@/components/motion/reveal'
-import { getHomeContent } from '@/lib/content/home'
-import { DEFAULT_LOCALE } from '@/lib/i18n'
-import { facilityGallery } from '@/lib/content/customer-materials.mjs'
+import { facilityGallery, productionEquipment } from '@/lib/content/customer-materials.mjs'
 
 export const metadata: Metadata = {
   title: 'Manufacturing and Equipment',
@@ -20,9 +18,7 @@ const stages = [
   { title: 'Assembly', text: 'Final assembly into filters and high-efficiency filter units.' },
 ]
 
-export default async function CapabilitiesPage() {
-  const content = await getHomeContent(DEFAULT_LOCALE)
-
+export default function CapabilitiesPage() {
   return (
     <>
       <PageHero
@@ -69,13 +65,15 @@ export default async function CapabilitiesPage() {
             <h2 id="equipment" className="mt-3 text-3xl font-extrabold sm:text-4xl">
               Listed equipment
             </h2>
-            <p className="mt-4 text-muted-foreground">Equipment types in use across the workshops. Quantities and specifications are shared with you during project discussion.</p>
+            <p className="mt-4 text-muted-foreground">Equipment quantities are taken from Qili&apos;s supplied company workbook. Project-specific tooling and configuration are confirmed during technical review.</p>
           </Reveal>
           <ul className="grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:col-span-8">
-            {content.equipment.map((e, i) => (
-              <Reveal as="li" key={e.title} index={i} className="bg-white p-5">
-                <h3 className="font-bold">{e.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{e.text}</p>
+            {productionEquipment.map((group, i) => (
+              <Reveal as="li" key={group.title} index={i} className="bg-white p-5">
+                <h3 className="font-bold">{group.title}</h3>
+                <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                  {group.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
               </Reveal>
             ))}
           </ul>

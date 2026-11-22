@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 
-import { facilityGallery, compactFooterCategoryCount } from '../lib/content/customer-materials.mjs'
+import { facilityGallery, productionEquipment, compactFooterCategoryCount } from '../lib/content/customer-materials.mjs'
 
 test('facility gallery uses supplied production and cleanroom photography', () => {
   assert.ok(facilityGallery.length >= 6)
@@ -14,6 +14,15 @@ test('facility gallery uses supplied production and cleanroom photography', () =
 
 test('mobile footer limits the product-family index to a scannable subset', () => {
   assert.equal(compactFooterCategoryCount, 6)
+})
+
+test('equipment groups preserve the quantities supplied in the customer workbook', () => {
+  const facts = productionEquipment.flatMap((group) => group.items).join(' · ')
+  assert.match(facts, /1 meltblown line/)
+  assert.match(facts, /2 nonwoven lines/)
+  assert.match(facts, /3 composite bag-media lines/)
+  assert.match(facts, /3 pleating machines/)
+  assert.match(facts, /3 riveting machines/)
 })
 
 test('production photographs remain visible even when viewport motion is missed', () => {
