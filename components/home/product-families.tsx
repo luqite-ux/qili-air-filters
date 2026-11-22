@@ -3,10 +3,21 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/motion/reveal'
 import { SectionHeading } from '@/components/layout/section-heading'
 import { ProductVisual } from '@/components/products/product-visual'
-import type { CategoryView } from '@/lib/repositories/products'
+import type { CategoryView, ProductView } from '@/lib/repositories/products'
 
-export function ProductFamilies({ categories }: { categories: CategoryView[] }) {
-  const featured = categories.slice(0, 6)
+export function ProductFamilies({ categories, products }: { categories: CategoryView[]; products: ProductView[] }) {
+  const firstProductByCategory = new Map<string, ProductView>()
+  for (const product of products) {
+    if (!firstProductByCategory.has(product.categorySlug)) firstProductByCategory.set(product.categorySlug, product)
+  }
+  const featured = categories.slice(0, 6).map((category) => {
+    const product = firstProductByCategory.get(category.slug)
+    return {
+      ...category,
+      image: category.image ?? product?.images[0],
+      summary: product?.summary || category.summary,
+    }
+  })
   const rest = categories.slice(6)
 
   return (
