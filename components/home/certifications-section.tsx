@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 import { Reveal } from '@/components/motion/reveal'
 import { SectionHeading } from '@/components/layout/section-heading'
@@ -34,6 +35,9 @@ export function CertificationItem({ cert, index = 0 }: { cert: Certification; in
           </div>
         </dl>
         <div className="lg:col-span-2 lg:text-right">
+          <Link href={`/quality#${cert.id}`} className="mb-3 block overflow-hidden rounded-sm border border-border bg-white">
+            <Image src={`/images/certificates/qili-certificate-${index * 2 + 2}.jpg`} alt={`${cert.standard} English certificate scan`} width={850} height={1200} className="h-40 w-full object-contain" />
+          </Link>
           <Link href={`/quality#${cert.id}`} className="inline-flex min-h-11 items-center gap-1.5 rounded-sm border border-input bg-white px-4 text-sm font-bold hover:bg-mist">
             View document <ArrowUpRight className="size-4" aria-hidden />
           </Link>

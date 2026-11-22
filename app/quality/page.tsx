@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, FileText } from 'lucide-react'
 import { PageHero } from '@/components/layout/page-hero'
 import { CtaBand } from '@/components/layout/cta-band'
@@ -63,7 +64,16 @@ export default async function QualityPage() {
                     </div>
                   </dl>
                 </div>
-                <div className="flex flex-col justify-between gap-6 rounded-lg border border-border bg-mist/70 p-6 lg:col-span-5">
+                <div className="flex flex-col gap-4 lg:col-span-5">
+                  <a href={`/images/certificates/qili-certificate-${i * 2 + 2}.jpg`} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg border border-border bg-white">
+                    <Image src={`/images/certificates/qili-certificate-${i * 2 + 2}.jpg`} alt={`${c.standard} English certificate scan`} width={850} height={1200} className="max-h-[32rem] w-full object-contain" />
+                  </a>
+                  <div className="flex gap-4 text-sm font-bold text-primary">
+                    <a href={`/images/certificates/qili-certificate-${i * 2 + 1}.jpg`} target="_blank" rel="noopener noreferrer">View Chinese scan</a>
+                    <a href={`/images/certificates/qili-certificate-${i * 2 + 2}.jpg`} target="_blank" rel="noopener noreferrer">View English scan</a>
+                  </div>
+                </div>
+                <div className="hidden">
                   <div className="flex items-start gap-4">
                     <span className="flex size-12 shrink-0 items-center justify-center rounded-sm bg-white text-primary">
                       <FileText className="size-6" aria-hidden />
