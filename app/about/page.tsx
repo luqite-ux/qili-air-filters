@@ -67,7 +67,7 @@ export default async function AboutPage() {
         <Reveal variant="mask" className="lg:col-span-6">
           <figure>
             <div className="overflow-hidden rounded-lg border border-border">
-              <Image src="/images/facility/park-entrance.jpg" alt={copy.imageAlt} width={1706} height={1279} sizes="(min-width:1024px) 46vw, 92vw" className="aspect-[4/3] h-auto w-full object-cover" />
+              <Image src={copy.image.url} alt={copy.image.alt} width={1706} height={1279} sizes="(min-width:1024px) 46vw, 92vw" className="aspect-[4/3] h-auto w-full object-cover" />
             </div>
             <figcaption className="mt-3 text-sm text-muted-foreground">{copy.imageCaption}</figcaption>
           </figure>
