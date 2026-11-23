@@ -238,20 +238,26 @@ html[data-motion-ready] [data-reveal='scale']:not([data-revealed]) {
 }
 html[data-motion-ready] [data-reveal='line']:not([data-revealed]) {
   opacity: 1;
-  transform: scaleX(0);
+  transform: scaleX(0.01);
   transform-origin: left center;
 }
 html[data-motion-ready] [data-reveal='line-y']:not([data-revealed]) {
   opacity: 1;
-  transform: scaleY(0);
+  transform: scaleY(0.01);
   transform-origin: top center;
 }
 html[data-motion-ready] [data-reveal='mask']:not([data-revealed]) {
   opacity: 1;
   transform: none;
+}
+/* Keep the observed box measurable; clipping it to zero prevents viewport entry. */
+html[data-motion-ready] [data-reveal='mask'] > * {
+  transition: clip-path 1.1s var(--ease-out-expo) var(--reveal-delay, 0ms);
+}
+html[data-motion-ready] [data-reveal='mask']:not([data-revealed]) > * {
   clip-path: inset(0 100% 0 0);
 }
-html[data-motion-ready] [data-reveal='mask'][data-revealed] {
+html[data-motion-ready] [data-reveal='mask'][data-revealed] > * {
   clip-path: inset(0 0 0 0);
 }
 html[data-motion-ready] [data-reveal='mask'] img {
