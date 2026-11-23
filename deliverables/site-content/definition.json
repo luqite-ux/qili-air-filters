@@ -179,6 +179,99 @@
           ],
           "canHide": false,
           "canReorder": false
+        },
+        {
+          "key": "certificates",
+          "type": "certificates",
+          "label": "Management system certifications",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Certificates",
+              "maxItems": 20,
+              "fields": [
+                {
+                  "key": "standard",
+                  "type": "text",
+                  "label": "standard",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "number",
+                  "type": "text",
+                  "label": "number",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "subject",
+                  "type": "text",
+                  "label": "subject",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "issued",
+                  "type": "text",
+                  "label": "issued",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "valid_through",
+                  "type": "text",
+                  "label": "validThrough",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "issued_label",
+                  "type": "text",
+                  "label": "issuedLabel",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "valid_label",
+                  "type": "text",
+                  "label": "validLabel",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "chinese",
+                  "type": "image",
+                  "label": "Chinese certificate",
+                  "required": true
+                },
+                {
+                  "key": "english",
+                  "type": "image",
+                  "label": "English certificate",
+                  "required": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -191,14 +284,11 @@
           "key": "gallery",
           "type": "gallery",
           "label": "Factory photographs",
-          "canHide": false,
-          "canReorder": false,
           "fields": [
             {
               "key": "items",
               "type": "repeat",
               "label": "Photographs",
-              "maxItems": 80,
               "fields": [
                 {
                   "key": "image",
@@ -210,26 +300,133 @@
                   "key": "caption",
                   "type": "text",
                   "label": "Caption",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 150
                 },
                 {
                   "key": "group",
                   "type": "text",
                   "label": "Business group",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 80
                 }
+              ],
+              "maxItems": 80
+            }
+          ],
+          "canHide": false,
+          "canReorder": false
+        },
+        {
+          "key": "equipment",
+          "type": "equipment",
+          "label": "Production equipment",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Equipment groups",
+              "maxItems": 20,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "items",
+                  "type": "repeat",
+                  "label": "Machines",
+                  "maxItems": 30,
+                  "fields": [
+                    {
+                      "key": "description",
+                      "type": "text",
+                      "label": "description",
+                      "localized": true,
+                      "required": true,
+                      "maxLength": 2000
+                    }
+                  ]
+                }
               ]
+            }
+          ]
+        },
+        {
+          "key": "overview",
+          "type": "overview",
+          "label": "Factory overview",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "lead",
+              "type": "text",
+              "label": "lead",
+              "localized": true,
+              "required": true,
+              "maxLength": 2000
+            },
+            {
+              "key": "area",
+              "type": "text",
+              "label": "area",
+              "localized": true,
+              "required": true,
+              "maxLength": 2000
+            },
+            {
+              "key": "workshops",
+              "type": "text",
+              "label": "workshops",
+              "localized": true,
+              "required": true,
+              "maxLength": 2000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "quality",
+      "path": "/quality",
+      "label": "Quality and registration",
+      "modules": [
+        {
+          "key": "registration",
+          "type": "registration",
+          "label": "Business registration",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "image",
+              "type": "image",
+              "label": "Business licence",
+              "required": true
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "label": "title",
+              "localized": true,
+              "required": true,
+              "maxLength": 2000
             }
           ]
         }
       ]
     }
   ],
-  "version": 2,
+  "version": 3,
   "fontFamilies": [
     {
       "key": "site-sans",

@@ -21,6 +21,10 @@ const stages = [
 
 export default async function CapabilitiesPage() {
   const snapshot = await getSiteContent('en')
+  const modules = snapshot?.pages.find(page => page.key === 'capabilities')?.modules
+  const equipment = modules?.find(module => module.key === 'equipment')?.values.items as Array<{title:string;items:Array<{description:string}>}> | undefined
+  const equipmentGroups = equipment ? equipment.map(group => ({title:group.title,items:group.items.map(item=>item.description)})) : productionEquipment
+  const overview = modules?.find(module => module.key === 'overview')?.values as {lead:string;area:string;workshops:string} | undefined
   const galleryModule = snapshot?.pages.find(page => page.key === 'capabilities')?.modules.find(module => module.key === 'gallery')
   const items = galleryModule?.values.items as Array<{ id: string; image: { url: string; alt: string }; caption: string; group: string }> | undefined
   const gallery = items?.length ? items.map(item => ({ src: item.image.url, alt: item.image.alt, caption: item.caption, group: item.group })) : facilityGallery.map(item => ({ ...item, group: 'Media processing' }))
@@ -30,17 +34,17 @@ export default async function CapabilitiesPage() {
       <PageHero
         eyebrow="Capabilities"
         title="From filter media to finished filter, under one roof"
-        lead="Our Kunshan base covers approximately 3,000 m² across seven workshops, so media, forming, framing and assembly stay close together."
+        lead={overview?.lead ?? 'Our Kunshan base covers approximately 3,000 m² across seven workshops, so media, forming, framing and assembly stay close together.'}
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Capabilities' }]}
         aside={
           <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border">
             <div className="bg-white p-5">
               <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Floor area</dt>
-              <dd className="mt-1 text-2xl font-extrabold">~3,000 m²</dd>
+              <dd className="mt-1 text-2xl font-extrabold">{overview?.area ?? '~3,000 m²'}</dd>
             </div>
             <div className="bg-white p-5">
               <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Workshops</dt>
-              <dd className="mt-1 text-2xl font-extrabold">7</dd>
+              <dd className="mt-1 text-2xl font-extrabold">{overview?.workshops ?? '7'}</dd>
             </div>
           </dl>
         }
@@ -74,7 +78,7 @@ export default async function CapabilitiesPage() {
             <p className="mt-4 text-muted-foreground">Our production equipment covers media preparation through finished-filter assembly. Project-specific tooling and configuration are confirmed during technical review.</p>
           </Reveal>
           <ul className="grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:col-span-8">
-            {productionEquipment.map((group, i) => (
+            {equipmentGroups.map((group, i) => (
               <Reveal as="li" key={group.title} index={i} className="bg-white p-5">
                 <h3 className="font-bold">{group.title}</h3>
                 <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">

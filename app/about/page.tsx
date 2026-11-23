@@ -5,6 +5,7 @@ import { CtaBand } from '@/components/layout/cta-band'
 import { Reveal } from '@/components/motion/reveal'
 import { getCategories } from '@/lib/repositories/products'
 import { site } from '@/lib/site'
+import { getPublishedSiteSettings } from '@/lib/site-settings'
 
 export const metadata: Metadata = {
   title: 'About Qili',
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 
 export default async function AboutPage() {
   const categories = await getCategories()
+  const site = await getPublishedSiteSettings()
 
   return (
     <>

@@ -15,6 +15,8 @@ export type HeroSlide = {
 }
 
 export type Certification = {
+  chinese?: string
+  english?: string
   id: string
   standard: string
   title: string

@@ -7,6 +7,7 @@ import { CtaBand } from '@/components/layout/cta-band'
 import { Reveal } from '@/components/motion/reveal'
 import { getHomeContent } from '@/lib/content/home'
 import { DEFAULT_LOCALE } from '@/lib/i18n'
+import { getSiteContent } from '@/lib/site-content/site-content'
 
 export const metadata: Metadata = {
   title: 'Quality and Certifications',
@@ -23,6 +24,9 @@ const steps = [
 
 export default async function QualityPage() {
   const { certifications } = await getHomeContent(DEFAULT_LOCALE)
+  const snapshot = await getSiteContent(DEFAULT_LOCALE)
+  const registration = snapshot?.pages.find(page=>page.key==='quality')?.modules.find(module=>module.key==='registration')?.values as {title:string;image:{url:string;alt:string}} | undefined
+  const certificatePage = (id:string) => id === 'iso-9001' ? 3 : id === 'iso-14001' ? 1 : 5
 
   return (
     <>
@@ -33,7 +37,7 @@ export default async function QualityPage() {
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Quality' }]}
       />
 
-      <section className="container-x py-14 lg:py-20" aria-labelledby="certs">
+      <section className="container-x py-14 lg:py-20" aria-labelledby="certs" data-hq-content-version={registration ? snapshot?.version : undefined}>
         <h2 id="certs" className="sr-only">
           Certifications
         </h2>
@@ -65,12 +69,12 @@ export default async function QualityPage() {
                   </dl>
                 </div>
                 <div className="flex flex-col gap-4 lg:col-span-5">
-                  <a href={`/images/certificates/qili-certificate-${i * 2 + 2}.jpg`} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg border border-border bg-white">
-                    <Image src={`/images/certificates/qili-certificate-${i * 2 + 2}.jpg`} alt={`${c.standard} English certificate scan`} width={850} height={1200} className="max-h-[32rem] w-full object-contain" />
+                  <a href={c.english ?? `/images/certificates/qili-certificate-${certificatePage(c.id)+1}.jpg`} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg border border-border bg-white">
+                    <Image src={c.english ?? `/images/certificates/qili-certificate-${certificatePage(c.id)+1}.jpg`} alt={`${c.standard} English certificate scan`} width={850} height={1200} className="h-auto w-full" />
                   </a>
                   <div className="flex gap-4 text-sm font-bold text-primary">
-                    <a href={`/images/certificates/qili-certificate-${i * 2 + 1}.jpg`} target="_blank" rel="noopener noreferrer">View Chinese scan</a>
-                    <a href={`/images/certificates/qili-certificate-${i * 2 + 2}.jpg`} target="_blank" rel="noopener noreferrer">View English scan</a>
+                    <a href={c.chinese ?? `/images/certificates/qili-certificate-${certificatePage(c.id)}.jpg`} target="_blank" rel="noopener noreferrer">View Chinese scan</a>
+                    <a href={c.english ?? `/images/certificates/qili-certificate-${certificatePage(c.id)+1}.jpg`} target="_blank" rel="noopener noreferrer">View English scan</a>
                   </div>
                 </div>
                 <div className="hidden">
@@ -96,6 +100,7 @@ export default async function QualityPage() {
         </ul>
       </section>
 
+      {registration && <section className="container-x pb-16"><Reveal><h2 className="text-3xl font-extrabold">{registration.title}</h2><p className="mt-4 text-muted-foreground">View our Chinese company registration document.</p><a className="mt-6 inline-flex min-h-11 items-center font-bold text-primary underline" href={registration.image.url} target="_blank" rel="noopener noreferrer">View business licence</a></Reveal></section>}
       <section className="border-t border-border bg-mist/60 py-14 lg:py-20" aria-labelledby="inspection">
         <div className="container-x">
           <Reveal>

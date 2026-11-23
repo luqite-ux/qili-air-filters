@@ -8,6 +8,10 @@
     "home.hero",
     "home.faq",
     "home.seo",
-    "capabilities.gallery"
+    "capabilities.gallery",
+    "home.certificates",
+    "capabilities.equipment",
+    "capabilities.overview",
+    "quality.registration"
   ]
 }

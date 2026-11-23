@@ -4,7 +4,8 @@
       "order": [
         "hero",
         "faq",
-        "seo"
+        "seo",
+        "certificates"
       ],
       "modules": {
         "faq": {
@@ -229,12 +230,159 @@
               }
             ]
           }
+        },
+        "certificates": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "iso-9001",
+                "title": {
+                  "en": "Quality management system"
+                },
+                "issued": {
+                  "en": "2026-09-16"
+                },
+                "number": {
+                  "en": "29526Q07641R001"
+                },
+                "chinese": {
+                  "alt": {
+                    "en": "ISO 9001:2015 Chinese certificate"
+                  },
+                  "assetId": "64450d68-abf1-4439-9d75-10c7eeb409ea"
+                },
+                "english": {
+                  "alt": {
+                    "en": "ISO 9001:2015 English certificate"
+                  },
+                  "assetId": "6cc8441c-0d85-4dda-89a2-bb8b4146260c"
+                },
+                "subject": {
+                  "en": "Quality management"
+                },
+                "standard": {
+                  "en": "ISO 9001:2015"
+                },
+                "valid_label": {
+                  "en": "15 Sep 2029"
+                },
+                "issued_label": {
+                  "en": "16 Sep 2026"
+                },
+                "valid_through": {
+                  "en": "2029-09-15"
+                }
+              },
+              {
+                "id": "iso-14001",
+                "title": {
+                  "en": "Environmental management system"
+                },
+                "issued": {
+                  "en": "2026-09-16"
+                },
+                "number": {
+                  "en": "29526E07642R001"
+                },
+                "chinese": {
+                  "alt": {
+                    "en": "ISO 14001:2015 Chinese certificate"
+                  },
+                  "assetId": "62f83f71-fa00-451a-869a-18a975e207a2"
+                },
+                "english": {
+                  "alt": {
+                    "en": "ISO 14001:2015 English certificate"
+                  },
+                  "assetId": "db320f19-f52c-4121-ba14-872ede731121"
+                },
+                "subject": {
+                  "en": "Environmental management"
+                },
+                "standard": {
+                  "en": "ISO 14001:2015"
+                },
+                "valid_label": {
+                  "en": "15 Sep 2029"
+                },
+                "issued_label": {
+                  "en": "16 Sep 2026"
+                },
+                "valid_through": {
+                  "en": "2029-09-15"
+                }
+              },
+              {
+                "id": "iso-45001",
+                "title": {
+                  "en": "Occupational health and safety management system"
+                },
+                "issued": {
+                  "en": "2026-09-16"
+                },
+                "number": {
+                  "en": "29526S07643R001"
+                },
+                "chinese": {
+                  "alt": {
+                    "en": "ISO 45001:2018 Chinese certificate"
+                  },
+                  "assetId": "36dd74bf-373e-46ff-b441-00221d4edd3a"
+                },
+                "english": {
+                  "alt": {
+                    "en": "ISO 45001:2018 English certificate"
+                  },
+                  "assetId": "8d935e4e-00c5-4bb9-86c8-345eabb2c6c6"
+                },
+                "subject": {
+                  "en": "Occupational health and safety management"
+                },
+                "standard": {
+                  "en": "ISO 45001:2018"
+                },
+                "valid_label": {
+                  "en": "15 Sep 2029"
+                },
+                "issued_label": {
+                  "en": "16 Sep 2026"
+                },
+                "valid_through": {
+                  "en": "2029-09-15"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "quality": {
+      "order": [
+        "registration"
+      ],
+      "modules": {
+        "registration": {
+          "hidden": false,
+          "values": {
+            "image": {
+              "alt": {
+                "en": "Qili business licence"
+              },
+              "assetId": "98bf5130-6b66-48a9-9b59-2d675727913f"
+            },
+            "title": {
+              "en": "Business registration"
+            }
+          }
         }
       }
     },
     "capabilities": {
       "order": [
-        "gallery"
+        "gallery",
+        "equipment",
+        "overview"
       ],
       "modules": {
         "gallery": {
@@ -1019,6 +1167,177 @@
                 },
                 "caption": {
                   "en": "Galvanized frame forming"
+                }
+              }
+            ]
+          }
+        },
+        "overview": {
+          "hidden": false,
+          "values": {
+            "area": {
+              "en": "~3,000 m²"
+            },
+            "lead": {
+              "en": "Our Kunshan base covers approximately 3,000 m² across seven workshops, so media, forming, framing and assembly stay close together."
+            },
+            "workshops": {
+              "en": "7"
+            }
+          }
+        },
+        "equipment": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "group-0",
+                "items": [
+                  {
+                    "id": "machine-0-0",
+                    "description": {
+                      "en": "1 meltblown line"
+                    }
+                  },
+                  {
+                    "id": "machine-0-1",
+                    "description": {
+                      "en": "2 nonwoven lines"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Media production"
+                }
+              },
+              {
+                "id": "group-1",
+                "items": [
+                  {
+                    "id": "machine-1-0",
+                    "description": {
+                      "en": "3 composite bag-media lines"
+                    }
+                  },
+                  {
+                    "id": "machine-1-1",
+                    "description": {
+                      "en": "2 high-frequency bag-media lines"
+                    }
+                  },
+                  {
+                    "id": "machine-1-2",
+                    "description": {
+                      "en": "1 mesh-laminating line"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Bag-media production"
+                }
+              },
+              {
+                "id": "group-2",
+                "items": [
+                  {
+                    "id": "machine-2-0",
+                    "description": {
+                      "en": "2 inner-frame machines"
+                    }
+                  },
+                  {
+                    "id": "machine-2-1",
+                    "description": {
+                      "en": "3 outer-frame machines"
+                    }
+                  },
+                  {
+                    "id": "machine-2-2",
+                    "description": {
+                      "en": "1 retaining-strip machine"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Frame forming"
+                }
+              },
+              {
+                "id": "group-3",
+                "items": [
+                  {
+                    "id": "machine-3-0",
+                    "description": {
+                      "en": "1 aluminum cutting machine"
+                    }
+                  },
+                  {
+                    "id": "machine-3-1",
+                    "description": {
+                      "en": "1 keel machine"
+                    }
+                  },
+                  {
+                    "id": "machine-3-2",
+                    "description": {
+                      "en": "1 straightening machine"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Metal preparation"
+                }
+              },
+              {
+                "id": "group-4",
+                "items": [
+                  {
+                    "id": "machine-4-0",
+                    "description": {
+                      "en": "3 pleating machines"
+                    }
+                  },
+                  {
+                    "id": "machine-4-1",
+                    "description": {
+                      "en": "1 gluing machine"
+                    }
+                  },
+                  {
+                    "id": "machine-4-2",
+                    "description": {
+                      "en": "1 three-axis dispensing machine"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Pleating and bonding"
+                }
+              },
+              {
+                "id": "group-5",
+                "items": [
+                  {
+                    "id": "machine-5-0",
+                    "description": {
+                      "en": "1 high-frequency welding machine"
+                    }
+                  },
+                  {
+                    "id": "machine-5-1",
+                    "description": {
+                      "en": "3 riveting machines"
+                    }
+                  },
+                  {
+                    "id": "machine-5-2",
+                    "description": {
+                      "en": "1 strip-clamping machine"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Joining and finishing"
                 }
               }
             ]
