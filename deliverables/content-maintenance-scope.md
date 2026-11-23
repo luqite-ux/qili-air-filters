@@ -12,11 +12,13 @@ Default locale: `en`
 - Site settings: legal identity, logo/favicon, contact details, address, languages and notification address.
 - Inquiries: tenant-scoped inquiry records; every public entry point uses its own generated CAPTCHA scope and server-side atomic challenge consumption.
 
-## Website Content v7 fixed-layout modules
+## Website Content v8 fixed-layout modules
 
 The v5 definition updated the homepage hero title's measured typography defaults to 41.6 px on desktop and 30.4 px at 390 px. The customer admin save, reopen and restore roundtrip for the three hero headings passed. Version 6 is now published with the same homepage content; full five-group typography and frontend style adoption remain pending.
 
 Version 6 adds a tenant-owned Applications catalog with 14 preserved records. Application names, summaries, considerations and category links are editable in Website Content; the public application list and detail pages read the published snapshot. Version 7 adds the four group headings and descriptions, page introductions, guidance labels and inquiry copy. The homepage application group labels use the same published snapshot. The source-coded application records and copy fallbacks were removed; layout and category alias mapping remain code-owned.
+
+Version 8 adds the Contact page headings, field labels, introduction and SEO title/description. The published site setting remains the source for the email, phone and address values. The form and CAPTCHA remain code-owned.
 
 | Page | Module | Maintainable fields | Source | Frontend consumer |
 | --- | --- | --- | --- | --- |
@@ -29,6 +31,7 @@ Version 6 adds a tenant-owned Applications catalog with 14 preserved records. Ap
 | `/capabilities` | `equipment` | Six equipment groups and their machine counts | Excel company worksheet C17 | Production equipment list |
 | `/capabilities` | `overview` | Factory description, area and workshop count | Excel C16 | Capability introduction and statistics |
 | `/quality` | `registration` | Business licence image and heading | Excel embedded business licence | Company registration document link |
+| `/contact` | `page_copy` | Hero, details and form headings, contact labels and SEO copy | Existing published Contact page copy | Contact page and metadata |
 
 Layout, responsive breakpoints, animation, component order and CSS remain code-owned. The editor does not accept HTML, CSS, arbitrary modules or drag-and-drop layout. Product/article fields remain in their dedicated editors and are not duplicated in Website Content.
 
