@@ -11,7 +11,7 @@ import { LeadTimeSection } from '@/components/home/lead-time-section'
 import { FaqSection } from '@/components/home/faq-section'
 import { RfqSection } from '@/components/home/rfq-section'
 import { getHomeContent } from '@/lib/content/home'
-import { getApplications } from '@/lib/repositories/applications'
+import { getApplicationPresentation, getApplications } from '@/lib/repositories/applications'
 import { getCategories, getProducts } from '@/lib/repositories/products'
 import { DEFAULT_LOCALE } from '@/lib/i18n'
 import { getSiteContent } from '@/lib/site-content/site-content'
@@ -25,11 +25,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   const locale = DEFAULT_LOCALE
-  const [content, categories, products, applications, snapshot] = await Promise.all([
+  const [content, categories, products, applications, applicationCopy, snapshot] = await Promise.all([
     getHomeContent(locale),
     getCategories(locale),
     getProducts(locale),
     getApplications(locale),
+    getApplicationPresentation(locale),
     process.env.SITE_CONTENT_INTEGRATION_KEY ? getSiteContent(locale) : null,
   ])
 
@@ -40,7 +41,7 @@ export default async function HomePage() {
       <SelectionPath steps={content.selection} />
       <AirflowSection layers={content.airflowLayers} />
       <ManufacturingSection equipment={content.equipment} />
-      <ApplicationsSection applications={applications} categories={categories} />
+      <ApplicationsSection applications={applications} categories={categories} groups={applicationCopy.groups} />
       <CertificationsSection certifications={content.certifications} />
       <ProcessSection steps={content.process} />
       <LeadTimeSection items={content.leadTimes} />

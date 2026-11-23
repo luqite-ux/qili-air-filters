@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/motion/reveal'
 import { SectionHeading } from '@/components/layout/section-heading'
-import { applicationGroupLabels, type ApplicationGroup, type ApplicationView } from '@/lib/repositories/applications'
+import { type ApplicationGroup, type ApplicationView } from '@/lib/repositories/applications'
 import type { CategoryView } from '@/lib/repositories/products'
 
-export function ApplicationsSection({ applications, categories }: { applications: ApplicationView[]; categories: CategoryView[] }) {
+export function ApplicationsSection({ applications, categories, groups: groupLabels }: { applications: ApplicationView[]; categories: CategoryView[]; groups: Record<ApplicationGroup, { title: string; blurb: string }> }) {
   const byCategory = new Map(categories.map((c) => [c.slug, c]))
-  const groups = Object.keys(applicationGroupLabels) as ApplicationGroup[]
+  const groups = Object.keys(groupLabels) as ApplicationGroup[]
 
   return (
     <section aria-labelledby="applications-title" className="section-pad">
@@ -28,8 +28,8 @@ export function ApplicationsSection({ applications, categories }: { applications
             const items = applications.filter((a) => a.group === g)
             return (
               <Reveal key={g} index={gi} as="div">
-                <h3 className="text-xl font-extrabold">{applicationGroupLabels[g].title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{applicationGroupLabels[g].blurb}</p>
+                <h3 className="text-xl font-extrabold">{groupLabels[g].title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{groupLabels[g].blurb}</p>
                 <ul className="mt-5 border-t border-border">
                   {items.map((a, i) => (
                     <Reveal as="li" key={a.slug} index={i} className="border-b border-border py-4">
