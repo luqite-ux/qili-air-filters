@@ -39,6 +39,10 @@ export default async function AboutPage() {
           </div>
           <dl className="mt-8 divide-y divide-border border-y border-border">
             <div className="grid gap-1 py-3 sm:grid-cols-[9rem_1fr] sm:gap-6">
+              <dt className="text-sm font-semibold text-muted-foreground">Brand</dt>
+              <dd className="text-sm" lang="zh-CN">{site.brand}</dd>
+            </div>
+            <div className="grid gap-1 py-3 sm:grid-cols-[9rem_1fr] sm:gap-6">
               <dt className="text-sm font-semibold text-muted-foreground">Company</dt>
               <dd className="text-sm">
                 {site.legalName}
