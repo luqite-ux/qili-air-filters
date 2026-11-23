@@ -184,77 +184,74 @@
           "key": "certificates",
           "type": "certificates",
           "label": "Management system certifications",
-          "canHide": false,
-          "canReorder": false,
           "fields": [
             {
               "key": "items",
               "type": "repeat",
               "label": "Certificates",
-              "maxItems": 20,
               "fields": [
                 {
                   "key": "standard",
                   "type": "text",
                   "label": "standard",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "title",
                   "type": "text",
                   "label": "title",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "number",
                   "type": "text",
                   "label": "number",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "subject",
                   "type": "text",
                   "label": "subject",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "issued",
                   "type": "text",
                   "label": "issued",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "valid_through",
                   "type": "text",
                   "label": "validThrough",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "issued_label",
                   "type": "text",
                   "label": "issuedLabel",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "valid_label",
                   "type": "text",
                   "label": "validLabel",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
@@ -268,6 +265,222 @@
                   "type": "image",
                   "label": "English certificate",
                   "required": true
+                }
+              ],
+              "maxItems": 20
+            }
+          ],
+          "canHide": false,
+          "canReorder": false
+        },
+        {
+          "key": "selection",
+          "type": "selection",
+          "label": "Selection questions",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Selection questions",
+              "maxItems": 40,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "text",
+                  "type": "text",
+                  "label": "text",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "question",
+                  "type": "text",
+                  "label": "question",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "hint",
+                  "type": "text",
+                  "label": "hint",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "airflow_layers",
+          "type": "airflow_layers",
+          "label": "Filtration stages",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Filtration stages",
+              "maxItems": 40,
+              "fields": [
+                {
+                  "key": "stage",
+                  "type": "text",
+                  "label": "stage",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "text",
+                  "type": "text",
+                  "label": "text",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "equipment",
+          "type": "equipment",
+          "label": "Manufacturing capabilities",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Manufacturing capabilities",
+              "maxItems": 40,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "text",
+                  "type": "text",
+                  "label": "text",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "process",
+          "type": "process",
+          "label": "Order process",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Order process",
+              "maxItems": 40,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "text",
+                  "type": "text",
+                  "label": "text",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lead_times",
+          "type": "lead_times",
+          "label": "Lead times",
+          "canHide": false,
+          "canReorder": false,
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Lead times",
+              "maxItems": 40,
+              "fields": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "title",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "window",
+                  "type": "text",
+                  "label": "window",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
+                },
+                {
+                  "key": "min",
+                  "type": "number",
+                  "label": "min",
+                  "required": true,
+                  "min": 0,
+                  "max": 1000
+                },
+                {
+                  "key": "max",
+                  "type": "number",
+                  "label": "max",
+                  "required": true,
+                  "min": 0,
+                  "max": 1000
+                },
+                {
+                  "key": "text",
+                  "type": "text",
+                  "label": "text",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 2000
                 }
               ]
             }
@@ -323,75 +536,75 @@
           "key": "equipment",
           "type": "equipment",
           "label": "Production equipment",
-          "canHide": false,
-          "canReorder": false,
           "fields": [
             {
               "key": "items",
               "type": "repeat",
               "label": "Equipment groups",
-              "maxItems": 20,
               "fields": [
                 {
                   "key": "title",
                   "type": "text",
                   "label": "title",
-                  "localized": true,
                   "required": true,
+                  "localized": true,
                   "maxLength": 2000
                 },
                 {
                   "key": "items",
                   "type": "repeat",
                   "label": "Machines",
-                  "maxItems": 30,
                   "fields": [
                     {
                       "key": "description",
                       "type": "text",
                       "label": "description",
-                      "localized": true,
                       "required": true,
+                      "localized": true,
                       "maxLength": 2000
                     }
-                  ]
+                  ],
+                  "maxItems": 30
                 }
-              ]
+              ],
+              "maxItems": 20
             }
-          ]
+          ],
+          "canHide": false,
+          "canReorder": false
         },
         {
           "key": "overview",
           "type": "overview",
           "label": "Factory overview",
-          "canHide": false,
-          "canReorder": false,
           "fields": [
             {
               "key": "lead",
               "type": "text",
               "label": "lead",
-              "localized": true,
               "required": true,
+              "localized": true,
               "maxLength": 2000
             },
             {
               "key": "area",
               "type": "text",
               "label": "area",
-              "localized": true,
               "required": true,
+              "localized": true,
               "maxLength": 2000
             },
             {
               "key": "workshops",
               "type": "text",
               "label": "workshops",
-              "localized": true,
               "required": true,
+              "localized": true,
               "maxLength": 2000
             }
-          ]
+          ],
+          "canHide": false,
+          "canReorder": false
         }
       ]
     },
@@ -404,8 +617,6 @@
           "key": "registration",
           "type": "registration",
           "label": "Business registration",
-          "canHide": false,
-          "canReorder": false,
           "fields": [
             {
               "key": "image",
@@ -417,16 +628,18 @@
               "key": "title",
               "type": "text",
               "label": "title",
-              "localized": true,
               "required": true,
+              "localized": true,
               "maxLength": 2000
             }
-          ]
+          ],
+          "canHide": false,
+          "canReorder": false
         }
       ]
     }
   ],
-  "version": 3,
+  "version": 4,
   "fontFamilies": [
     {
       "key": "site-sans",

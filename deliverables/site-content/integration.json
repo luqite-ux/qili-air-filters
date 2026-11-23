@@ -12,6 +12,11 @@
     "home.certificates",
     "capabilities.equipment",
     "capabilities.overview",
-    "quality.registration"
+    "quality.registration",
+    "home.selection",
+    "home.airflow_layers",
+    "home.equipment",
+    "home.process",
+    "home.lead_times"
   ]
 }

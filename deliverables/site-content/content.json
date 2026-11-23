@@ -5,7 +5,12 @@
         "hero",
         "faq",
         "seo",
-        "certificates"
+        "certificates",
+        "selection",
+        "airflow_layers",
+        "equipment",
+        "process",
+        "lead_times"
       ],
       "modules": {
         "faq": {
@@ -231,6 +236,253 @@
             ]
           }
         },
+        "process": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "process-0",
+                "text": {
+                  "en": "Share the application, dimensions, quantity and any drawing or sample."
+                },
+                "title": {
+                  "en": "Requirement"
+                }
+              },
+              {
+                "id": "process-1",
+                "text": {
+                  "en": "We propose filter stage, media and frame against your conditions."
+                },
+                "title": {
+                  "en": "Selection"
+                }
+              },
+              {
+                "id": "process-2",
+                "text": {
+                  "en": "Specification, drawing and sample are confirmed with you."
+                },
+                "title": {
+                  "en": "Sample and confirmation"
+                }
+              },
+              {
+                "id": "process-3",
+                "text": {
+                  "en": "Materials and workshop time are scheduled for the confirmed order."
+                },
+                "title": {
+                  "en": "Production planning"
+                }
+              },
+              {
+                "id": "process-4",
+                "text": {
+                  "en": "Packing and dispatch are arranged to your agreed terms."
+                },
+                "title": {
+                  "en": "Delivery"
+                }
+              }
+            ]
+          }
+        },
+        "equipment": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "equipment-0",
+                "text": {
+                  "en": "Fibre media production for filtration layers."
+                },
+                "title": {
+                  "en": "Meltblown equipment"
+                }
+              },
+              {
+                "id": "equipment-1",
+                "text": {
+                  "en": "Base and support media for filters and cotton."
+                },
+                "title": {
+                  "en": "Nonwoven equipment"
+                }
+              },
+              {
+                "id": "equipment-2",
+                "text": {
+                  "en": "Forms pleated packs for panel and HEPA formats."
+                },
+                "title": {
+                  "en": "Pleating equipment"
+                }
+              },
+              {
+                "id": "equipment-3",
+                "text": {
+                  "en": "Cuts and joins pocket media for bag filters."
+                },
+                "title": {
+                  "en": "Bag-filter equipment"
+                }
+              },
+              {
+                "id": "equipment-4",
+                "text": {
+                  "en": "Prepares frames to the sizes you specify."
+                },
+                "title": {
+                  "en": "Frame equipment"
+                }
+              },
+              {
+                "id": "equipment-5",
+                "text": {
+                  "en": "Sets media packs into frames and casings."
+                },
+                "title": {
+                  "en": "Gluing equipment"
+                }
+              },
+              {
+                "id": "equipment-6",
+                "text": {
+                  "en": "Joins pockets, headers and fittings."
+                },
+                "title": {
+                  "en": "Welding equipment"
+                }
+              },
+              {
+                "id": "equipment-7",
+                "text": {
+                  "en": "Brings media, frames and fittings together."
+                },
+                "title": {
+                  "en": "Assembly equipment"
+                }
+              }
+            ]
+          }
+        },
+        "selection": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "selection-0",
+                "hint": {
+                  "en": "Dust, oil mist, gas or odour · airflow · temperature range · humidity"
+                },
+                "text": {
+                  "en": "Start from the air itself: what it carries, how fast it moves and how hot or humid it is."
+                },
+                "title": {
+                  "en": "Operating conditions"
+                },
+                "question": {
+                  "en": "What is in the air?"
+                }
+              },
+              {
+                "id": "selection-1",
+                "hint": {
+                  "en": "Width × height × depth · face size · installation direction"
+                },
+                "text": {
+                  "en": "Give the housing or grid the filter must fit, including frame depth and any clearance."
+                },
+                "title": {
+                  "en": "Dimensions"
+                },
+                "question": {
+                  "en": "What must it fit?"
+                }
+              },
+              {
+                "id": "selection-2",
+                "hint": {
+                  "en": "Media type · pleat or pocket layout · frame material · sealing"
+                },
+                "text": {
+                  "en": "Pick the media family, pleat or pocket structure and frame material for the stage."
+                },
+                "title": {
+                  "en": "Media and frame"
+                },
+                "question": {
+                  "en": "How is it built?"
+                }
+              },
+              {
+                "id": "selection-3",
+                "hint": {
+                  "en": "Cleanroom, laboratory, coating booth, HVAC terminal, appliance"
+                },
+                "text": {
+                  "en": "Name the process or space so stages can be balanced across the whole filtration train."
+                },
+                "title": {
+                  "en": "Application"
+                },
+                "question": {
+                  "en": "Where does it work?"
+                }
+              }
+            ]
+          }
+        },
+        "lead_times": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "media",
+                "max": 10,
+                "min": 7,
+                "text": {
+                  "en": "Roll goods for container quantities."
+                },
+                "title": {
+                  "en": "Filter media, container orders"
+                },
+                "window": {
+                  "en": "7–10 days"
+                }
+              },
+              {
+                "id": "primary",
+                "max": 15,
+                "min": 10,
+                "text": {
+                  "en": "Panel, pleated and bag formats."
+                },
+                "title": {
+                  "en": "Primary and medium-efficiency filters"
+                },
+                "window": {
+                  "en": "10–15 days"
+                }
+              },
+              {
+                "id": "hepa",
+                "max": 25,
+                "min": 20,
+                "text": {
+                  "en": "Framed HEPA panels and units."
+                },
+                "title": {
+                  "en": "HEPA filters"
+                },
+                "window": {
+                  "en": "20–25 days"
+                }
+              }
+            ]
+          }
+        },
         "certificates": {
           "hidden": false,
           "values": {
@@ -350,6 +602,61 @@
                 },
                 "valid_through": {
                   "en": "2029-09-15"
+                }
+              }
+            ]
+          }
+        },
+        "airflow_layers": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "pre",
+                "text": {
+                  "en": "Holds back lint and coarse dust so the finer stages behind it are protected."
+                },
+                "stage": {
+                  "en": "Stage 01"
+                },
+                "title": {
+                  "en": "Pre-filter"
+                }
+              },
+              {
+                "id": "bag",
+                "text": {
+                  "en": "Pockets give a large media surface for finer dust across the middle stage."
+                },
+                "stage": {
+                  "en": "Stage 02"
+                },
+                "title": {
+                  "en": "Medium-efficiency bag filter"
+                }
+              },
+              {
+                "id": "hepa",
+                "text": {
+                  "en": "Fine-fibre media for the smallest particles in controlled environments."
+                },
+                "stage": {
+                  "en": "Stage 03"
+                },
+                "title": {
+                  "en": "HEPA media"
+                }
+              },
+              {
+                "id": "chem",
+                "text": {
+                  "en": "Activated carbon or chemical media for gaseous contaminants and odour."
+                },
+                "stage": {
+                  "en": "Stage 04"
+                },
+                "title": {
+                  "en": "Chemical media"
                 }
               }
             ]
