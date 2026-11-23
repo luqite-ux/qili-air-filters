@@ -200,7 +200,7 @@ const en: HomeContent = {
       items: [
         {
           q: 'What is the minimum order quantity?',
-          a: 'It depends on product type and specification. Tell us your target quantity and we confirm what is practical for that item.',
+          a: 'The stated minimums are 500 m of filter media, 100 filters, or 300 HEPA filter panels. Please confirm the specification and quantity in your inquiry.',
         },
         {
           q: 'Can I request a sample first?',
