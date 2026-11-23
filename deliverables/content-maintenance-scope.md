@@ -12,13 +12,14 @@ Default locale: `en`
 - Site settings: legal identity, logo/favicon, contact details, address, languages and notification address.
 - Inquiries: tenant-scoped inquiry records; every public entry point uses its own generated CAPTCHA scope and server-side atomic challenge consumption.
 
-## Website Content v3 fixed-layout modules
+## Website Content v4 fixed-layout modules
 
 | Page | Module | Maintainable fields | Source | Frontend consumer |
 | --- | --- | --- | --- | --- |
 | `/` | `hero` | Three slide labels, headings, copy, CTA labels/links and tenant-owned banner images | Supplied banner folder and verified English copy | `HeroCarousel` |
 | `/` | `faq` | Buyer FAQ group, question and answer, stable row ID and order | Verified product/company facts | `FaqSection` |
 | `/` | `seo` | Homepage SEO title and description | Verified company/product facts | Next.js homepage metadata |
+| `/` | `selection`, `airflow_layers`, `equipment`, `process`, `lead_times` | Existing homepage selection, filtration layers, equipment, process and lead-time copy and links | Existing verified homepage content; v4 migration and publication readback | Fixed homepage modules; 63-field desktop/mobile adoption report |
 | `/` and `/quality` | `home.certificates` | Certificate standard, number, dates, English/Chinese scans | Six-page customer certificate PDF, mapped by certificate number | Home certification cards and Quality page |
 | `/capabilities` | `gallery` | All 52 factory images, captions, business groups and ordering | Complete customer factory-photo folder | Grouped factory gallery |
 | `/capabilities` | `equipment` | Six equipment groups and their machine counts | Excel company worksheet C17 | Production equipment list |

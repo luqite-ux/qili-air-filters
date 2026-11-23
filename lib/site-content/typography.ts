@@ -11,7 +11,7 @@ export function siteTypographyStyle(styles: unknown, path: string, fontMap: Reco
   const value = raw as TypographyOverride, output: ResponsiveTypographyStyle = {}
   if (typeof value.fontFamily === 'string' && Object.hasOwn(fontMap, value.fontFamily) && fontMap[value.fontFamily]) output.fontFamily = fontMap[value.fontFamily]
   if (typeof value.fontWeight === 'number' && Number.isInteger(value.fontWeight) && value.fontWeight >= 100 && value.fontWeight <= 900 && value.fontWeight % 100 === 0) output.fontWeight = value.fontWeight
-  if (typeof value.fontSizeDesktop === 'number' && Number.isInteger(value.fontSizeDesktop) && value.fontSizeDesktop >= 1 && value.fontSizeDesktop <= 512) output['--hq-font-size-desktop'] = `${value.fontSizeDesktop}px`
-  if (typeof value.fontSizeMobile === 'number' && Number.isInteger(value.fontSizeMobile) && value.fontSizeMobile >= 1 && value.fontSizeMobile <= 512) output['--hq-font-size-mobile'] = `${value.fontSizeMobile}px`
+  if (typeof value.fontSizeDesktop === 'number' && Number.isFinite(value.fontSizeDesktop) && value.fontSizeDesktop >= 1 && value.fontSizeDesktop <= 512) output['--hq-font-size-desktop'] = `${value.fontSizeDesktop}px`
+  if (typeof value.fontSizeMobile === 'number' && Number.isFinite(value.fontSizeMobile) && value.fontSizeMobile >= 1 && value.fontSizeMobile <= 512) output['--hq-font-size-mobile'] = `${value.fontSizeMobile}px`
   return Object.keys(output).length ? output : undefined
 }

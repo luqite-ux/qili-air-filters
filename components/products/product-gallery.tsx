@@ -19,8 +19,10 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
       <Dialog.Root open={open} onOpenChange={setOpen}>
         <div className="layer-sheet relative aspect-square overflow-hidden rounded-lg bg-white">
           <Image src={current.src} alt={current.alt} width={current.width} height={current.height} sizes="(min-width:1024px) 46vw, 92vw" priority className="h-full w-full object-contain" />
+        </div>
+        <div className="mt-2 flex justify-end">
           <Dialog.Trigger
-            className="absolute bottom-3 right-3 inline-flex h-11 items-center gap-2 rounded-sm border border-border bg-white/90 px-4 text-sm font-semibold backdrop-blur hover:bg-white"
+            className="inline-flex h-11 items-center gap-2 rounded-sm border border-border bg-white px-4 text-sm font-semibold hover:bg-mist"
             aria-label={`Enlarge image of ${name}`}
           >
             <Maximize2 className="size-4" aria-hidden />
