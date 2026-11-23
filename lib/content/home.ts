@@ -29,6 +29,7 @@ export type Certification = {
 }
 
 export type HomeContent = {
+  heroStyles?: Record<string, unknown>
   slides: HeroSlide[]
   selection: { title: string; text: string; question: string; hint: string }[]
   airflowLayers: { id: string; stage: string; title: string; text: string }[]

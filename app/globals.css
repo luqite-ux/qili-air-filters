@@ -1,6 +1,13 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+@media (max-width: 639.98px) {
+  .hero-managed-title[style*="--hq-font-size-mobile:"] { font-size: var(--hq-font-size-mobile); }
+}
+@media (min-width: 640px) {
+  .hero-managed-title[style*="--hq-font-size-desktop:"] { font-size: var(--hq-font-size-desktop); }
+}
+
 :root {
   --background: oklch(0.985 0.006 225);
   --foreground: oklch(0.24 0.045 245);

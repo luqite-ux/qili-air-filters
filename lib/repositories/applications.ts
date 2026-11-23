@@ -144,13 +144,23 @@ const raw: RawApplication[] = [
 ]
 
 function toView(a: RawApplication, locale: string): ApplicationView {
+  // Application terminology is broader than the source-backed catalogue categories.
+  const catalogSlugs: Record<string, string[]> = {
+    'hepa-filters': ['high-efficiency-filters'],
+    'chemical-filters': ['metal-mesh-oil-mist-and-chemical-filters'],
+    'oil-mist-filters': ['metal-mesh-oil-mist-and-chemical-filters'],
+    'pre-filters': ['primary-panel-filters'],
+    'high-temperature-filters': ['high-efficiency-filters'],
+    'household-commercial-hepa': ['residential-and-commercial-hepa-filters'],
+    'filter-media': ['ql-primary-and-medium-efficiency-filter-media', 'medium-efficiency-bag-filter-roll-media', 'hepa-composite-filter-paper'],
+  }
   return {
     slug: a.slug,
     name: resolveLocalized(a.name, locale),
     group: a.group,
     summary: resolveLocalized(a.summary, locale),
     considerations: resolveLocalized(a.considerations, locale),
-    categorySlugs: a.categorySlugs,
+    categorySlugs: [...new Set(a.categorySlugs.flatMap(slug => catalogSlugs[slug] ?? [slug]))],
   }
 }
 

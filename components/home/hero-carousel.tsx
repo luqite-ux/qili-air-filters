@@ -6,10 +6,11 @@ import Link from 'next/link'
 import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react'
 import type { HeroSlide } from '@/lib/content/home'
 import { cn } from '@/lib/utils'
+import { siteTypographyStyle } from '@/lib/site-content/typography'
 
 const INTERVAL = 7000
 
-export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
+export function HeroCarousel({ slides, styles }: { slides: HeroSlide[]; styles?: Record<string, unknown> }) {
   const [index, setIndex] = useState(0)
   const [playing, setPlaying] = useState(false)
   const [engaged, setEngaged] = useState(false)
@@ -101,7 +102,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                     <span aria-hidden className="h-px w-8 bg-air" />
                     {slide.eyebrow}
                   </p>
-                  <h2 className="hero-layer mt-4 text-[1.9rem] font-extrabold leading-[1.08] sm:text-4xl xl:text-[2.6rem]" style={{ ['--layer' as string]: 2 }}>
+                  <h2 className="hero-layer hero-managed-title mt-4 text-[1.9rem] font-extrabold leading-[1.08] sm:text-4xl xl:text-[2.6rem]" style={{ ['--layer' as string]: 2, ...siteTypographyStyle(styles, `slides.${slide.id}.title`, { 'site-sans': 'var(--font-manrope), sans-serif' }) }}>
                     {slide.title}
                   </h2>
                   <p className="hero-layer mt-4 text-base leading-relaxed text-muted-foreground" style={{ ['--layer' as string]: 3 }}>

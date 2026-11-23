@@ -35,7 +35,7 @@ export default async function HomePage() {
 
   return (
     <div className="contents" {...(snapshot?.version ? { 'data-hq-content-version': snapshot.version } : {})}>
-      <HeroCarousel slides={content.slides} />
+      <HeroCarousel slides={content.slides} styles={content.heroStyles} />
       <ProductFamilies categories={categories} products={products} />
       <SelectionPath steps={content.selection} />
       <AirflowSection layers={content.airflowLayers} />
