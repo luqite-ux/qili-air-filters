@@ -12,7 +12,7 @@ Default locale: `en`
 - Site settings: legal identity, logo/favicon, contact details, address, languages and notification address.
 - Inquiries: tenant-scoped inquiry records; every public entry point uses its own generated CAPTCHA scope and server-side atomic challenge consumption.
 
-## Website Content v9 fixed-layout modules
+## Website Content v10 fixed-layout modules
 
 The v5 definition updated the homepage hero title's measured typography defaults to 41.6 px on desktop and 30.4 px at 390 px. The customer admin save, reopen and restore roundtrip for the three hero headings passed. Version 6 is now published with the same homepage content; full five-group typography and frontend style adoption remain pending.
 
@@ -21,6 +21,8 @@ Version 6 adds a tenant-owned Applications catalog with 14 preserved records. Ap
 Version 8 adds the Contact page headings, field labels, introduction and SEO title/description. The published site setting remains the source for the email, phone and address values. The form and CAPTCHA remain code-owned.
 
 Version 9 adds 19 About page copy and SEO fields. Legal company name, brand and address still come from site settings; product scope entries come from the product category repository. The About image file remains a code asset pending media-slot reconciliation.
+
+Version 10 adds the Quality page headings, certificate field labels, inspection steps, registration guidance, CTA and SEO copy. Certificate data and scans remain in the published certificates module. Unused hidden certificate placeholder markup was removed.
 
 | Page | Module | Maintainable fields | Source | Frontend consumer |
 | --- | --- | --- | --- | --- |
@@ -35,6 +37,7 @@ Version 9 adds 19 About page copy and SEO fields. Legal company name, brand and 
 | `/quality` | `registration` | Business licence image and heading | Excel embedded business licence | Company registration document link |
 | `/contact` | `page_copy` | Hero, details and form headings, contact labels and SEO copy | Existing published Contact page copy | Contact page and metadata |
 | `/about` | `page_copy` | Hero, company introduction, fact labels, image caption and alt text, product scope, CTA and SEO copy | Existing published About page copy | About page and metadata |
+| `/quality` | `page_copy` | Hero, certificate field labels, four inspection steps, registration guidance, CTA and SEO copy | Existing published Quality page copy | Quality page and metadata |
 
 Layout, responsive breakpoints, animation, component order and CSS remain code-owned. The editor does not accept HTML, CSS, arbitrary modules or drag-and-drop layout. Product/article fields remain in their dedicated editors and are not duplicated in Website Content.
 
