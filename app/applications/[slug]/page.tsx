@@ -11,9 +11,7 @@ import { getCategories } from '@/lib/repositories/products'
 
 type Params = { params: Promise<{ slug: string }> }
 
-export async function generateStaticParams() {
-  return []
-}
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params
