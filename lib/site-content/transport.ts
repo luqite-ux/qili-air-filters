@@ -1,5 +1,5 @@
 // Server-only transport: import through site-content.ts in customer applications.
-export type AdapterConfig = { adminUrl: string; tenantId: string; domain: string; integrationKey: string }
+export type AdapterConfig = { adminUrl: string; tenantId: string; domain: string; integrationKey: string; deploymentCacheKey?: string }
 export type SiteSnapshot = { version: string; definitionVersion: number; locale: string; pages: Array<{ key: string; path: string; modules: Array<{ key: string; type: string; values: Record<string, unknown>; styles?: Record<string, { fontFamily?: string; fontWeight?: number; fontSizeDesktop?: number; fontSizeMobile?: number }> }> }> }
 type Fetcher = (input: string | URL | Request, init?: RequestInit & { next?: { revalidate: number } }) => Promise<Response>
 export async function loadEntryRedirect(config: AdapterConfig, kind: 'product' | 'article', slug: string, fetcher: Fetcher = fetch): Promise<string | null> {
@@ -18,7 +18,7 @@ function endpoint(config: AdapterConfig, suffix = '') {
 export async function loadSiteSnapshot(config: AdapterConfig, locale: string, previewSession: string | null, fetcher: Fetcher = fetch): Promise<SiteSnapshot | null> {
   const response = previewSession
     ? await fetcher(endpoint(config, '/preview-session'), { method: 'POST', cache: 'no-store', redirect: 'error', headers: { 'Content-Type': 'application/json', 'X-Site-Content-Key': config.integrationKey }, body: JSON.stringify({ domain: config.domain, session: previewSession, locale }) })
-    : await fetcher(`${endpoint(config)}?locale=${encodeURIComponent(locale)}`, { cache: 'force-cache', next: { revalidate: 60 }, redirect: 'error' })
+    : await fetcher(`${endpoint(config)}?locale=${encodeURIComponent(locale)}${config.deploymentCacheKey ? `&consumer=${encodeURIComponent(config.deploymentCacheKey)}` : ''}`, { cache: 'force-cache', next: { revalidate: 60 }, redirect: 'error' })
   if (!previewSession && response.status === 404) return null
   if (!response.ok) throw new Error(previewSession ? 'Site preview denied or expired; exit preview to view the public site.' : 'Site content unavailable')
   const payload = await response.json()

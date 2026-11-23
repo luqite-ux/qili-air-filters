@@ -10,7 +10,7 @@ export function adapterConfig(): AdapterConfig {
   const domain = process.env.SITE_CONTENT_DOMAIN?.trim()
   const integrationKey = process.env.SITE_CONTENT_INTEGRATION_KEY?.trim()
   if (!tenantId || !domain || !integrationKey) throw new Error('Site content adapter is not configured')
-  return { adminUrl, tenantId, domain, integrationKey }
+  return { adminUrl, tenantId, domain, integrationKey, deploymentCacheKey: process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 12) }
 }
 export const getSiteContent = cache(async (locale: string) => {
   const session = (await cookies()).get(PREVIEW_COOKIE)?.value ?? null
