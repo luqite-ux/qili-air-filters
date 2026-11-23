@@ -1,75 +1,1027 @@
 {
   "pages": {
     "home": {
-      "order": ["hero", "faq", "seo"],
+      "order": [
+        "hero",
+        "faq",
+        "seo"
+      ],
       "modules": {
-        "hero": {
-          "hidden": false,
-          "values": {
-            "slides": [
-              {
-                "id": "range",
-                "eyebrow": { "en": "Product range" },
-                "title": { "en": "From pre-filters to HEPA, filter media to finished units" },
-                "body": { "en": "Panel, bag, HEPA, chemical, high-temperature and oil-mist filters, plus filter media and humidifier pads. Choose by stage, structure and media." },
-                "primary_label": { "en": "Browse products" },
-                "primary_href": "/products",
-                "secondary_label": { "en": "Request a quote" },
-                "secondary_href": "/contact",
-                "image": { "assetId": "7db893ab-e76f-4dc7-84e6-608f158b6fb3", "alt": { "en": "Cylindrical filters, filter roll, carbon panel and filter sheets arranged on a reflective teal surface" } },
-                "side": "left",
-                "tab_label": { "en": "Product range" }
-              },
-              {
-                "id": "manufacturing",
-                "eyebrow": { "en": "Manufacturing and customization" },
-                "title": { "en": "Made to your dimensions, media and frame" },
-                "body": { "en": "Media production, pleating, framing and assembly in Kunshan. Send a drawing, a sample or a size list and we plan the build with you." },
-                "primary_label": { "en": "See our capabilities" },
-                "primary_href": "/capabilities",
-                "secondary_label": { "en": "Send a drawing" },
-                "secondary_href": "/contact",
-                "image": { "assetId": "2fbd8da7-fb7c-45fe-9d6f-eea9ab152ca1", "alt": { "en": "Layered filter media, activated carbon granules, a filter media roll and production machine on a light blue background" } },
-                "side": "left",
-                "tab_label": { "en": "Custom manufacturing" }
-              },
-              {
-                "id": "application",
-                "eyebrow": { "en": "Application-fit inquiry" },
-                "title": { "en": "Tell us where the air needs to be cleaner" },
-                "body": { "en": "Describe the process, airflow and space. We match filter stage, media and frame to the application and quote against your requirement." },
-                "primary_label": { "en": "Start an inquiry" },
-                "primary_href": "/contact",
-                "secondary_label": { "en": "Explore applications" },
-                "secondary_href": "/applications",
-                "image": { "assetId": "4ff27b71-8182-4e87-acbf-7dd53e010177", "alt": { "en": "Bundle of white filter fibres with glowing airflow curves on a blue gradient" } },
-                "side": "right",
-                "tab_label": { "en": "Application fit" }
-              }
-            ]
-          }
-        },
         "faq": {
           "hidden": false,
           "values": {
             "items": [
-              { "id": "dimensions", "group": { "en": "Specifications and customization" }, "question": { "en": "Can you make a filter to my own dimensions?" }, "answer": { "en": "Yes. Send a drawing, a size list or a sample. We confirm media, frame and structure with you before production." } },
-              { "id": "quote-info", "group": { "en": "Specifications and customization" }, "question": { "en": "What information helps you quote fastest?" }, "answer": { "en": "The application, dimensions, quantity, target filter stage and any temperature, humidity or contaminant details." } },
-              { "id": "media-only", "group": { "en": "Specifications and customization" }, "question": { "en": "Do you supply filter media without converting it into filters?" }, "answer": { "en": "Yes. Meltblown and nonwoven media and filter cotton can be supplied in rolls or cut to size." } },
-              { "id": "moq", "group": { "en": "MOQ and samples" }, "question": { "en": "What is the minimum order quantity?" }, "answer": { "en": "The stated minimums are 500 m of filter media, 100 filters, or 300 HEPA filter panels. Please confirm the specification and quantity in your inquiry." } },
-              { "id": "sample", "group": { "en": "MOQ and samples" }, "question": { "en": "Can I request a sample first?" }, "answer": { "en": "Sample arrangements depend on the product. Ask in your inquiry and we confirm what can be prepared and on what terms." } },
-              { "id": "lead-time", "group": { "en": "Ordering and lead time" }, "question": { "en": "How long does production take?" }, "answer": { "en": "We give planning references by product family on this page. Firm timing is confirmed once specification and quantity are agreed." } },
-              { "id": "order", "group": { "en": "Ordering and lead time" }, "question": { "en": "How do we place an order?" }, "answer": { "en": "Send an inquiry, confirm specification and quotation, then production is planned for the confirmed order." } },
-              { "id": "inspection", "group": { "en": "Inspection" }, "question": { "en": "Can we agree inspection requirements in advance?" }, "answer": { "en": "Yes. Raise inspection or documentation needs in your inquiry so they are discussed during order confirmation." } },
-              { "id": "certificates", "group": { "en": "Inspection" }, "question": { "en": "Which management-system certificates do you hold?" }, "answer": { "en": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018. Details are shown in the certification section and on the Quality page." } }
+              {
+                "id": "dimensions",
+                "group": {
+                  "en": "Specifications and customization"
+                },
+                "answer": {
+                  "en": "Yes. We can develop sizes, materials, colours and processes to suit your requirements, and provide OEM/ODM design, sampling and bulk production based on your brand and technical requirements."
+                },
+                "question": {
+                  "en": "Can you customize products and provide OEM or ODM services?"
+                }
+              },
+              {
+                "id": "quote-info",
+                "group": {
+                  "en": "Specifications and customization"
+                },
+                "answer": {
+                  "en": "Service life depends on operating conditions. Typical references are 2–4 months for pre-filters, 3–6 months for medium-efficiency filters and 8–12 months for HEPA filters with upstream filters properly maintained. Differential pressure and regular technical inspection determine replacement. Pre-filters capture particles of 5 micrometres and above; selected models are washable. Medium-efficiency filters capture 1–5 micrometre particles and protect HEPA media. H13/H14 HEPA options address 0.3-micrometre particles. We can help plan spare-filter quantities."
+                },
+                "question": {
+                  "en": "What affects filter service life and replacement?"
+                }
+              },
+              {
+                "id": "media-only",
+                "group": {
+                  "en": "Specifications and customization"
+                },
+                "answer": {
+                  "en": "Yes. Meltblown and nonwoven media and filter cotton can be supplied in rolls or cut to size. Applications include microelectronics, terminal air conditioning, biological laboratories, food and beverage production, pharmaceuticals, lithium batteries, semiconductors, hospitals, automotive painting, solar photovoltaics, membrane manufacturing, the nuclear industry, residential fresh-air systems, commercial HVAC, animal husbandry and farming."
+                },
+                "question": {
+                  "en": "Do you supply filter media without converting it into filters? Which industries use your products?"
+                }
+              },
+              {
+                "id": "moq",
+                "group": {
+                  "en": "MOQ and samples"
+                },
+                "answer": {
+                  "en": "The minimum order is 500 metres for filter media, 100 units for filters and 300 pieces for HEPA filter elements."
+                },
+                "question": {
+                  "en": "What is the minimum order quantity?"
+                }
+              },
+              {
+                "id": "sample",
+                "group": {
+                  "en": "MOQ and samples"
+                },
+                "answer": {
+                  "en": "Standard small samples are free, with freight payable by the recipient. Custom samples incur a sampling fee, which can be refunded or credited against a confirmed bulk order. Standard small filter-cotton samples are dispatched in 1–3 working days. Custom samples normally take 5–7 working days, depending on process complexity. Custom orders proceed to bulk production after sample approval, with the approved sample used as the material and process reference."
+                },
+                "question": {
+                  "en": "Can I request a sample first? How long do samples take, and are they approved before production?"
+                }
+              },
+              {
+                "id": "lead-time",
+                "group": {
+                  "en": "Ordering and lead time"
+                },
+                "answer": {
+                  "en": "General order planning is 12–25 days, depending on quantity and process complexity. Product-family references are 7–10 days for a standard 40-foot high-cube container of filter media, 10–15 days for pre- and medium-efficiency filters, and 20–25 days for HEPA filters. The schedule is confirmed with the order. Peak-season changes are discussed in advance; expedited production can be considered for urgent orders."
+                },
+                "question": {
+                  "en": "How long does production take?"
+                }
+              },
+              {
+                "id": "order",
+                "group": {
+                  "en": "Ordering and lead time"
+                },
+                "answer": {
+                  "en": "Send an inquiry, confirm specification and quotation, then production is planned for the confirmed order. Pricing is tiered by quantity, specifications and customization, with dedicated arrangements for regular bulk customers. Standard neutral packaging is included; international freight and taxes are excluded. Specified packaging and EXW/FOB quotations can be arranged. Raw-material and exchange-rate changes may affect new quotations and are discussed in advance; confirmed-order pricing remains fixed."
+                },
+                "question": {
+                  "en": "How do we place an order? How are prices, packaging and trade terms agreed?"
+                }
+              },
+              {
+                "id": "inspection",
+                "group": {
+                  "en": "Inspection"
+                },
+                "answer": {
+                  "en": "Product data sheets and factory inspection reports are available. Third-party test reports can be arranged to meet customer requirements. Third-party inspection services are not offered. Inspection covers incoming materials, processing, assembly and finished-goods storage, with designated inspectors at each stage. We provide regular progress updates and can supply production photos or videos on request. Our recorded order on-time delivery rate is above 98%."
+                },
+                "question": {
+                  "en": "Which technical documents and inspection services are available? How do you monitor production and communicate progress?"
+                }
+              },
+              {
+                "id": "certificates",
+                "group": {
+                  "en": "Inspection"
+                },
+                "answer": {
+                  "en": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018. Details are shown in the certification section and on the Quality page."
+                },
+                "question": {
+                  "en": "Which management-system certificates do you hold?"
+                }
+              }
             ]
           }
         },
         "seo": {
           "hidden": false,
           "values": {
-            "title": { "en": "Qili Air Filters | Filter Media Manufacturer in Kunshan" },
-            "description": { "en": "Qili Air Filters manufactures pre-filters, bag filters, HEPA filters, chemical filters and filter media in Kunshan, China. Request a quote." }
+            "title": {
+              "en": "Qili Air Filters | Filter Media Manufacturer in Kunshan"
+            },
+            "description": {
+              "en": "Qili Air Filters manufactures pre-filters, bag filters, HEPA filters, chemical filters and filter media in Kunshan, China. Request a quote."
+            }
+          }
+        },
+        "hero": {
+          "hidden": false,
+          "values": {
+            "slides": [
+              {
+                "id": "range",
+                "body": {
+                  "en": "Panel, bag, HEPA, chemical, high-temperature and oil-mist filters, plus filter media and humidifier pads. Choose by stage, structure and media."
+                },
+                "side": "left",
+                "image": {
+                  "alt": {
+                    "en": "Cylindrical filters, filter roll, carbon panel and filter sheets arranged on a reflective teal surface"
+                  },
+                  "assetId": "7db893ab-e76f-4dc7-84e6-608f158b6fb3"
+                },
+                "title": {
+                  "en": "From pre-filters to HEPA, filter media to finished units"
+                },
+                "eyebrow": {
+                  "en": "Product range"
+                },
+                "tab_label": {
+                  "en": "Product range"
+                },
+                "primary_href": "/products",
+                "primary_label": {
+                  "en": "Browse products"
+                },
+                "secondary_href": "/contact",
+                "secondary_label": {
+                  "en": "Request a quote"
+                }
+              },
+              {
+                "id": "manufacturing",
+                "body": {
+                  "en": "Media production, pleating, framing and assembly in Kunshan. Send a drawing, a sample or a size list and we plan the build with you."
+                },
+                "side": "left",
+                "image": {
+                  "alt": {
+                    "en": "Layered filter media, activated carbon granules, a filter media roll and production machine on a light blue background"
+                  },
+                  "assetId": "2fbd8da7-fb7c-45fe-9d6f-eea9ab152ca1"
+                },
+                "title": {
+                  "en": "Made to your dimensions, media and frame"
+                },
+                "eyebrow": {
+                  "en": "Manufacturing and customization"
+                },
+                "tab_label": {
+                  "en": "Custom manufacturing"
+                },
+                "primary_href": "/capabilities",
+                "primary_label": {
+                  "en": "See our capabilities"
+                },
+                "secondary_href": "/contact",
+                "secondary_label": {
+                  "en": "Send a drawing"
+                }
+              },
+              {
+                "id": "application",
+                "body": {
+                  "en": "Describe the process, airflow and space. We match filter stage, media and frame to the application and quote against your requirement."
+                },
+                "side": "right",
+                "image": {
+                  "alt": {
+                    "en": "Bundle of white filter fibres with glowing airflow curves on a blue gradient"
+                  },
+                  "assetId": "4ff27b71-8182-4e87-acbf-7dd53e010177"
+                },
+                "title": {
+                  "en": "Tell us where the air needs to be cleaner"
+                },
+                "eyebrow": {
+                  "en": "Application-fit inquiry"
+                },
+                "tab_label": {
+                  "en": "Application fit"
+                },
+                "primary_href": "/contact",
+                "primary_label": {
+                  "en": "Start an inquiry"
+                },
+                "secondary_href": "/applications",
+                "secondary_label": {
+                  "en": "Explore applications"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "order": [
+        "gallery"
+      ],
+      "modules": {
+        "gallery": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "view-cac58295f429",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Factory exterior"
+                  },
+                  "assetId": "89694124-0a10-4cfd-b2ec-c7b44b859052"
+                },
+                "caption": {
+                  "en": "Factory exterior"
+                }
+              },
+              {
+                "id": "view-d337752dfbc0",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Factory exterior"
+                  },
+                  "assetId": "a0d850ad-a147-4c13-8d33-3631295bd754"
+                },
+                "caption": {
+                  "en": "Factory exterior"
+                }
+              },
+              {
+                "id": "view-f8fbb5b80b65",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Factory exterior"
+                  },
+                  "assetId": "2995d621-ed6a-43ab-86d6-2b719e2cd336"
+                },
+                "caption": {
+                  "en": "Factory exterior"
+                }
+              },
+              {
+                "id": "view-a9bce9a3509e",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Factory exterior"
+                  },
+                  "assetId": "c31fe566-0657-4b06-868d-c94df53be5ab"
+                },
+                "caption": {
+                  "en": "Factory exterior"
+                }
+              },
+              {
+                "id": "view-20296f9d877e",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Production equipment"
+                  },
+                  "assetId": "5bef45f7-da8b-4f69-aeee-760f9dabd293"
+                },
+                "caption": {
+                  "en": "Production equipment"
+                }
+              },
+              {
+                "id": "view-0cce28493bb7",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Factory exterior"
+                  },
+                  "assetId": "eef535d2-4800-4c41-8754-aa30d4277e38"
+                },
+                "caption": {
+                  "en": "Factory exterior"
+                }
+              },
+              {
+                "id": "view-be0f257c44cf",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Production equipment"
+                  },
+                  "assetId": "8bd6a7a1-bbaf-42b3-9563-8f62da0746c0"
+                },
+                "caption": {
+                  "en": "Production equipment"
+                }
+              },
+              {
+                "id": "view-170ddcebc609",
+                "group": {
+                  "en": "Clean production areas"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Production corridor"
+                  },
+                  "assetId": "8ee0bea9-1e95-4006-89ee-30df3be7fec0"
+                },
+                "caption": {
+                  "en": "Production corridor"
+                }
+              },
+              {
+                "id": "view-a3af2c185493",
+                "group": {
+                  "en": "Clean production areas"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Production corridor"
+                  },
+                  "assetId": "f2a2953e-4461-4c97-9e0f-4b7111d6f680"
+                },
+                "caption": {
+                  "en": "Production corridor"
+                }
+              },
+              {
+                "id": "view-d0059ffc16cd",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Workshop information board"
+                  },
+                  "assetId": "80482d57-8ac7-400c-8575-763351c784a1"
+                },
+                "caption": {
+                  "en": "Workshop information board"
+                }
+              },
+              {
+                "id": "view-488fa47852fc",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media roll storage"
+                  },
+                  "assetId": "c58ef8b6-dd38-4e29-922a-20ae0903c721"
+                },
+                "caption": {
+                  "en": "Filter-media roll storage"
+                }
+              },
+              {
+                "id": "view-24ccb0f96f5a",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Material storage"
+                  },
+                  "assetId": "b5ebfde2-0b22-4bbc-8d14-c8de9ca45fbb"
+                },
+                "caption": {
+                  "en": "Material storage"
+                }
+              },
+              {
+                "id": "view-73de5459fec1",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Material storage"
+                  },
+                  "assetId": "513a8530-f137-4d05-a331-869bdbad9877"
+                },
+                "caption": {
+                  "en": "Material storage"
+                }
+              },
+              {
+                "id": "view-0d7e75d11ba4",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Material storage"
+                  },
+                  "assetId": "03c60a8e-3d77-4fa8-af15-4cf57ea1d893"
+                },
+                "caption": {
+                  "en": "Material storage"
+                }
+              },
+              {
+                "id": "view-a91d40afd387",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Warehouse"
+                  },
+                  "assetId": "c56e0676-8aec-44e9-8be4-bd73a50757af"
+                },
+                "caption": {
+                  "en": "Warehouse"
+                }
+              },
+              {
+                "id": "view-d872b8a2dd9f",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Warehouse"
+                  },
+                  "assetId": "90d1fdb5-e448-4268-af79-085bcff8394d"
+                },
+                "caption": {
+                  "en": "Warehouse"
+                }
+              },
+              {
+                "id": "view-cdbd068a9eba",
+                "group": {
+                  "en": "Materials and storage"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Warehouse"
+                  },
+                  "assetId": "e58c0262-0366-42ad-8a2c-47566ff1fc83"
+                },
+                "caption": {
+                  "en": "Warehouse"
+                }
+              },
+              {
+                "id": "view-df4b7309532a",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Production equipment"
+                  },
+                  "assetId": "2fa9a594-f45c-48e7-a50e-1b4a4de3fe16"
+                },
+                "caption": {
+                  "en": "Production equipment"
+                }
+              },
+              {
+                "id": "view-a42e6095593f",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Company honours display"
+                  },
+                  "assetId": "a8b9aedd-d1d7-4a10-93b1-520a6def83c9"
+                },
+                "caption": {
+                  "en": "Company honours display"
+                }
+              },
+              {
+                "id": "view-66baef85a70f",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Material loading"
+                  },
+                  "assetId": "247c41a6-fe7f-4eb9-ac82-31859128a30a"
+                },
+                "caption": {
+                  "en": "Material loading"
+                }
+              },
+              {
+                "id": "view-03c879418185",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Bag-filter assembly"
+                  },
+                  "assetId": "4ee97278-7872-4375-8a96-83bf532d5eff"
+                },
+                "caption": {
+                  "en": "Bag-filter assembly"
+                }
+              },
+              {
+                "id": "view-575a8f0d8010",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Bag-filter assembly line"
+                  },
+                  "assetId": "2b0a4d82-c225-4ca8-9ea5-3c540f88875c"
+                },
+                "caption": {
+                  "en": "Bag-filter assembly line"
+                }
+              },
+              {
+                "id": "view-478f1f59ba1c",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Bag-filter assembly line"
+                  },
+                  "assetId": "3d0d77e6-c07b-425f-8adf-cc450002a4fc"
+                },
+                "caption": {
+                  "en": "Bag-filter assembly line"
+                }
+              },
+              {
+                "id": "view-b63179685670",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Bag-filter assembly equipment"
+                  },
+                  "assetId": "0ae3a290-5bc0-46e4-b97c-8100c778eb8e"
+                },
+                "caption": {
+                  "en": "Bag-filter assembly equipment"
+                }
+              },
+              {
+                "id": "view-fc317e78628e",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Automatic inner-frame forming"
+                  },
+                  "assetId": "e335eb95-a711-4f63-a75e-e41a2a569272"
+                },
+                "caption": {
+                  "en": "Automatic inner-frame forming"
+                }
+              },
+              {
+                "id": "view-12cb7948fba0",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Automatic inner-frame forming"
+                  },
+                  "assetId": "c7c37e11-e9e5-41f0-a042-76c3201f6d46"
+                },
+                "caption": {
+                  "en": "Automatic inner-frame forming"
+                }
+              },
+              {
+                "id": "view-26f59e1d38e4",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Company reception"
+                  },
+                  "assetId": "1249f73b-c8f8-427d-9110-0e677955cf3c"
+                },
+                "caption": {
+                  "en": "Company reception"
+                }
+              },
+              {
+                "id": "view-b56c1848a9f8",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Company reception"
+                  },
+                  "assetId": "d9a69ed5-667d-4abb-892f-72eacf33838c"
+                },
+                "caption": {
+                  "en": "Company reception"
+                }
+              },
+              {
+                "id": "view-900264a29ddd",
+                "group": {
+                  "en": "Factory and workplace"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Company reception"
+                  },
+                  "assetId": "85a75324-9106-402f-a61e-fe323498a871"
+                },
+                "caption": {
+                  "en": "Company reception"
+                }
+              },
+              {
+                "id": "view-4235d4f0a0a3",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media pleating"
+                  },
+                  "assetId": "2e5ce460-112f-4115-a046-d0ca8f5e754b"
+                },
+                "caption": {
+                  "en": "Filter-media pleating"
+                }
+              },
+              {
+                "id": "view-90a8c94daef7",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media pleating"
+                  },
+                  "assetId": "af2fcbe9-d506-4b3a-999a-0d6acf34d402"
+                },
+                "caption": {
+                  "en": "Filter-media pleating"
+                }
+              },
+              {
+                "id": "view-74890e7b2a4c",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media pleating"
+                  },
+                  "assetId": "7ea2c2ec-6eea-4569-afac-bf213ba2188c"
+                },
+                "caption": {
+                  "en": "Filter-media pleating"
+                }
+              },
+              {
+                "id": "view-21768d604d59",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media pleating"
+                  },
+                  "assetId": "32d5e44d-7886-4ce4-bdf8-60f4c8038b63"
+                },
+                "caption": {
+                  "en": "Filter-media pleating"
+                }
+              },
+              {
+                "id": "view-f0fb3775a43a",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media pleating"
+                  },
+                  "assetId": "6eddf321-c53c-4553-9457-fb54c68a58bc"
+                },
+                "caption": {
+                  "en": "Filter-media pleating"
+                }
+              },
+              {
+                "id": "view-f8ea5208b744",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media pleating"
+                  },
+                  "assetId": "1ed89ce1-d29c-4e0a-9c0b-4dd6df2dd01b"
+                },
+                "caption": {
+                  "en": "Filter-media pleating"
+                }
+              },
+              {
+                "id": "view-0d126db04e5a",
+                "group": {
+                  "en": "Clean production areas"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Cleanroom"
+                  },
+                  "assetId": "45690b0c-c6c3-47ac-94a5-2649b338a5cd"
+                },
+                "caption": {
+                  "en": "Cleanroom"
+                }
+              },
+              {
+                "id": "view-150ad4e2813b",
+                "group": {
+                  "en": "Clean production areas"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Clean production area"
+                  },
+                  "assetId": "fe7402d1-8a3b-4e20-be15-683ed0f07662"
+                },
+                "caption": {
+                  "en": "Clean production area"
+                }
+              },
+              {
+                "id": "view-6f87ec87af02",
+                "group": {
+                  "en": "Clean production areas"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Cleanroom air shower"
+                  },
+                  "assetId": "4ba7d3c0-336d-47c6-a8ae-fb43e39e449f"
+                },
+                "caption": {
+                  "en": "Cleanroom air shower"
+                }
+              },
+              {
+                "id": "view-ef39cb918c58",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Separatorless media gluing"
+                  },
+                  "assetId": "0a6cf989-4551-4df9-97e9-4e84ab7a33b5"
+                },
+                "caption": {
+                  "en": "Separatorless media gluing"
+                }
+              },
+              {
+                "id": "view-fa27945d10f6",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Separatorless media gluing"
+                  },
+                  "assetId": "03d2a35e-9c6d-4fb6-8f5d-ed47c07c25e2"
+                },
+                "caption": {
+                  "en": "Separatorless media gluing"
+                }
+              },
+              {
+                "id": "view-85a5fffcbd6d",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Separator filter pleating"
+                  },
+                  "assetId": "2c58cbb1-c401-4f73-b363-502ac00d41e7"
+                },
+                "caption": {
+                  "en": "Separator filter pleating"
+                }
+              },
+              {
+                "id": "view-ee8c870d8bcd",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Separator filter pleating"
+                  },
+                  "assetId": "6f106157-8164-4023-ba61-e5c7d3db8cb9"
+                },
+                "caption": {
+                  "en": "Separator filter pleating"
+                }
+              },
+              {
+                "id": "view-4b3f06024a00",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Separator filter pleating"
+                  },
+                  "assetId": "0172012c-d235-4571-a4fe-020ca0836c31"
+                },
+                "caption": {
+                  "en": "Separator filter pleating"
+                }
+              },
+              {
+                "id": "view-568501ac682b",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Filter-media cutting"
+                  },
+                  "assetId": "0a9a0a8e-e770-4a05-9181-8fac50149d39"
+                },
+                "caption": {
+                  "en": "Filter-media cutting"
+                }
+              },
+              {
+                "id": "view-3b1db3ae37d4",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Automatic forming"
+                  },
+                  "assetId": "572f3b1b-d685-4ac6-9b52-d5e1afc79a9c"
+                },
+                "caption": {
+                  "en": "Automatic forming"
+                }
+              },
+              {
+                "id": "view-689addd87e3a",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Ultrasonic bag-media production"
+                  },
+                  "assetId": "9a9ccd84-f8c6-4386-9ffb-090f9bf06f69"
+                },
+                "caption": {
+                  "en": "Ultrasonic bag-media production"
+                }
+              },
+              {
+                "id": "view-16695e67e10a",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Ultrasonic bag-media production"
+                  },
+                  "assetId": "21d1bd21-2db7-4c12-9e79-7f9f80926e76"
+                },
+                "caption": {
+                  "en": "Ultrasonic bag-media production"
+                }
+              },
+              {
+                "id": "view-43c75abd3dd5",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Ultrasonic bag-media production"
+                  },
+                  "assetId": "4d558edd-505c-464d-a908-2655c085b683"
+                },
+                "caption": {
+                  "en": "Ultrasonic bag-media production"
+                }
+              },
+              {
+                "id": "view-c20748fd0b05",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Ultrasonic bag-media production"
+                  },
+                  "assetId": "5618152d-68c5-4f81-af02-093dd1186431"
+                },
+                "caption": {
+                  "en": "Ultrasonic bag-media production"
+                }
+              },
+              {
+                "id": "view-de1748bcc99c",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Ultrasonic bag-media production"
+                  },
+                  "assetId": "30192395-923b-483d-8b8c-8e90cb82a2cc"
+                },
+                "caption": {
+                  "en": "Ultrasonic bag-media production"
+                }
+              },
+              {
+                "id": "view-43e9dcc33130",
+                "group": {
+                  "en": "Media processing"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Ultrasonic bag-media production"
+                  },
+                  "assetId": "59c0a0f4-a6b3-4c7b-82ad-de02037d4e3c"
+                },
+                "caption": {
+                  "en": "Ultrasonic bag-media production"
+                }
+              },
+              {
+                "id": "view-58922e4446f2",
+                "group": {
+                  "en": "Forming and assembly"
+                },
+                "image": {
+                  "alt": {
+                    "en": "Qili — Galvanized frame forming"
+                  },
+                  "assetId": "3e6e3c18-bbae-4bb0-a5f2-a3bcc5dc51fb"
+                },
+                "caption": {
+                  "en": "Galvanized frame forming"
+                }
+              }
+            ]
           }
         }
       }

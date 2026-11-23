@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { Logo } from '@/components/layout/logo'
-import { site, mainNav } from '@/lib/site'
+import { mainNav } from '@/lib/site'
+import { getPublishedSiteSettings } from '@/lib/site-settings'
 import { getCategories } from '@/lib/repositories/products'
 import { compactFooterCategoryCount } from '@/lib/content/customer-materials.mjs'
 
 export async function SiteFooter() {
+  const site = await getPublishedSiteSettings()
   const categories = await getCategories()
   return (
     <footer className="relative border-t border-border bg-mist">

@@ -4,6 +4,7 @@ import { PageHero } from '@/components/layout/page-hero'
 import { CtaBand } from '@/components/layout/cta-band'
 import { Reveal } from '@/components/motion/reveal'
 import { facilityGallery, productionEquipment } from '@/lib/content/customer-materials.mjs'
+import { getSiteContent } from '@/lib/site-content/site-content'
 
 export const metadata: Metadata = {
   title: 'Manufacturing and Equipment',
@@ -18,7 +19,12 @@ const stages = [
   { title: 'Assembly', text: 'Final assembly into filters and high-efficiency filter units.' },
 ]
 
-export default function CapabilitiesPage() {
+export default async function CapabilitiesPage() {
+  const snapshot = await getSiteContent('en')
+  const galleryModule = snapshot?.pages.find(page => page.key === 'capabilities')?.modules.find(module => module.key === 'gallery')
+  const items = galleryModule?.values.items as Array<{ id: string; image: { url: string; alt: string }; caption: string; group: string }> | undefined
+  const gallery = items?.length ? items.map(item => ({ src: item.image.url, alt: item.image.alt, caption: item.caption, group: item.group })) : facilityGallery.map(item => ({ ...item, group: 'Media processing' }))
+  const groups = [...new Set(gallery.map(item => item.group))]
   return (
     <>
       <PageHero
@@ -65,7 +71,7 @@ export default function CapabilitiesPage() {
             <h2 id="equipment" className="mt-3 text-3xl font-extrabold sm:text-4xl">
               Listed equipment
             </h2>
-            <p className="mt-4 text-muted-foreground">Equipment quantities are taken from Qili&apos;s supplied company workbook. Project-specific tooling and configuration are confirmed during technical review.</p>
+            <p className="mt-4 text-muted-foreground">Our production equipment covers media preparation through finished-filter assembly. Project-specific tooling and configuration are confirmed during technical review.</p>
           </Reveal>
           <ul className="grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:col-span-8">
             {productionEquipment.map((group, i) => (
@@ -80,26 +86,33 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      <section className="container-x py-14 lg:py-20" aria-labelledby="site">
+      <section className="container-x py-14 lg:py-20" aria-labelledby="site" data-hq-content-version={galleryModule ? snapshot?.version : undefined}>
         <Reveal>
           <p className="eyebrow">Inside production</p>
           <h2 id="site" className="mt-3 max-w-2xl text-3xl font-extrabold sm:text-4xl">
-            Equipment and workshop areas supplied by Qili
+            Inside our factory
           </h2>
-          <p className="mt-4 max-w-3xl text-muted-foreground">The photographs below come from the customer&apos;s production archive and show the equipment behind cutting, pleating, forming and assembly.</p>
+          <p className="mt-4 max-w-3xl text-muted-foreground">Explore our production equipment, cleanrooms, material storage and assembly areas in Kunshan.</p>
         </Reveal>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {facilityGallery.map((f) => (
-            <li key={f.src}>
+        <div className="mt-10 space-y-6">
+        {groups.map((group, groupIndex) => (
+          <details key={group} open={groupIndex === 0} className="group border-b border-border pb-6">
+          <summary className="cursor-pointer py-3 text-xl font-bold">{group} <span className="ml-2 text-sm font-normal text-muted-foreground">Explore photographs</span></summary>
+          <ul className="mt-6 columns-1 gap-6 sm:columns-2 lg:columns-3">
+          {gallery.filter(item => item.group === group).map((f) => (
+            <Reveal as="li" key={f.src} className="mb-6 break-inside-avoid">
               <figure>
                 <div className="overflow-hidden rounded-lg border border-border">
-                  <Image src={f.src} alt={f.alt} width={1800} height={1200} sizes="(min-width:1024px) 30vw, (min-width:640px) 46vw, 92vw" className="aspect-[3/2] h-auto w-full object-cover" />
+                  <Image src={f.src} alt={f.alt} width={1800} height={1200} sizes="(min-width:1024px) 30vw, (min-width:640px) 46vw, 92vw" className="h-auto w-full" />
                 </div>
                 <figcaption className="mt-3 text-sm text-muted-foreground">{f.caption}</figcaption>
               </figure>
-            </li>
+            </Reveal>
           ))}
-        </ul>
+          </ul>
+          </details>
+        ))}
+        </div>
       </section>
 
       <CtaBand title="Send a drawing or sample" text="Share dimensions, media and frame requirements. We will plan the build with you." />

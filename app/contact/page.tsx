@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 import { PageHero } from '@/components/layout/page-hero'
 import { RfqForm } from '@/components/inquiry/rfq-form'
 import { Reveal } from '@/components/motion/reveal'
-import { site } from '@/lib/site'
+import { getPublishedSiteSettings } from '@/lib/site-settings'
 
 export const metadata: Metadata = {
   title: 'Request a Quote',
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ product?: string; application?: string }> }) {
   const { product, application } = await searchParams
+  const site = await getPublishedSiteSettings()
 
   return (
     <>

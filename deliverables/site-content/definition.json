@@ -1,8 +1,4 @@
 {
-  "version": 1,
-  "fontFamilies": [
-    { "key": "site-sans", "label": "Manrope" }
-  ],
   "pages": [
     {
       "key": "home",
@@ -13,61 +9,231 @@
           "key": "hero",
           "type": "hero",
           "label": "Homepage banner carousel",
-          "canHide": false,
-          "canReorder": false,
           "fields": [
             {
               "key": "slides",
               "type": "repeat",
               "label": "Banner slides",
-              "maxItems": 3,
               "fields": [
-                { "key": "eyebrow", "type": "text", "label": "Eyebrow", "localized": true, "required": true, "maxLength": 90 },
-                { "key": "title", "type": "text", "label": "Heading", "localized": true, "required": true, "maxLength": 120, "typography": { "fontFamilies": ["site-sans"], "fontWeights": [700, 800], "fontSize": { "min": 28, "max": 48 }, "defaults": { "fontFamily": "site-sans", "fontWeight": 800, "fontSizeDesktop": 42, "fontSizeMobile": 30 } } },
-                { "key": "body", "type": "textarea", "label": "Description", "localized": true, "required": true, "maxLength": 360 },
-                { "key": "primary_label", "type": "text", "label": "Primary button", "localized": true, "required": true, "maxLength": 50 },
-                { "key": "primary_href", "type": "link", "label": "Primary target", "required": true },
-                { "key": "secondary_label", "type": "text", "label": "Secondary button", "localized": true, "required": true, "maxLength": 50 },
-                { "key": "secondary_href", "type": "link", "label": "Secondary target", "required": true },
-                { "key": "image", "type": "image", "label": "Banner image", "required": true },
-                { "key": "side", "type": "text", "label": "Content side", "required": true, "maxLength": 5 },
-                { "key": "tab_label", "type": "text", "label": "Slide tab", "localized": true, "required": true, "maxLength": 50 }
-              ]
+                {
+                  "key": "eyebrow",
+                  "type": "text",
+                  "label": "Eyebrow",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 90
+                },
+                {
+                  "key": "title",
+                  "type": "text",
+                  "label": "Heading",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 120,
+                  "typography": {
+                    "defaults": {
+                      "fontFamily": "site-sans",
+                      "fontWeight": 800,
+                      "fontSizeMobile": 30,
+                      "fontSizeDesktop": 42
+                    },
+                    "fontSize": {
+                      "max": 48,
+                      "min": 28
+                    },
+                    "fontWeights": [
+                      700,
+                      800
+                    ],
+                    "fontFamilies": [
+                      "site-sans"
+                    ]
+                  }
+                },
+                {
+                  "key": "body",
+                  "type": "textarea",
+                  "label": "Description",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 360
+                },
+                {
+                  "key": "primary_label",
+                  "type": "text",
+                  "label": "Primary button",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 50
+                },
+                {
+                  "key": "primary_href",
+                  "type": "link",
+                  "label": "Primary target",
+                  "required": true
+                },
+                {
+                  "key": "secondary_label",
+                  "type": "text",
+                  "label": "Secondary button",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 50
+                },
+                {
+                  "key": "secondary_href",
+                  "type": "link",
+                  "label": "Secondary target",
+                  "required": true
+                },
+                {
+                  "key": "image",
+                  "type": "image",
+                  "label": "Banner image",
+                  "required": true
+                },
+                {
+                  "key": "side",
+                  "type": "text",
+                  "label": "Content side",
+                  "required": true,
+                  "maxLength": 5
+                },
+                {
+                  "key": "tab_label",
+                  "type": "text",
+                  "label": "Slide tab",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 50
+                }
+              ],
+              "maxItems": 3
             }
-          ]
+          ],
+          "canHide": false,
+          "canReorder": false
         },
         {
           "key": "faq",
           "type": "faq",
           "label": "Homepage buyer FAQ",
+          "fields": [
+            {
+              "key": "items",
+              "type": "repeat",
+              "label": "Questions",
+              "fields": [
+                {
+                  "key": "group",
+                  "type": "text",
+                  "label": "Group",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 90
+                },
+                {
+                  "key": "question",
+                  "type": "text",
+                  "label": "Question",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 180
+                },
+                {
+                  "key": "answer",
+                  "type": "textarea",
+                  "label": "Answer",
+                  "required": true,
+                  "localized": true,
+                  "maxLength": 900
+                }
+              ],
+              "maxItems": 12
+            }
+          ],
+          "canHide": false,
+          "canReorder": false
+        },
+        {
+          "key": "seo",
+          "type": "seo",
+          "label": "Homepage SEO",
+          "fields": [
+            {
+              "key": "title",
+              "type": "text",
+              "label": "SEO title",
+              "required": true,
+              "localized": true,
+              "maxLength": 70
+            },
+            {
+              "key": "description",
+              "type": "textarea",
+              "label": "SEO description",
+              "required": true,
+              "localized": true,
+              "maxLength": 170
+            }
+          ],
+          "canHide": false,
+          "canReorder": false
+        }
+      ]
+    },
+    {
+      "key": "capabilities",
+      "path": "/capabilities",
+      "label": "Manufacturing facility",
+      "modules": [
+        {
+          "key": "gallery",
+          "type": "gallery",
+          "label": "Factory photographs",
           "canHide": false,
           "canReorder": false,
           "fields": [
             {
               "key": "items",
               "type": "repeat",
-              "label": "Questions",
-              "maxItems": 12,
+              "label": "Photographs",
+              "maxItems": 80,
               "fields": [
-                { "key": "group", "type": "text", "label": "Group", "localized": true, "required": true, "maxLength": 90 },
-                { "key": "question", "type": "text", "label": "Question", "localized": true, "required": true, "maxLength": 180 },
-                { "key": "answer", "type": "textarea", "label": "Answer", "localized": true, "required": true, "maxLength": 900 }
+                {
+                  "key": "image",
+                  "type": "image",
+                  "label": "Photograph",
+                  "required": true
+                },
+                {
+                  "key": "caption",
+                  "type": "text",
+                  "label": "Caption",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 150
+                },
+                {
+                  "key": "group",
+                  "type": "text",
+                  "label": "Business group",
+                  "localized": true,
+                  "required": true,
+                  "maxLength": 80
+                }
               ]
             }
           ]
-        },
-        {
-          "key": "seo",
-          "type": "seo",
-          "label": "Homepage SEO",
-          "canHide": false,
-          "canReorder": false,
-          "fields": [
-            { "key": "title", "type": "text", "label": "SEO title", "localized": true, "required": true, "maxLength": 70 },
-            { "key": "description", "type": "textarea", "label": "SEO description", "localized": true, "required": true, "maxLength": 170 }
-          ]
         }
       ]
+    }
+  ],
+  "version": 2,
+  "fontFamilies": [
+    {
+      "key": "site-sans",
+      "label": "Manrope"
     }
   ]
 }

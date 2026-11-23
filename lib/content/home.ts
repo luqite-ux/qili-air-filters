@@ -178,63 +178,63 @@ const en: HomeContent = {
     },
   ],
   faq: [
-    {
-      group: 'Specifications and customization',
-      items: [
-        {
-          q: 'Can you make a filter to my own dimensions?',
-          a: 'Yes. Send a drawing, a size list or a sample. We confirm media, frame and structure with you before production.',
-        },
-        {
-          q: 'What information helps you quote fastest?',
-          a: 'The application, dimensions, quantity, target filter stage and any temperature, humidity or contaminant details.',
-        },
-        {
-          q: 'Do you supply filter media without converting it into filters?',
-          a: 'Yes. Meltblown and nonwoven media and filter cotton can be supplied in rolls or cut to size.',
-        },
-      ],
-    },
-    {
-      group: 'MOQ and samples',
-      items: [
-        {
-          q: 'What is the minimum order quantity?',
-          a: 'The stated minimums are 500 m of filter media, 100 filters, or 300 HEPA filter panels. Please confirm the specification and quantity in your inquiry.',
-        },
-        {
-          q: 'Can I request a sample first?',
-          a: 'Sample arrangements depend on the product. Ask in your inquiry and we confirm what can be prepared and on what terms.',
-        },
-      ],
-    },
-    {
-      group: 'Ordering and lead time',
-      items: [
-        {
-          q: 'How long does production take?',
-          a: 'We give planning references by product family on this page. Firm timing is confirmed once specification and quantity are agreed.',
-        },
-        {
-          q: 'How do we place an order?',
-          a: 'Send an inquiry, confirm specification and quotation, then production is planned for the confirmed order.',
-        },
-      ],
-    },
-    {
-      group: 'Inspection',
-      items: [
-        {
-          q: 'Can we agree inspection requirements in advance?',
-          a: 'Yes. Raise inspection or documentation needs in your inquiry so they are discussed during order confirmation.',
-        },
-        {
-          q: 'Which management-system certificates do you hold?',
-          a: 'ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018. Details are shown in the certification section and on the Quality page.',
-        },
-      ],
-    },
-  ],
+  {
+    "group": "Specifications and customization",
+    "items": [
+      {
+        "q": "Can you customize products and provide OEM or ODM services?",
+        "a": "Yes. We can develop sizes, materials, colours and processes to suit your requirements, and provide OEM/ODM design, sampling and bulk production based on your brand and technical requirements."
+      },
+      {
+        "q": "What affects filter service life and replacement?",
+        "a": "Service life depends on operating conditions. Typical references are 2–4 months for pre-filters, 3–6 months for medium-efficiency filters and 8–12 months for HEPA filters with upstream filters properly maintained. Differential pressure and regular technical inspection determine replacement. Pre-filters capture particles of 5 micrometres and above; selected models are washable. Medium-efficiency filters capture 1–5 micrometre particles and protect HEPA media. H13/H14 HEPA options address 0.3-micrometre particles. We can help plan spare-filter quantities."
+      },
+      {
+        "q": "Do you supply filter media without converting it into filters? Which industries use your products?",
+        "a": "Yes. Meltblown and nonwoven media and filter cotton can be supplied in rolls or cut to size. Applications include microelectronics, terminal air conditioning, biological laboratories, food and beverage production, pharmaceuticals, lithium batteries, semiconductors, hospitals, automotive painting, solar photovoltaics, membrane manufacturing, the nuclear industry, residential fresh-air systems, commercial HVAC, animal husbandry and farming."
+      }
+    ]
+  },
+  {
+    "group": "MOQ and samples",
+    "items": [
+      {
+        "q": "What is the minimum order quantity?",
+        "a": "The minimum order is 500 metres for filter media, 100 units for filters and 300 pieces for HEPA filter elements."
+      },
+      {
+        "q": "Can I request a sample first? How long do samples take, and are they approved before production?",
+        "a": "Standard small samples are free, with freight payable by the recipient. Custom samples incur a sampling fee, which can be refunded or credited against a confirmed bulk order. Standard small filter-cotton samples are dispatched in 1–3 working days. Custom samples normally take 5–7 working days, depending on process complexity. Custom orders proceed to bulk production after sample approval, with the approved sample used as the material and process reference."
+      }
+    ]
+  },
+  {
+    "group": "Ordering and lead time",
+    "items": [
+      {
+        "q": "How long does production take?",
+        "a": "General order planning is 12–25 days, depending on quantity and process complexity. Product-family references are 7–10 days for a standard 40-foot high-cube container of filter media, 10–15 days for pre- and medium-efficiency filters, and 20–25 days for HEPA filters. The schedule is confirmed with the order. Peak-season changes are discussed in advance; expedited production can be considered for urgent orders."
+      },
+      {
+        "q": "How do we place an order? How are prices, packaging and trade terms agreed?",
+        "a": "Send an inquiry, confirm specification and quotation, then production is planned for the confirmed order. Pricing is tiered by quantity, specifications and customization, with dedicated arrangements for regular bulk customers. Standard neutral packaging is included; international freight and taxes are excluded. Specified packaging and EXW/FOB quotations can be arranged. Raw-material and exchange-rate changes may affect new quotations and are discussed in advance; confirmed-order pricing remains fixed."
+      }
+    ]
+  },
+  {
+    "group": "Inspection",
+    "items": [
+      {
+        "q": "Which technical documents and inspection services are available? How do you monitor production and communicate progress?",
+        "a": "Product data sheets and factory inspection reports are available. Third-party test reports can be arranged to meet customer requirements. Third-party inspection services are not offered. Inspection covers incoming materials, processing, assembly and finished-goods storage, with designated inspectors at each stage. We provide regular progress updates and can supply production photos or videos on request. Our recorded order on-time delivery rate is above 98%."
+      },
+      {
+        "q": "Which management-system certificates do you hold?",
+        "a": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018. Details are shown in the certification section and on the Quality page."
+      }
+    ]
+  }
+],
   certifications: [
     {
       id: 'iso-9001',

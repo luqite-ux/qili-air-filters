@@ -1,5 +1,6 @@
 import { DEFAULT_LOCALE, l, la, resolveLocalized, type Localized } from '@/lib/i18n'
-import { getServerDatabase, getTenantId } from '@/lib/supabase/server'
+import { getTenantId } from '@/lib/supabase/server'
+import { readPublicCatalog } from './public-catalog'
 
 /*
  * Integration boundary: replace the demo records below with tenant-scoped backend data.
@@ -306,10 +307,9 @@ function toProduct(raw: RawProduct, locale: string): ProductView {
 }
 
 export async function getCategories(locale: string = DEFAULT_LOCALE): Promise<CategoryView[]> {
-  const db = getServerDatabase(), tenantId = getTenantId()
-  if (!db || !tenantId) return rawCategories.map((c) => toCategory(c, locale))
-  const { data, error } = await db.from('product_categories').select('slug,name,name_en,name_i18n,description,description_en,description_i18n,sort_order').eq('tenant_id', tenantId).eq('is_active', true).order('sort_order').order('id')
-  if (error || !data?.length) return rawCategories.map((c) => toCategory(c, locale))
+  const tenantId = getTenantId()
+  if (!tenantId) throw new Error('Catalogue tenant is not configured')
+  const { categories: data } = await readPublicCatalog(tenantId)
   return data.map((row) => {
     const localizedName = resolveLocalized((row.name_i18n ?? { en: row.name_en || row.name }) as Localized, locale)
     const summary = resolveLocalized((row.description_i18n ?? { en: row.description_en || row.description || '' }) as Localized, locale)
@@ -323,12 +323,10 @@ export async function getCategory(slug: string, locale: string = DEFAULT_LOCALE)
 }
 
 export async function getProducts(locale: string = DEFAULT_LOCALE, categorySlug?: string): Promise<ProductView[]> {
-  const db = getServerDatabase(), tenantId = getTenantId()
-  if (!db || !tenantId) return rawProducts.filter((p) => !categorySlug || p.categorySlug === categorySlug).map((p) => toProduct(p, locale))
-  let query = db.from('products').select('slug,category_slug,name,name_en,name_i18n,description,description_en,description_i18n,overview,overview_en,overview_i18n,features,features_i18n,image_url,specs,extra_data,sort_order').eq('tenant_id', tenantId).eq('is_active', true).order('sort_order').order('id')
-  if (categorySlug) query = query.eq('category_slug', categorySlug)
-  const { data, error } = await query
-  if (error || !data?.length) return rawProducts.filter((p) => !categorySlug || p.categorySlug === categorySlug).map((p) => toProduct(p, locale))
+  const tenantId = getTenantId()
+  if (!tenantId) throw new Error('Catalogue tenant is not configured')
+  const catalog = await readPublicCatalog(tenantId)
+  const data = catalog.products.filter(row => !categorySlug || row.category_slug === categorySlug)
   return data.map((row) => {
     const name = resolveLocalized((row.name_i18n ?? { en: row.name_en || row.name }) as Localized, locale)
     const summary = resolveLocalized((row.description_i18n ?? { en: row.description_en || row.description || '' }) as Localized, locale)

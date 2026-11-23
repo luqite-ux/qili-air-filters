@@ -38,6 +38,7 @@ export default async function ArticlePage({ params }: Params) {
           <Image src={article.coverImage.src} alt={article.coverImage.alt} width={article.coverImage.width} height={article.coverImage.height} sizes="(min-width:1024px) 960px, 92vw" priority className="mx-auto mb-10 h-auto w-full max-w-4xl rounded-lg border border-border" />
         )}
         <div className="mx-auto max-w-2xl space-y-5 text-lg leading-relaxed">
+          {article.bodyHtml && <div className="space-y-5 [&_img]:h-auto [&_img]:max-w-full [&_h2]:text-2xl [&_h2]:font-bold [&_a]:underline" dangerouslySetInnerHTML={{ __html: article.bodyHtml }} />}
           {article.body.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
