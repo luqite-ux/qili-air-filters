@@ -28,6 +28,33 @@ export const applicationGroupLabels: Record<ApplicationGroup, { title: string; b
   building: { title: 'Building and ventilation', blurb: 'Comfort, fresh-air and agricultural ventilation.' },
 }
 
+export async function getApplicationPresentation(locale: string = DEFAULT_LOCALE) {
+  const snapshot = await getSiteContent(locale)
+  const values = snapshot?.pages.find(page => page.key === 'applications')?.modules.find(module => module.key === 'page_copy')?.values
+  const get = (key: string, fallback: string) => typeof values?.[key] === 'string' && values[key] ? values[key] as string : fallback
+  const groups = Array.isArray(values?.groups) ? values.groups : []
+  const labels = { ...applicationGroupLabels }
+  for (const value of groups) {
+    if (!value || typeof value !== 'object') continue
+    const row = value as Record<string, unknown>, group = row.group as ApplicationGroup
+    if (group in labels && typeof row.title === 'string' && typeof row.blurb === 'string') labels[group] = { title: row.title, blurb: row.blurb }
+  }
+  return {
+    groups: labels,
+    heroTitle: get('hero_title', 'Start from where the air is used'),
+    heroLead: get('hero_lead', 'Fields where our filter families apply, each with the product paths to begin with. These are applicable fields, not a list of completed projects.'),
+    ctaTitle: get('cta_title', 'Describe your application'),
+    ctaText: get('cta_text', 'Share the operating conditions and dimensions. We will propose the stages and media.'),
+    considerationsTitle: get('considerations_title', 'What to settle first'),
+    relatedTitle: get('related_title', 'Related fields'),
+    productPathsTitle: get('product_paths_title', 'Product paths'),
+    productPathsLead: get('product_paths_lead', 'Families to start from for this field.'),
+    viewFamilyLabel: get('view_family_label', 'View family'),
+    rfqEyebrow: get('rfq_eyebrow', 'Request a Quote'),
+    rfqTitlePrefix: get('rfq_title_prefix', 'Filters for'),
+  }
+}
+
 /* Applicable fields only. These are not claims of completed projects. */
 const raw: RawApplication[] = [
   {

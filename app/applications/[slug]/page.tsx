@@ -6,7 +6,7 @@ import { PageHero } from '@/components/layout/page-hero'
 import { ProductVisual } from '@/components/products/product-visual'
 import { RfqForm } from '@/components/inquiry/rfq-form'
 import { Reveal } from '@/components/motion/reveal'
-import { applicationGroupLabels, getApplication, getApplications } from '@/lib/repositories/applications'
+import { getApplication, getApplicationPresentation, getApplications } from '@/lib/repositories/applications'
 import { getCategories } from '@/lib/repositories/products'
 
 type Params = { params: Promise<{ slug: string }> }
@@ -24,14 +24,14 @@ export default async function ApplicationPage({ params }: Params) {
   const { slug } = await params
   const app = await getApplication(slug)
   if (!app) notFound()
-  const [categories, all] = await Promise.all([getCategories(), getApplications()])
+  const [categories, all, copy] = await Promise.all([getCategories(), getApplications(), getApplicationPresentation()])
   const paths = app.categorySlugs.map((s) => categories.find((c) => c.slug === s)).filter((c) => !!c)
   const others = all.filter((a) => a.group === app.group && a.slug !== app.slug)
 
   return (
     <>
       <PageHero
-        eyebrow={applicationGroupLabels[app.group].title}
+        eyebrow={copy.groups[app.group].title}
         title={app.name}
         lead={app.summary}
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Applications', href: '/applications' }, { label: app.name }]}
@@ -40,7 +40,7 @@ export default async function ApplicationPage({ params }: Params) {
       <section className="container-x grid gap-12 py-14 lg:grid-cols-12 lg:py-20" aria-labelledby="app-considerations">
         <Reveal className="lg:col-span-5">
           <h2 id="app-considerations" className="text-2xl font-extrabold sm:text-3xl">
-            What to settle first
+            {copy.considerationsTitle}
           </h2>
           <ul className="mt-6 space-y-4">
             {app.considerations.map((c) => (
@@ -52,7 +52,7 @@ export default async function ApplicationPage({ params }: Params) {
           </ul>
           {others.length > 0 && (
             <div className="mt-10">
-              <h3 className="text-sm font-bold uppercase tracking-wide text-muted-foreground">Related fields</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wide text-muted-foreground">{copy.relatedTitle}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {others.map((o) => (
                   <li key={o.slug}>
@@ -68,8 +68,8 @@ export default async function ApplicationPage({ params }: Params) {
 
         <div className="lg:col-span-7">
           <Reveal>
-            <h2 className="text-2xl font-extrabold sm:text-3xl">Product paths</h2>
-            <p className="mt-2 text-muted-foreground">Families to start from for this field.</p>
+            <h2 className="text-2xl font-extrabold sm:text-3xl">{copy.productPathsTitle}</h2>
+            <p className="mt-2 text-muted-foreground">{copy.productPathsLead}</p>
           </Reveal>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2">
             {paths.map((c, i) => (
@@ -80,7 +80,7 @@ export default async function ApplicationPage({ params }: Params) {
                     <span className="eyebrow">{c.role}</span>
                     <span className="mt-1 text-base font-bold">{c.name}</span>
                     <span className="mt-4 inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary">
-                      View family <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                      {copy.viewFamilyLabel} <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
                     </span>
                   </span>
                 </Link>
@@ -93,9 +93,9 @@ export default async function ApplicationPage({ params }: Params) {
       <section className="border-t border-border bg-mist/60 py-16 lg:py-20" aria-labelledby="app-rfq">
         <div className="container-x">
           <Reveal>
-            <p className="eyebrow">Request a Quote</p>
+            <p className="eyebrow">{copy.rfqEyebrow}</p>
             <h2 id="app-rfq" className="mt-3 max-w-3xl text-3xl font-extrabold sm:text-4xl">
-              Filters for {app.name.toLowerCase()}
+              {copy.rfqTitlePrefix} {app.name.toLowerCase()}
             </h2>
           </Reveal>
           <div className="mt-8">

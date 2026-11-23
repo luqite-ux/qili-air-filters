@@ -12,11 +12,11 @@ Default locale: `en`
 - Site settings: legal identity, logo/favicon, contact details, address, languages and notification address.
 - Inquiries: tenant-scoped inquiry records; every public entry point uses its own generated CAPTCHA scope and server-side atomic challenge consumption.
 
-## Website Content v6 fixed-layout modules
+## Website Content v7 fixed-layout modules
 
 The v5 definition updated the homepage hero title's measured typography defaults to 41.6 px on desktop and 30.4 px at 390 px. The customer admin save, reopen and restore roundtrip for the three hero headings passed. Version 6 is now published with the same homepage content; full five-group typography and frontend style adoption remain pending.
 
-Version 6 adds a tenant-owned Applications catalog with 14 preserved records. Application names, summaries, considerations and category links are editable in Website Content; the public application list and detail pages read the published snapshot. Group headings and page layout remain code-owned for the next scope pass.
+Version 6 adds a tenant-owned Applications catalog with 14 preserved records. Application names, summaries, considerations and category links are editable in Website Content; the public application list and detail pages read the published snapshot. Version 7 adds the four group headings and descriptions, page introductions, guidance labels and inquiry copy. Layout remains code-owned.
 
 | Page | Module | Maintainable fields | Source | Frontend consumer |
 | --- | --- | --- | --- | --- |
@@ -44,4 +44,4 @@ All assets are registered under the same tenant; no local path, temporary URL or
 
 ## Remaining maintenance review
 
-The entries above describe implemented modules, not a blanket backend acceptance. Group headings, descriptions and other fixed copy still require scope reconciliation; customer-role editing, publication adoption and full five-group typography verification remain tracked separately. Do not mark the entire maintenance gate PASS from this inventory alone.
+The entries above describe implemented modules, not a blanket backend acceptance. Other fixed copy still requires scope reconciliation; customer-role editing of the v7 copy module, publication adoption and full five-group typography verification remain tracked separately. Do not mark the entire maintenance gate PASS from this inventory alone.

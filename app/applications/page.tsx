@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import { PageHero } from '@/components/layout/page-hero'
 import { CtaBand } from '@/components/layout/cta-band'
 import { Reveal } from '@/components/motion/reveal'
-import { applicationGroupLabels, getApplications, type ApplicationGroup } from '@/lib/repositories/applications'
+import { getApplicationPresentation, getApplications, type ApplicationGroup } from '@/lib/repositories/applications'
 import { getCategories } from '@/lib/repositories/products'
 
 export const metadata: Metadata = {
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 const groupOrder: ApplicationGroup[] = ['precision', 'life-science', 'industrial', 'building']
 
 export default async function ApplicationsPage() {
-  const [applications, categories] = await Promise.all([getApplications(), getCategories()])
+  const [applications, categories, copy] = await Promise.all([getApplications(), getCategories(), getApplicationPresentation()])
 
   return (
     <>
       <PageHero
         eyebrow="Applications"
-        title="Start from where the air is used"
-        lead="Fields where our filter families apply, each with the product paths to begin with. These are applicable fields, not a list of completed projects."
+        title={copy.heroTitle}
+        lead={copy.heroLead}
         crumbs={[{ label: 'Home', href: '/' }, { label: 'Applications' }]}
       />
 
@@ -31,7 +31,7 @@ export default async function ApplicationsPage() {
         {groupOrder.map((group, gi) => {
           const items = applications.filter((a) => a.group === group)
           if (!items.length) return null
-          const label = applicationGroupLabels[group]
+          const label = copy.groups[group]
           return (
             <section key={group} className="grid gap-8 lg:grid-cols-12 lg:gap-12" aria-labelledby={`group-${group}`}>
               <Reveal className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
@@ -66,7 +66,7 @@ export default async function ApplicationsPage() {
         })}
       </div>
 
-      <CtaBand title="Describe your application" text="Share the operating conditions and dimensions. We will propose the stages and media." />
+      <CtaBand title={copy.ctaTitle} text={copy.ctaText} />
     </>
   )
 }
