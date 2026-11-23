@@ -6,13 +6,13 @@ import { PageHero } from '@/components/layout/page-hero'
 import { ProductVisual } from '@/components/products/product-visual'
 import { RfqForm } from '@/components/inquiry/rfq-form'
 import { Reveal } from '@/components/motion/reveal'
-import { applicationGroupLabels, getApplication, getApplicationSlugs, getApplications } from '@/lib/repositories/applications'
+import { applicationGroupLabels, getApplication, getApplications } from '@/lib/repositories/applications'
 import { getCategories } from '@/lib/repositories/products'
 
 type Params = { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
-  return (await getApplicationSlugs()).map((slug) => ({ slug }))
+  return []
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {

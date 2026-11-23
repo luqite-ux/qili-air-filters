@@ -1,4 +1,5 @@
 import { DEFAULT_LOCALE, l, la, resolveLocalized, type Localized } from '@/lib/i18n'
+import { getSiteContent } from '@/lib/site-content/site-content'
 
 export type ApplicationGroup = 'precision' | 'life-science' | 'industrial' | 'building'
 
@@ -165,14 +166,31 @@ function toView(a: RawApplication, locale: string): ApplicationView {
 }
 
 export async function getApplications(locale: string = DEFAULT_LOCALE) {
-  return raw.map((a) => toView(a, locale))
+  const snapshot = await getSiteContent(locale)
+  const module = snapshot?.pages.find(page => page.key === 'applications')?.modules.find(module => module.key === 'catalog')
+  const rows = module?.values.items
+  if (!Array.isArray(rows)) return raw.map((a) => toView(a, locale))
+  const validGroups = new Set<ApplicationGroup>(['precision', 'life-science', 'industrial', 'building'])
+  return rows.map((value): ApplicationView => {
+    if (!value || typeof value !== 'object') throw new Error('Invalid application record')
+    const row = value as Record<string, unknown>
+    if (typeof row.slug !== 'string' || typeof row.name !== 'string' || typeof row.summary !== 'string' || !validGroups.has(row.group as ApplicationGroup)) throw new Error('Invalid published application')
+    if (typeof row.considerations !== 'string' || typeof row.category_slugs !== 'string') throw new Error('Invalid application list fields')
+    const source = raw.find(item => item.slug === row.slug)
+    return { slug: row.slug, name: row.name, group: row.group as ApplicationGroup, summary: row.summary,
+      considerations: row.considerations.split('\n').map(item => item.trim()).filter(Boolean),
+      categorySlugs: [...new Set(row.category_slugs.split('\n').map(item => item.trim()).filter(Boolean).flatMap(slug => {
+        const original = source?.categorySlugs.find(item => item === slug)
+        return original ? toView({ ...source!, categorySlugs: [slug] }, locale).categorySlugs : [slug]
+      }))],
+    }
+  })
 }
 
 export async function getApplication(slug: string, locale: string = DEFAULT_LOCALE) {
-  const found = raw.find((a) => a.slug === slug)
-  return found ? toView(found, locale) : null
+  return (await getApplications(locale)).find(application => application.slug === slug) ?? null
 }
 
 export async function getApplicationSlugs() {
-  return raw.map((a) => a.slug)
+  return (await getApplications()).map(application => application.slug)
 }
