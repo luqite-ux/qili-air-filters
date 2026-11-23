@@ -26,6 +26,8 @@ Version 10 adds the Quality page headings, certificate field labels, inspection 
 
 Version 11 adds the Capabilities page headings, process steps, equipment and gallery guidance, CTA and SEO copy. The 52 factory images, six equipment groups and facility overview remain in their existing published modules. Public page source fallbacks for equipment and gallery were removed.
 
+The old homepage dictionary fallback and unused product, article, equipment and facility demo records were removed after matching the published module and catalog counts. Homepage module absence now fails explicitly rather than silently displaying a stale copy.
+
 | Page | Module | Maintainable fields | Source | Frontend consumer |
 | --- | --- | --- | --- | --- |
 | `/` | `hero` | Three slide labels, headings, copy, CTA labels/links and tenant-owned banner images | Supplied banner folder and verified English copy | `HeroCarousel` |
