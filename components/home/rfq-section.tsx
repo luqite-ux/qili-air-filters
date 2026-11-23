@@ -2,10 +2,10 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 import { Reveal } from '@/components/motion/reveal'
 import { SectionHeading } from '@/components/layout/section-heading'
 import { RfqForm } from '@/components/inquiry/rfq-form'
-import { getSiteSettings } from '@/lib/site'
+import { getPublishedSiteSettings } from '@/lib/site-settings'
 
 export async function RfqSection() {
-  const s = await getSiteSettings()
+  const s = await getPublishedSiteSettings()
   return (
     <section id="rfq" aria-labelledby="rfq-title" className="section-pad relative scroll-mt-20 overflow-hidden bg-mist">
       <div aria-hidden className="lab-grid absolute inset-0" />
