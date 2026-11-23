@@ -5,25 +5,28 @@ import { ArrowRight, Newspaper } from 'lucide-react'
 import { PageHero } from '@/components/layout/page-hero'
 import { Reveal } from '@/components/motion/reveal'
 import { getArticles } from '@/lib/repositories/news'
+import { getNewsListingCopy } from '@/lib/repositories/listing-copy'
 
-export const metadata: Metadata = {
-  title: 'News',
-  description: 'Company and product news from Qili Air Filters.',
-  alternates: { canonical: '/news' },
+export const dynamic = 'force-dynamic'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const copy = await getNewsListingCopy()
+  return { title: copy.seo_title, description: copy.seo_description, alternates: { canonical: '/news' } }
 }
 
 const dateFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
 
 export default async function NewsPage() {
   const articles = await getArticles()
+  const copy = await getNewsListingCopy()
 
   return (
     <>
-      <PageHero eyebrow="News" title="Company and product news" lead="Updates from Qili will appear here." crumbs={[{ label: 'Home', href: '/' }, { label: 'News' }]} />
+      <PageHero eyebrow={copy.hero_eyebrow} title={copy.hero_title} lead={copy.hero_lead} crumbs={[{ label: 'Home', href: '/' }, { label: copy.hero_eyebrow }]} />
 
       <section className="container-x py-14 lg:py-20" aria-labelledby="news-list">
         <h2 id="news-list" className="sr-only">
-          Latest news
+          {copy.list_title}
         </h2>
         {articles.length === 0 ? (
           <Reveal variant="scale" className="layer-sheet relative overflow-hidden rounded-xl p-8 sm:p-14">
@@ -32,14 +35,14 @@ export default async function NewsPage() {
               <span className="mx-auto flex size-14 items-center justify-center rounded-sm bg-mist text-primary">
                 <Newspaper className="size-7" aria-hidden />
               </span>
-              <p className="mt-6 text-2xl font-extrabold">No news published yet</p>
-              <p className="mt-3 text-muted-foreground">While we prepare our first update, browse the product range or send us your requirement.</p>
+              <p className="mt-6 text-2xl font-extrabold">{copy.empty_title}</p>
+              <p className="mt-3 text-muted-foreground">{copy.empty_text}</p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                 <Link href="/products" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-primary px-6 text-sm font-bold text-primary-foreground hover:bg-primary/90">
-                  Browse products <ArrowRight className="size-4" aria-hidden />
+                  {copy.browse_label} <ArrowRight className="size-4" aria-hidden />
                 </Link>
                 <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-input bg-white px-6 text-sm font-bold hover:bg-mist">
-                  Request a Quote
+                  {copy.quote_label}
                 </Link>
               </div>
             </div>
@@ -57,7 +60,7 @@ export default async function NewsPage() {
                     <span className="mt-2 text-lg font-bold group-hover:text-primary">{a.title}</span>
                     <span className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{a.excerpt}</span>
                     <span className="mt-4 inline-flex min-h-11 items-center gap-1.5 text-sm font-bold text-primary">
-                      Read article <ArrowRight className="size-4" aria-hidden />
+                      {copy.read_label} <ArrowRight className="size-4" aria-hidden />
                     </span>
                   </span>
                 </Link>

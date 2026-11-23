@@ -12,7 +12,7 @@ Default locale: `en`
 - Site settings: legal identity, logo/favicon, contact details, address, languages and notification address.
 - Inquiries: tenant-scoped inquiry records; every public entry point uses its own generated CAPTCHA scope and server-side atomic challenge consumption.
 
-## Website Content v12 fixed-layout modules
+## Website Content v13 fixed-layout modules
 
 The v5 definition updated the homepage hero title's measured typography defaults to 41.6 px on desktop and 30.4 px at 390 px. The customer admin save, reopen and restore roundtrip for the three hero headings passed. Version 6 is now published with the same homepage content; full five-group typography and frontend style adoption remain pending.
 
@@ -27,6 +27,8 @@ Version 10 adds the Quality page headings, certificate field labels, inspection 
 Version 11 adds the Capabilities page headings, process steps, equipment and gallery guidance, CTA and SEO copy. The 52 factory images, six equipment groups and facility overview remain in their existing published modules. Public page source fallbacks for equipment and gallery were removed.
 
 Version 12 binds the About photograph to its registered tenant media asset. Its original file hash matches the first factory-gallery image. The local About image path is no longer a public content source.
+
+Version 13 adds the Product and News listing page headings, introductions, empty states, CTA labels and SEO copy. Actual product categories, products and articles remain in their dedicated tenant-scoped repositories.
 
 The old homepage dictionary fallback and unused product, article, equipment and facility demo records were removed after matching the published module and catalog counts. Homepage module absence now fails explicitly rather than silently displaying a stale copy.
 
@@ -45,6 +47,8 @@ The old homepage dictionary fallback and unused product, article, equipment and 
 | `/about` | `page_copy` | Hero, company introduction, fact labels, image caption and alt text, product scope, CTA and SEO copy | Existing published About page copy | About page and metadata |
 | `/quality` | `page_copy` | Hero, certificate field labels, four inspection steps, registration guidance, CTA and SEO copy | Existing published Quality page copy | Quality page and metadata |
 | `/capabilities` | `page_copy` | Hero, four production stages, equipment and gallery guidance, CTA and SEO copy | Existing published Capabilities page copy | Capabilities page and metadata |
+| `/products` | `page_copy` | Listing hero, empty state, family guidance, CTA and SEO copy | Existing published Product listing copy | Product listing and metadata |
+| `/news` | `page_copy` | Listing hero, empty state, links and SEO copy | Existing published News listing copy | News listing and metadata |
 
 Layout, responsive breakpoints, animation, component order and CSS remain code-owned. The editor does not accept HTML, CSS, arbitrary modules or drag-and-drop layout. Product/article fields remain in their dedicated editors and are not duplicated in Website Content.
 
