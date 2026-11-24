@@ -50,7 +50,7 @@ export function HeroCarousel({ slides, styles }: { slides: HeroSlide[]; styles?:
     <section
       aria-roledescription="carousel"
       aria-label="Qili Air Filters highlights"
-      className="relative border-b border-border bg-mist"
+      className="relative overflow-x-clip border-b border-border bg-mist"
       onKeyDown={onKeyDown}
       onMouseEnter={() => setEngaged(true)}
       onMouseLeave={() => setEngaged(false)}
