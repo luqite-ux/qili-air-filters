@@ -57,8 +57,11 @@ export function InquiryCaptchaField({
   }, [requests, scope])
 
   useEffect(() => {
-    void refresh()
-    return () => requests.abortCurrent()
+    const frame = window.requestAnimationFrame(() => { void refresh() })
+    return () => {
+      window.cancelAnimationFrame(frame)
+      requests.abortCurrent()
+    }
   }, [refresh, refreshKey, requests])
 
   return (

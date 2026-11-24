@@ -21,10 +21,13 @@ export function HeroCarousel({ slides, styles }: { slides: HeroSlide[]; styles?:
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setPlaying(!reduce.matches)
+    const frame = window.requestAnimationFrame(() => setPlaying(!reduce.matches))
     const onChange = () => reduce.matches && setPlaying(false)
     reduce.addEventListener('change', onChange)
-    return () => reduce.removeEventListener('change', onChange)
+    return () => {
+      window.cancelAnimationFrame(frame)
+      reduce.removeEventListener('change', onChange)
+    }
   }, [])
 
   const running = playing && !engaged

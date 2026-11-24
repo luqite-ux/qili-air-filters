@@ -41,7 +41,10 @@ function layerTexture(index: number) {
 export default function AirflowScene({ active, onReady, onFail }: Props) {
   const hostRef = useRef<HTMLDivElement>(null)
   const activeRef = useRef(active)
-  activeRef.current = active
+
+  useEffect(() => {
+    activeRef.current = active
+  }, [active])
 
   useEffect(() => {
     const host = hostRef.current

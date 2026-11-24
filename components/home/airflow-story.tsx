@@ -30,7 +30,8 @@ export function AirflowStory({ layers }: { layers: Layer[] }) {
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
-    setEligible(canUseWebgl())
+    const frame = window.requestAnimationFrame(() => setEligible(canUseWebgl()))
+    return () => window.cancelAnimationFrame(frame)
   }, [])
 
   const onReady = useCallback(() => setReady(true), [])

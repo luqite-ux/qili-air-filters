@@ -56,8 +56,8 @@ function mappedCategories(text: string): string[] {
 }
 export async function getApplications(locale: string = DEFAULT_LOCALE) {
   const snapshot = await getSiteContent(locale)
-  const module = snapshot?.pages.find(page => page.key === 'applications')?.modules.find(module => module.key === 'catalog')
-  const rows = module?.values.items
+  const catalogModule = snapshot?.pages.find(page => page.key === 'applications')?.modules.find(module => module.key === 'catalog')
+  const rows = catalogModule?.values.items
   if (!Array.isArray(rows)) throw new Error('Published application catalog missing')
   const validGroups = new Set<ApplicationGroup>(['precision', 'life-science', 'industrial', 'building'])
   return rows.map((value): ApplicationView => {
