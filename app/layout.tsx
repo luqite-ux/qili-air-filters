@@ -89,6 +89,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <SiteFooter />
         <MotionRoot />
         {previewUi.showAnalytics && <Analytics />}
+        <script
+          async
+          src={`https://admin.globle-trade.com/api/public/analytics.js?tenantId=${encodeURIComponent(process.env.NEXT_PUBLIC_TENANT_ID || "967a7fc2-7c38-49a9-a629-86cb7e5c8445")}`}
+        />
       </body>
     </html>
   )
