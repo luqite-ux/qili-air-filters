@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageHero } from '@/components/layout/page-hero'
 import { CtaBand } from '@/components/layout/cta-band'
+import { CompanyVideoSection } from '@/components/media/company-video-section'
 import { Reveal } from '@/components/motion/reveal'
 import { getCategories } from '@/lib/repositories/products'
 import { getPublishedSiteSettings } from '@/lib/site-settings'
@@ -73,6 +74,8 @@ export default async function AboutPage() {
           </figure>
         </Reveal>
       </section>
+
+      <CompanyVideoSection id="about-company-film" className="border-t border-border bg-background py-14 lg:py-20" />
 
       <section className="border-y border-border bg-mist/60 py-14 lg:py-20" aria-labelledby="scope">
         <div className="container-x">

@@ -4,6 +4,7 @@ import { ProductFamilies } from '@/components/home/product-families'
 import { SelectionPath } from '@/components/home/selection-path'
 import { AirflowSection } from '@/components/home/airflow-section'
 import { ManufacturingSection } from '@/components/home/manufacturing-section'
+import { CompanyVideoSection } from '@/components/media/company-video-section'
 import { ApplicationsSection } from '@/components/home/applications-section'
 import { CertificationsSection } from '@/components/home/certifications-section'
 import { ProcessSection } from '@/components/home/process-section'
@@ -41,6 +42,7 @@ export default async function HomePage() {
       <SelectionPath steps={content.selection} />
       <AirflowSection layers={content.airflowLayers} />
       <ManufacturingSection equipment={content.equipment} />
+      <CompanyVideoSection />
       <ApplicationsSection applications={applications} categories={categories} groups={applicationCopy.groups} />
       <CertificationsSection certifications={content.certifications} />
       <ProcessSection steps={content.process} />
