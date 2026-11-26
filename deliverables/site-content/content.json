@@ -83,7 +83,7 @@
                   "en": "Ordering and lead time"
                 },
                 "answer": {
-                  "en": "General order planning is 12–25 days, depending on quantity and process complexity. Product-family references are 7–10 days for a standard 40-foot high-cube container of filter media, 10–15 days for pre- and medium-efficiency filters, and 20–25 days for HEPA filters. The schedule is confirmed with the order. Peak-season changes are discussed in advance; expedited production can be considered for urgent orders."
+                  "en": "General order planning is 15–25 days, depending on quantity and process complexity. Product-family references are 15–20 days for a standard 40-foot high-cube container of filter media, 20–25 days for pre- and medium-efficiency filters, and 20–25 days for HEPA filters. The schedule is confirmed with the order. Peak-season changes are discussed in advance; expedited production can be considered for urgent orders."
                 },
                 "question": {
                   "en": "How long does production take?"
@@ -180,10 +180,10 @@
                 },
                 "side": "left",
                 "image": {
+                  "assetId": "f6045fa8-00b1-4ea7-b701-ca6ad2ab6292",
                   "alt": {
-                    "en": "Layered filter media, activated carbon granules, a filter media roll and production machine on a light blue background"
-                  },
-                  "assetId": "2fbd8da7-fb7c-45fe-9d6f-eea9ab152ca1"
+                    "en": "Qili industrial air filters and colorful bag filter media rolls arranged on a teal airflow background"
+                  }
                 },
                 "title": {
                   "en": "Made to your dimensions, media and frame"
@@ -440,8 +440,8 @@
             "items": [
               {
                 "id": "media",
-                "max": 10,
-                "min": 7,
+                "max": 20,
+                "min": 15,
                 "text": {
                   "en": "Roll goods for container quantities."
                 },
@@ -449,13 +449,13 @@
                   "en": "Filter media, container orders"
                 },
                 "window": {
-                  "en": "7–10 days"
+                  "en": "15–20 days"
                 }
               },
               {
                 "id": "primary",
-                "max": 15,
-                "min": 10,
+                "max": 25,
+                "min": 20,
                 "text": {
                   "en": "Panel, pleated and bag formats."
                 },
@@ -463,7 +463,7 @@
                   "en": "Primary and medium-efficiency filters"
                 },
                 "window": {
-                  "en": "10–15 days"
+                  "en": "20–25 days"
                 }
               },
               {
@@ -664,11 +664,265 @@
         }
       }
     },
-    "quality": {
+    "news": {
       "order": [
-        "registration"
+        "page_copy"
       ],
       "modules": {
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "hero_lead": {
+              "en": "Updates from Qili will appear here."
+            },
+            "seo_title": {
+              "en": "News"
+            },
+            "empty_text": {
+              "en": "While we prepare our first update, browse the product range or send us your requirement."
+            },
+            "hero_title": {
+              "en": "Company and product news"
+            },
+            "list_title": {
+              "en": "Latest news"
+            },
+            "read_label": {
+              "en": "Read article"
+            },
+            "empty_title": {
+              "en": "No news published yet"
+            },
+            "quote_label": {
+              "en": "Request a Quote"
+            },
+            "browse_label": {
+              "en": "Browse products"
+            },
+            "hero_eyebrow": {
+              "en": "News"
+            },
+            "seo_description": {
+              "en": "Company and product news from Qili Air Filters."
+            }
+          }
+        }
+      }
+    },
+    "about": {
+      "order": [
+        "page_copy"
+      ],
+      "modules": {
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "image": {
+              "alt": {
+                "en": "Entrance gate and office tower of the industrial park where Qili is based"
+              },
+              "assetId": "89694124-0a10-4cfd-b2ec-c7b44b859052"
+            },
+            "cta_text": {
+              "en": "Send your requirement and we will reply to your business email."
+            },
+            "cta_title": {
+              "en": "Talk to the team"
+            },
+            "seo_title": {
+              "en": "About Qili"
+            },
+            "hero_title": {
+              "en": "Air filters and filter media, made in Kunshan"
+            },
+            "brand_label": {
+              "en": "Brand"
+            },
+            "scope_title": {
+              "en": "What we make"
+            },
+            "hero_eyebrow": {
+              "en": "About"
+            },
+            "address_label": {
+              "en": "Registered address"
+            },
+            "company_label": {
+              "en": "Company"
+            },
+            "company_title": {
+              "en": "One company, media to finished unit"
+            },
+            "image_caption": {
+              "en": "Park entrance, Zhoushi Town, Kunshan"
+            },
+            "scope_eyebrow": {
+              "en": "Product scope"
+            },
+            "hero_lead_suffix": {
+              "en": "designs and manufactures air filters and filter media for buyers who need specific dimensions, media and frames."
+            },
+            "production_label": {
+              "en": "Production base"
+            },
+            "production_value": {
+              "en": "Approximately 3,000 m², seven workshops"
+            },
+            "company_paragraph_1": {
+              "en": "Qili works across the filter chain: pre-filters, medium-efficiency bag filters, HEPA filters, chemical, high-temperature and oil-mist filters, activated-carbon filters, air-filter media, filter cotton, household and commercial HEPA filters, humidifier pads and high-efficiency filter units."
+            },
+            "company_paragraph_2": {
+              "en": "That range lets us match media and structure to one requirement instead of selling a fixed catalogue. Buyers send dimensions, a drawing or a sample, and we plan the build with them."
+            },
+            "seo_description_suffix": {
+              "en": "makes air filters and filter media in Kunshan, Jiangsu, China."
+            }
+          }
+        }
+      }
+    },
+    "contact": {
+      "order": [
+        "page_copy"
+      ],
+      "modules": {
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "hero_lead": {
+              "en": "Send dimensions, media, quantity and application. A drawing or sample can follow by email."
+            },
+            "seo_title": {
+              "en": "Request a Quote"
+            },
+            "form_title": {
+              "en": "Your requirement"
+            },
+            "hero_title": {
+              "en": "Tell us what you need to filter"
+            },
+            "email_label": {
+              "en": "Email"
+            },
+            "phone_label": {
+              "en": "Phone"
+            },
+            "hero_eyebrow": {
+              "en": "Request a Quote"
+            },
+            "address_label": {
+              "en": "Registered address"
+            },
+            "details_title": {
+              "en": "Contact details"
+            },
+            "seo_description": {
+              "en": "Send dimensions, media and quantity for air filters or filter media. Qili replies by business email."
+            }
+          }
+        }
+      }
+    },
+    "quality": {
+      "order": [
+        "registration",
+        "page_copy"
+      ],
+      "modules": {
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "steps": [
+              {
+                "id": "step-1",
+                "text": {
+                  "en": "Dimensions, media, frame and application are confirmed before production starts."
+                },
+                "title": {
+                  "en": "Specification check"
+                }
+              },
+              {
+                "id": "step-2",
+                "text": {
+                  "en": "Incoming media and frame materials are checked against the agreed specification."
+                },
+                "title": {
+                  "en": "Material check"
+                }
+              },
+              {
+                "id": "step-3",
+                "text": {
+                  "en": "Pleating, gluing and assembly are checked as work proceeds."
+                },
+                "title": {
+                  "en": "In-process check"
+                }
+              },
+              {
+                "id": "step-4",
+                "text": {
+                  "en": "Finished filters are inspected for dimensions and appearance before packing."
+                },
+                "title": {
+                  "en": "Final inspection"
+                }
+              }
+            ],
+            "cta_text": {
+              "en": "Tell us what you need to check and we will agree it before production."
+            },
+            "cta_title": {
+              "en": "Need inspection requirements on your order?"
+            },
+            "hero_lead": {
+              "en": "Qili holds ISO 9001, ISO 14001 and ISO 45001 certifications. Each is a separate certificate with its own number."
+            },
+            "seo_title": {
+              "en": "Quality and Certifications"
+            },
+            "hero_title": {
+              "en": "Three management system certifications"
+            },
+            "hero_eyebrow": {
+              "en": "Quality"
+            },
+            "issued_label": {
+              "en": "Issued"
+            },
+            "seo_description": {
+              "en": "ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 management system certifications and the inspection steps behind Qili air filters."
+            },
+            "inspection_title": {
+              "en": "How an order is checked"
+            },
+            "registration_lead": {
+              "en": "View our Chinese company registration document."
+            },
+            "chinese_scan_label": {
+              "en": "View Chinese scan"
+            },
+            "english_scan_label": {
+              "en": "View English scan"
+            },
+            "inspection_eyebrow": {
+              "en": "Inspection"
+            },
+            "valid_through_label": {
+              "en": "Valid through"
+            },
+            "certifications_title": {
+              "en": "Certifications"
+            },
+            "registration_link_label": {
+              "en": "View business licence"
+            },
+            "certificate_number_label": {
+              "en": "Certificate no."
+            }
+          }
+        },
         "registration": {
           "hidden": false,
           "values": {
@@ -685,11 +939,371 @@
         }
       }
     },
+    "products": {
+      "order": [
+        "page_copy"
+      ],
+      "modules": {
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "cta_text": {
+              "en": "Tell us the airflow conditions, dimensions and application. We will suggest the structure and media."
+            },
+            "cta_title": {
+              "en": "Not sure which family fits?"
+            },
+            "empty_cta": {
+              "en": "Request a Quote"
+            },
+            "hero_lead": {
+              "en": "Choose by filtration stage, structure and media. Every item can be made to your dimensions, frame and media on request."
+            },
+            "seo_title": {
+              "en": "Air Filters and Filter Media"
+            },
+            "empty_text": {
+              "en": "Send us your requirement and we will respond with a suitable option."
+            },
+            "hero_title": {
+              "en": "Air filters and filter media, organised by stage"
+            },
+            "list_title": {
+              "en": "Product list"
+            },
+            "empty_title": {
+              "en": "No products listed in this family yet"
+            },
+            "hero_eyebrow": {
+              "en": "Products"
+            },
+            "families_title": {
+              "en": "How the families fit together"
+            },
+            "planning_label": {
+              "en": "Planning reference:"
+            },
+            "seo_description": {
+              "en": "Pre-filters, bag filters, HEPA filters, chemical filters, high-temperature and oil-mist filters, filter media, humidifier pads and high-efficiency filter units from Qili in Kunshan, China."
+            },
+            "families_eyebrow": {
+              "en": "Product families"
+            }
+          }
+        }
+      }
+    },
+    "applications": {
+      "order": [
+        "catalog",
+        "page_copy"
+      ],
+      "modules": {
+        "catalog": {
+          "hidden": false,
+          "values": {
+            "items": [
+              {
+                "id": "microelectronics",
+                "name": {
+                  "en": "Microelectronics"
+                },
+                "slug": "microelectronics",
+                "group": "precision",
+                "summary": {
+                  "en": "Air filtration around assembly and test areas where particles and gases affect yield."
+                },
+                "category_slugs": "hepa-filters\nchemical-filters\npre-filters",
+                "considerations": {
+                  "en": "Particle control at fan-filter and terminal stages\nGas-phase filtration where airborne molecules matter\nFrame sizes matched to existing ceiling grids"
+                }
+              },
+              {
+                "id": "semiconductors",
+                "name": {
+                  "en": "Semiconductors"
+                },
+                "slug": "semiconductors",
+                "group": "precision",
+                "summary": {
+                  "en": "Staged particle and chemical filtration for fabrication-support air systems."
+                },
+                "category_slugs": "hepa-filters\nchemical-filters\nhigh-efficiency-filter-units",
+                "considerations": {
+                  "en": "Combined particle and chemical filtration stages\nLow-outgassing frame and media choices discussed per project\nDimensions fitted to existing housings"
+                }
+              },
+              {
+                "id": "lithium-batteries",
+                "name": {
+                  "en": "Lithium batteries"
+                },
+                "slug": "lithium-batteries",
+                "group": "precision",
+                "summary": {
+                  "en": "Dry-room and process-air filtration for battery production environments."
+                },
+                "category_slugs": "hepa-filters\nchemical-filters\nhigh-temperature-filters",
+                "considerations": {
+                  "en": "Particle control in controlled-humidity areas\nSolvent and odour treatment with chemical media\nHeat and moisture conditions confirmed per line"
+                }
+              },
+              {
+                "id": "photovoltaics",
+                "name": {
+                  "en": "Photovoltaics"
+                },
+                "slug": "photovoltaics",
+                "group": "precision",
+                "summary": {
+                  "en": "Process and cleanroom air filtration for photovoltaic cell and module production."
+                },
+                "category_slugs": "hepa-filters\nchemical-filters\nhigh-temperature-filters",
+                "considerations": {
+                  "en": "Particle control around cell and module lines\nChemical media for process-gas areas\nHeat-resistant constructions where lines run hot"
+                }
+              },
+              {
+                "id": "membrane-production",
+                "name": {
+                  "en": "Membrane production"
+                },
+                "slug": "membrane-production",
+                "group": "precision",
+                "summary": {
+                  "en": "Clean and solvent-laden air handling around coating and film processes."
+                },
+                "category_slugs": "oil-mist-filters\nhigh-temperature-filters\nchemical-filters",
+                "considerations": {
+                  "en": "Particle control across coating areas\nMist and solvent handling in drying zones\nTemperature range shared before construction is chosen"
+                }
+              },
+              {
+                "id": "biological-laboratories",
+                "name": {
+                  "en": "Biological laboratories"
+                },
+                "slug": "biological-laboratories",
+                "group": "life-science",
+                "summary": {
+                  "en": "HEPA and terminal filtration for laboratory air supply and exhaust."
+                },
+                "category_slugs": "hepa-filters\nhigh-efficiency-filter-units\npre-filters",
+                "considerations": {
+                  "en": "HEPA panels and housed units for supply and exhaust\nSealing faces matched to cabinet or housing design\nReplacement size lists maintained for repeat orders"
+                }
+              },
+              {
+                "id": "pharmaceuticals",
+                "name": {
+                  "en": "Pharmaceuticals"
+                },
+                "slug": "pharmaceuticals",
+                "group": "life-science",
+                "summary": {
+                  "en": "Multi-stage filtration for production and support areas."
+                },
+                "category_slugs": "pre-filters\nmedium-efficiency-bag-filters\nhepa-filters",
+                "considerations": {
+                  "en": "Pre-filter, bag and HEPA stages sized together\nFrame and media choices agreed against your requirement\nInspection requirements discussed before production"
+                }
+              },
+              {
+                "id": "food-beverage",
+                "name": {
+                  "en": "Food and beverage"
+                },
+                "slug": "food-beverage",
+                "group": "life-science",
+                "summary": {
+                  "en": "Air filtration for processing, packing and storage areas."
+                },
+                "category_slugs": "pre-filters\nmedium-efficiency-bag-filters\nchemical-filters",
+                "considerations": {
+                  "en": "Pre-filter and bag stages for general processing air\nFrame materials discussed for wash-down areas\nOdour control with chemical media where needed"
+                }
+              },
+              {
+                "id": "hospitals",
+                "name": {
+                  "en": "Hospitals"
+                },
+                "slug": "hospitals",
+                "group": "life-science",
+                "summary": {
+                  "en": "Staged filtration for ventilation systems in care and support areas."
+                },
+                "category_slugs": "medium-efficiency-bag-filters\nhepa-filters\nhigh-efficiency-filter-units",
+                "considerations": {
+                  "en": "Bag and HEPA stages for central air handling\nHigh-efficiency units for terminal installation\nPlanned replacement sizes for maintenance teams"
+                }
+              },
+              {
+                "id": "automotive-coating",
+                "name": {
+                  "en": "Automotive coating"
+                },
+                "slug": "automotive-coating",
+                "group": "industrial",
+                "summary": {
+                  "en": "Booth and supply-air filtration where overspray, mist and heat are present."
+                },
+                "category_slugs": "oil-mist-filters\nhigh-temperature-filters\npre-filters",
+                "considerations": {
+                  "en": "Mist-handling constructions for process air\nHeat-resistant frames where booths run warm\nPre-filter stages that protect finer filters"
+                }
+              },
+              {
+                "id": "hvac-terminals",
+                "name": {
+                  "en": "HVAC terminals"
+                },
+                "slug": "hvac-terminals",
+                "group": "building",
+                "summary": {
+                  "en": "Terminal and air handling unit filtration for building air."
+                },
+                "category_slugs": "pre-filters\nmedium-efficiency-bag-filters\nhigh-efficiency-filter-units",
+                "considerations": {
+                  "en": "Pre-filter and bag stages in standard face sizes\nHigh-efficiency units at supply terminals\nSizes and frames matched to existing units"
+                }
+              },
+              {
+                "id": "commercial-hvac",
+                "name": {
+                  "en": "Commercial HVAC"
+                },
+                "slug": "commercial-hvac",
+                "group": "building",
+                "summary": {
+                  "en": "Filtration and humidification media for commercial air systems."
+                },
+                "category_slugs": "medium-efficiency-bag-filters\nfilter-media\nhumidifier-pads",
+                "considerations": {
+                  "en": "Bag and panel stages for central systems\nMedia supplied for in-house filter conversion\nHumidifier pads for evaporative systems"
+                }
+              },
+              {
+                "id": "residential-fresh-air",
+                "name": {
+                  "en": "Residential fresh air"
+                },
+                "slug": "residential-fresh-air",
+                "group": "building",
+                "summary": {
+                  "en": "Filter elements and media for household fresh-air and purification units."
+                },
+                "category_slugs": "household-commercial-hepa\nfilter-media\nhumidifier-pads",
+                "considerations": {
+                  "en": "HEPA elements made to the appliance fit\nMedia supplied for OEM filter production\nHumidifier pads matched to unit models"
+                }
+              },
+              {
+                "id": "agricultural-ventilation",
+                "name": {
+                  "en": "Agricultural ventilation"
+                },
+                "slug": "agricultural-ventilation",
+                "group": "building",
+                "summary": {
+                  "en": "Ventilation filtration for farm buildings and growing spaces."
+                },
+                "category_slugs": "filter-media\nhumidifier-pads\npre-filters",
+                "considerations": {
+                  "en": "Coarse media for dust-heavy intake air\nPads for evaporative cooling and humidification\nRolls and cut pieces sized to your fans or walls"
+                }
+              }
+            ]
+          }
+        },
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "groups": [
+              {
+                "id": "precision",
+                "blurb": {
+                  "en": "Particle and gas control around sensitive production."
+                },
+                "group": "precision",
+                "title": {
+                  "en": "Cleanroom and precision"
+                }
+              },
+              {
+                "id": "life-science",
+                "blurb": {
+                  "en": "Controlled air for laboratories, production and care settings."
+                },
+                "group": "life-science",
+                "title": {
+                  "en": "Life science and healthcare"
+                }
+              },
+              {
+                "id": "industrial",
+                "blurb": {
+                  "en": "Process air with heat, mist or chemical loading."
+                },
+                "group": "industrial",
+                "title": {
+                  "en": "Industrial process"
+                }
+              },
+              {
+                "id": "building",
+                "blurb": {
+                  "en": "Comfort, fresh-air and agricultural ventilation."
+                },
+                "group": "building",
+                "title": {
+                  "en": "Building and ventilation"
+                }
+              }
+            ],
+            "cta_text": {
+              "en": "Share the operating conditions and dimensions. We will propose the stages and media."
+            },
+            "cta_title": {
+              "en": "Describe your application"
+            },
+            "hero_lead": {
+              "en": "Fields where our filter families apply, each with the product paths to begin with. These are applicable fields, not a list of completed projects."
+            },
+            "hero_title": {
+              "en": "Start from where the air is used"
+            },
+            "rfq_eyebrow": {
+              "en": "Request a Quote"
+            },
+            "related_title": {
+              "en": "Related fields"
+            },
+            "rfq_title_prefix": {
+              "en": "Filters for"
+            },
+            "view_family_label": {
+              "en": "View family"
+            },
+            "product_paths_lead": {
+              "en": "Families to start from for this field."
+            },
+            "product_paths_title": {
+              "en": "Product paths"
+            },
+            "considerations_title": {
+              "en": "What to settle first"
+            }
+          }
+        }
+      }
+    },
     "capabilities": {
       "order": [
         "gallery",
         "equipment",
-        "overview"
+        "overview",
+        "page_copy"
       ],
       "modules": {
         "gallery": {
@@ -1648,6 +2262,100 @@
                 }
               }
             ]
+          }
+        },
+        "page_copy": {
+          "hidden": false,
+          "values": {
+            "stages": [
+              {
+                "id": "stage-1",
+                "text": {
+                  "en": "Meltblown and nonwoven lines for filter media and filter cotton."
+                },
+                "title": {
+                  "en": "Media"
+                }
+              },
+              {
+                "id": "stage-2",
+                "text": {
+                  "en": "Pleating and bag-making for panel, bag and V-bank structures."
+                },
+                "title": {
+                  "en": "Forming"
+                }
+              },
+              {
+                "id": "stage-3",
+                "text": {
+                  "en": "Frame making, gluing and welding for the frame and media you specify."
+                },
+                "title": {
+                  "en": "Framing"
+                }
+              },
+              {
+                "id": "stage-4",
+                "text": {
+                  "en": "Final assembly into filters and high-efficiency filter units."
+                },
+                "title": {
+                  "en": "Assembly"
+                }
+              }
+            ],
+            "cta_text": {
+              "en": "Share dimensions, media and frame requirements. We will plan the build with you."
+            },
+            "cta_title": {
+              "en": "Send a drawing or sample"
+            },
+            "seo_title": {
+              "en": "Manufacturing and Equipment"
+            },
+            "flow_title": {
+              "en": "Four stages, one route"
+            },
+            "hero_title": {
+              "en": "From filter media to finished filter, under one roof"
+            },
+            "flow_eyebrow": {
+              "en": "Production flow"
+            },
+            "gallery_lead": {
+              "en": "Explore our production equipment, cleanrooms, material storage and assembly areas in Kunshan."
+            },
+            "hero_eyebrow": {
+              "en": "Capabilities"
+            },
+            "gallery_title": {
+              "en": "Inside our factory"
+            },
+            "equipment_lead": {
+              "en": "Our production equipment covers media preparation through finished-filter assembly. Project-specific tooling and configuration are confirmed during technical review."
+            },
+            "equipment_title": {
+              "en": "Listed equipment"
+            },
+            "gallery_eyebrow": {
+              "en": "Inside production"
+            },
+            "seo_description": {
+              "en": "Filter media, pleating, bag filter, frame, gluing, welding and assembly capability at the Qili production base in Kunshan, Jiangsu."
+            },
+            "workshops_label": {
+              "en": "Workshops"
+            },
+            "floor_area_label": {
+              "en": "Floor area"
+            },
+            "equipment_eyebrow": {
+              "en": "Equipment"
+            },
+            "gallery_expand_label": {
+              "en": "Explore photographs"
+            }
           }
         }
       }

@@ -49,7 +49,7 @@ const catalogSlugs: Record<string, string[]> = {
   'pre-filters': ['primary-panel-filters'],
   'high-temperature-filters': ['high-efficiency-filters'],
   'household-commercial-hepa': ['residential-and-commercial-hepa-filters'],
-  'filter-media': ['ql-primary-and-medium-efficiency-filter-media', 'medium-efficiency-bag-filter-roll-media', 'hepa-composite-filter-paper'],
+  'filter-media': ['ql-primary-and-medium-efficiency-filter-media', 'ql-bag-filter-media', 'medium-efficiency-bag-filter-roll-media'],
 }
 function mappedCategories(text: string): string[] {
   return [...new Set(text.split('\n').map(item => item.trim()).filter(Boolean).flatMap(slug => catalogSlugs[slug] ?? [slug]))]
