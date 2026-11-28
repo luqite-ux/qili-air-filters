@@ -5,10 +5,10 @@ import { SectionHeading } from '@/components/layout/section-heading'
 import { CompanyVideoPlayer } from './company-video-player'
 
 export const COMPANY_PROMO_VIDEO = {
-  src: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/qili-air-filters/videos/aa5dec8c5706733d645d.mp4',
+  src: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/qili-air-filters/videos/e8929b06b77757809c6f.mp4',
   poster: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/qili-air-filters/videos/1cdabb41416ed5b0533d.jpg',
   title: 'Suzhou Qili Environmental Protection Technology company film',
-  durationLabel: '01:41',
+  durationLabel: '01:33',
 } as const
 
 const filmHighlights = [

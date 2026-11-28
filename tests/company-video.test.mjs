@@ -18,7 +18,7 @@ const aboutPageSource = fs.readFileSync(path.join(repoRoot, 'app/about/page.tsx'
 test('company promo video and poster use qili-air-filters tenant R2 URLs', () => {
   assert.match(
     sectionSource,
-    /https:\/\/pub-c7a22068052144a5805830c30d280128\.r2\.dev\/tenants\/qili-air-filters\/videos\/aa5dec8c5706733d645d\.mp4/
+    /https:\/\/pub-c7a22068052144a5805830c30d280128\.r2\.dev\/tenants\/qili-air-filters\/videos\/e8929b06b77757809c6f\.mp4/
   )
   assert.match(
     sectionSource,

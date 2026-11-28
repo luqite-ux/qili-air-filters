@@ -14,7 +14,7 @@ export function CompanyVideoPlayer({
   src,
   poster,
   title,
-  durationLabel = '01:41',
+  durationLabel = '01:33',
 }: CompanyVideoPlayerProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
